@@ -1,0 +1,778 @@
+===== QUICK FILE STUDIO — BUTTON/BRIDGE AUDIT =====
+Sun Sep 20 11:07:18 HDT 2026
+
+===== HTML BUTTONS =====
+web/index.html:129:    <button class="icon-btn" id="menuBtn">☰</button>
+web/index.html:132:      <button class="icon-btn" id="searchBtn" title="بحث">⌕</button>
+web/index.html:133:      <button class="icon-btn" id="menuToolsBtn" title="الأدوات">⋮</button>
+web/index.html:134:      <button class="icon-btn" id="themeBtn" title="تبديل الوضع" aria-label="تبديل الوضع">☀️</button>
+web/index.html:135:      <button class="icon-btn" id="settingsBtn" title="الإعدادات">⚙</button>
+web/index.html:140:    <button class="nav active" data-page="files">📁 <span>الملفات</span></button>
+web/index.html:141:    <button class="nav" data-page="user-files">📂 <span>ملفاتك</span></button>
+web/index.html:142:    <button class="nav" data-page="projects">🧩 <span>المشاريع</span></button>
+web/index.html:143:    <button class="nav" data-page="editor">📝 <span>المحرر</span></button>
+web/index.html:144:    <button class="nav" data-page="tools">🛠️ <span>الأدوات</span></button>
+web/index.html:145:    <button class="nav" data-page="console">⌘ <span>الطرفية</span></button>
+web/index.html:146:    <button class="nav" data-page="trash">🗑️ <span>سلة المحذوفات</span></button>
+web/index.html:147:    <button class="nav" data-page="activity">◷ <span>السجل</span></button>
+web/index.html:154:        <button class="primary" id="userFilesChooseBtn">📂 اختيار مجلد ملفاتك</button>
+web/index.html:155:        <button id="userFilesRefreshBtn" title="تحديث">↻ تحديث</button>
+web/index.html:174:        <button class="primary" id="userFilesStartBtn">
+web/index.html:200:        <button class="primary" id="chooseFolderBtn">📁 اختيار مجلد</button>
+web/index.html:203:          <button id="newBtn">＋ جديد</button>
+web/index.html:205:            <button data-new="file">📄 ملف جديد</button>
+web/index.html:206:            <button data-new="folder">📁 مجلد جديد</button>
+web/index.html:207:            <button data-new="project">🧩 مشروع جديد</button>
+web/index.html:211:        <button id="refreshBtn" title="تحديث">↻</button>
+web/index.html:214:          <button id="selectMenuBtn">☑ تحديد</button>
+web/index.html:216:            <button id="selectAllMenu">تحديد الكل</button>
+web/index.html:217:            <button id="clearSelectionMenu">إلغاء التحديد</button>
+web/index.html:222:          <button id="sortMenuBtn">↕ ترتيب</button>
+web/index.html:224:            <button data-sort="name">الاسم</button>
+web/index.html:225:            <button data-sort="size">الحجم</button>
+web/index.html:226:            <button data-sort="modified">آخر تعديل</button>
+web/index.html:227:            <button data-sort="type">النوع</button>
+web/index.html:248:      <div class="section-head"><h2>المشاريع</h2><button class="primary" id="newProjectBtn">＋ مشروع جديد</button></div>
+web/index.html:254:  <button type="button" onclick="qfsEditorCore.find()">بحث</button>
+web/index.html:255:  <button type="button" onclick="qfsEditorCore.replace()">استبدال</button>
+web/index.html:256:  <button type="button" onclick="qfsEditorCore.gotoLine()">انتقال للسطر</button>
+web/index.html:257:  <button type="button" onclick="qfsEditorCore.statistics()">إحصائيات</button>
+web/index.html:258:  <button type="button" onclick="qfsEditorCore.indent()">إزاحة +</button>
+web/index.html:259:  <button type="button" onclick="qfsEditorCore.unindent()">إزاحة -</button>
+web/index.html:260:  <button type="button" onclick="qfsEditorCore.toggleWrap()">Word Wrap</button>
+web/index.html:261:  <button type="button" onclick="qfsEditorCore.toggleReadonly()">قراءة فقط</button>
+web/index.html:262:  <button type="button" onclick="qfsEditorCore.font(1)">A+</button>
+web/index.html:263:  <button type="button" onclick="qfsEditorCore.font(-1)">A-</button>
+web/index.html:267:<button onclick="qfsMini.tab()">Tab</button>
+web/index.html:268:<button onclick="qfsMini.braces()">{ }</button>
+web/index.html:269:<button onclick="qfsMini.parentheses()">()</button>
+web/index.html:270:<button onclick="qfsMini.semicolon()">;</button>
+web/index.html:271:<button onclick="qfsMini.angle()">&lt; &gt;</button>
+web/index.html:272:<button onclick="qfsMini.undo()">↶</button>
+web/index.html:273:<button onclick="qfsMini.redo()">↷</button>
+web/index.html:274:<button onclick="qfsMini.copy()">Copy</button>
+web/index.html:275:<button onclick="qfsMini.paste()">Paste</button>
+web/index.html:276:<button onclick="qfsMini.cut()">Cut</button>
+web/index.html:277:<button onclick="qfsMini.left()">←</button>
+web/index.html:278:<button onclick="qfsMini.right()">→</button>
+web/index.html:279:<button onclick="qfsMini.up()">↑</button>
+web/index.html:280:<button onclick="qfsMini.down()">↓</button>
+web/index.html:285:          <button id="editorFileMenuBtn">📄 ملف</button>
+web/index.html:287:            <button id="openEditorBtn">فتح ملف</button>
+web/index.html:288:            <button id="saveEditorBtn">حفظ</button>
+web/index.html:289:            <button id="saveAsBtn">حفظ باسم</button>
+web/index.html:290:            <button id="closeEditorBtn">إغلاق الملف</button>
+web/index.html:295:          <button id="editorEditMenuBtn">✏️ تحرير</button>
+web/index.html:297:            <button id="editorUndo">تراجع</button>
+web/index.html:298:            <button id="editorRedo">إعادة</button>
+web/index.html:299:            <button id="editorSelectAll">تحديد الكل</button>
+web/index.html:300:            <button id="editorFind">بحث</button>
+web/index.html:301:            <button id="editorReplace">بحث واستبدال</button>
+web/index.html:302:            <button id="editorGoto">الانتقال إلى سطر</button>
+web/index.html:307:          <button id="editorToolsMenuBtn">🛠 أدوات</button>
+web/index.html:309:            <button id="previewBtn">معاينة</button>
+web/index.html:310:            <button id="formatBtn">تنسيق</button>
+web/index.html:311:            <button id="editorStatsBtn">إحصائيات</button>
+web/index.html:327:        <div class="tool"><h3>JSON</h3><textarea id="jsonTool"></textarea><div><button id="jsonPretty">تنسيق</button><button id="jsonMin">تصغير</button></div></div>
+web/index.html:328:        <div class="tool"><h3>Base64</h3><textarea id="b64Tool"></textarea><div><button id="b64Enc">ترميز</button><button id="b64Dec">فك</button></div></div>
+web/index.html:329:        <div class="tool"><h3>URL</h3><textarea id="urlTool"></textarea><div><button id="urlEnc">ترميز</button><button id="urlDec">فك</button></div></div>
+web/index.html:330:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+web/index.html:331:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+web/index.html:332:        <div class="tool"><h3>UUID</h3><button id="uuidRun">توليد UUID</button><pre id="uuidOut"></pre></div>
+web/index.html:338:      <div class="console-head"><button id="clearConsole">مسح</button><span>Shell</span></div>
+web/index.html:340:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+web/index.html:344:      <div class="section-head"><h2>سلة المحذوفات</h2><button id="emptyTrash">إفراغ</button></div>
+web/index.html:349:      <div class="section-head"><h2>سجل العمليات</h2><button id="clearActivity">مسح</button></div>
+web/index.html:354:  <div id="modal" class="modal hidden"><div class="modal-card"><div class="modal-head"><h3 id="modalTitle"></h3><button id="modalClose">×</button></div><div id="modalBody"></div></div></div>
+web/index.html:357:    <button id="globalRefresh">↻ تحديث الملفات</button>
+web/index.html:358:    <button id="globalSearch">⌕ بحث</button>
+web/index.html:359:    <button id="globalSelectAll">☑ تحديد الكل</button>
+web/index.html:360:    <button id="globalNewFile">📄 ملف جديد</button>
+web/index.html:361:    <button id="globalNewFolder">📁 مجلد جديد</button>
+web/index.html:362:    <button id="globalSettings">⚙ الإعدادات</button>
+web/index.html:363:    <button id="globalAbout">ℹ حول Quick File Studio</button>
+
+===== JS EVENT HANDLERS =====
+web/js/app.js:182:  if(editorBackBtn) editorBackBtn.onclick = returnFromEditor;
+web/js/app.js:185:  if(editorBack) editorBack.onclick = returnFromEditor;
+web/js/app.js:188:  $('#menuBtn').onclick=()=>{
+web/js/app.js:193:  $$('.nav').forEach(b=>b.onclick=()=>showPage(b.dataset.page));
+web/js/app.js:194:  $('#chooseFolderBtn').onclick=chooseFolder;
+web/js/app.js:195:  $('#refreshBtn').onclick=loadDir;
+web/js/app.js:198:  $('#userFilesChooseBtn').onclick=chooseUserFilesFolder;
+web/js/app.js:199:  $('#userFilesStartBtn').onclick=chooseUserFilesFolder;
+web/js/app.js:200:  $('#userFilesRefreshBtn').onclick=refreshUserFiles;
+web/js/app.js:201:  $('#userFilesSearch').oninput=renderUserFiles;
+web/js/app.js:202:  $('#selectAllMenu').onclick=()=>{state.entries.forEach(e=>state.selected.add(e.uri));renderFiles()};
+web/js/app.js:203:  $('#clearSelectionMenu').onclick=()=>{state.selected.clear();renderFiles()};
+web/js/app.js:204:  $('#newBtn').onclick=newItemMenu;
+web/js/app.js:205:  $('#selectAllMenu').onclick=()=>{state.entries.forEach(e=>state.selected.add(e.uri));renderFiles()};
+web/js/app.js:206:  $('#clearSelectionMenu').onclick=()=>{state.selected.clear();renderFiles()};
+web/js/app.js:207:  $('#sortMenuBtn').onclick=()=>$('#sortMenu').classList.toggle('hidden');
+web/js/app.js:209:    b.onclick=()=>{
+web/js/app.js:216:  $('#searchBtn').onclick=()=>$('#searchRow').classList.toggle('hidden');
+web/js/app.js:217:  $('#fileSearch').oninput=renderFiles;
+web/js/app.js:218:  $('#sortSelect').onchange=e=>{state.sort=e.target.value;renderFiles()};
+web/js/app.js:219:  $('#themeBtn').onclick=toggleTheme;
+web/js/app.js:222:  $('#settingsBtn').onclick=settingsModal;
+web/js/app.js:223:  $('#saveEditorBtn').onclick=saveEditor;
+web/js/app.js:224:  $('#saveAsBtn').onclick=saveAs;
+web/js/app.js:225:  $('#openEditorBtn').onclick=openEditorPicker;
+web/js/app.js:226:  $('#previewBtn').onclick=previewHtml;
+web/js/app.js:227:  $('#formatBtn').onclick=formatEditor;
+web/js/app.js:228:  $('#editor').oninput=()=>{state.editorDirty=true;updateEditorStats(); if(state.settings.autosave){clearTimeout(window.auto);window.auto=setTimeout(saveEditor,900)}};
+web/js/app.js:229:  $('#newProjectBtn').onclick=newProject;
+web/js/app.js:230:  $('#clearConsole').onclick=()=>$('#consoleOut').textContent='';
+web/js/app.js:231:  $('#runCmd').onclick=runCmd;
+web/js/app.js:233:  $('#emptyTrash').onclick=emptyTrash;
+web/js/app.js:234:  $('#clearActivity').onclick=()=>{state.activity=[];localStorage.removeItem('qfs.activity');renderActivity()};
+web/js/app.js:235:  ['jsonPretty','jsonMin','b64Enc','b64Dec','urlEnc','urlDec','regexRun','hashRun','uuidRun'].forEach(id=>$('#'+id).onclick=window[id]);
+web/js/app.js:236:  $('#colorPick').oninput=e=>$('#colorOut').value=e.target.value;
+web/js/app.js:458:    el.addEventListener('click', () => openUserFile(entry));
+web/js/app.js:460:    el.addEventListener('keydown', e => {
+web/js/app.js:495:    rootButton.onclick = async () => {
+web/js/app.js:602:    el.onclick=ev=>{if(ev.ctrlKey||ev.metaKey){state.selected.has(uri)?state.selected.delete(uri):state.selected.add(uri);renderFiles();return}openEntry(e)};
+web/js/app.js:603:    el.oncontextmenu=ev=>{ev.preventDefault();contextMenu(e)};
+web/js/app.js:719:  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parent:state.cwd,name,mime:guessMime(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js:720:  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parent:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js:734:  $('#ctxOpen').onclick=()=>{closeModal();openEntry(e)};
+web/js/app.js:735:  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:736:  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{sourceUri:e.uri,targetParentUri:dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+web/js/app.js:737:  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{sourceUri:e.uri,sourceParentUri:state.cwd,targetParentUri:dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:738:  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{sourceUri:e.uri,targetParentUri:state.cwd});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:739:  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:740:  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+web/js/app.js:741:  $('#ctxDelete').onclick=async()=>{
+web/js/app.js:837:  $('#setSave').onclick=()=>{state.settings.lang=$('#setLang').value;state.settings.autosave=$('#setAuto').checked;localStorage.setItem('qfs.settings',JSON.stringify(state.settings));closeModal();toast('تم حفظ الإعدادات')};
+web/js/app.js:1097:$('#modalClose').onclick=closeModal;$('#modal').onclick=e=>{if(e.target.id==='modal')closeModal()};
+web/js/app.js:1105:window.addEventListener('load', async () => {
+web/js/app.js:1171:    if (b) b.onclick = e => {
+web/js/app.js:1178:    btn.onclick = () => {
+web/js/app.js:1189:    selectAll.onclick = () => {
+web/js/app.js:1198:    clearSelection.onclick = () => {
+web/js/app.js:1206:  if (undo) undo.onclick = () => {
+web/js/app.js:1212:  if (redo) redo.onclick = () => {
+web/js/app.js:1219:    selectEditor.onclick = () => {
+web/js/app.js:1231:    find.onclick = () => {
+web/js/app.js:1253:    replace.onclick = () => {
+web/js/app.js:1272:    gotoLine.onclick = () => {
+web/js/app.js:1298:    stats.onclick = () => {
+web/js/app.js:1322:    closeEditor.onclick = () => {
+web/js/app.js:1340:  document.addEventListener('click', e => {
+web/js/app.js:1346:window.addEventListener('load', () => {
+web/js/app.js:1351:window.addEventListener('load', () => {
+web/js/app.js:1354:  if (refresh) refresh.onclick = () => {
+web/js/app.js:1360:  if (search) search.onclick = () => {
+web/js/app.js:1367:  if (selectAll) selectAll.onclick = () => {
+web/js/app.js:1374:  if (newFile) newFile.onclick = () => {
+web/js/app.js:1380:  if (about) about.onclick = () => {
+web/js/editor/file-actions.js:96:    editor.addEventListener('input', () => {
+web/js/editor/file-actions.js:118:    document.addEventListener('DOMContentLoaded', bindLiveDirtyState, { once: true });
+web/js/editor/shortcuts.js:2:  document.addEventListener('keydown',async e=>{
+web/js/editor/session.js:2:  window.addEventListener('beforeunload',e=>{
+web/js/editor/session.js:11:  document.addEventListener('visibilitychange',()=>{
+web/js/editor-core.js:609:      e.addEventListener('scroll', syncEditorScroll);
+web/js/editor-core.js:611:      e.addEventListener('input', () => {
+web/js/editor-core.js:617:      e.addEventListener('scroll', updateHighlight);
+web/js/editor-core.js:619:      e.addEventListener('click', updateCurrentLine);
+web/js/editor-core.js:620:      e.addEventListener('keyup', updateCurrentLine);
+web/js/editor-core.js:621:      e.addEventListener('select', updateCurrentLine);
+web/js/editor-core.js:985:      e.addEventListener(ev,updateStats);
+web/js/editor-core.js:988:    e.addEventListener('keydown',ev=>{
+web/js/editor-core.js:1085:  document.addEventListener('DOMContentLoaded',bind);
+web/js/editor-core.js:1161:      e.addEventListener(eventName, updateCaretStatus);
+web/js/editor-core.js:1164:    e.addEventListener('select', updateCaretStatus);
+web/js/editor-core.js:1177:    document.addEventListener('DOMContentLoaded', bindCaretStatus, {once:true});
+web/js/updater.js:280:      later.onclick = () => {
+web/js/updater.js:287:      now.onclick = async () => {
+web/js/core/editor-state.js:124:        el.onclick=(event)=>{
+web/js/core/editor-state.js:139:      plus.onclick=()=>{
+web/js/editor.js:181:      btn.onclick = e => {
+web/js/editor.js:193:    $('#editorNewTab').onclick = () => newTab();
+web/js/editor.js:376:    e.addEventListener('input', () => {
+web/js/editor.js:381:    e.addEventListener('keydown', ev => {
+web/js/editor.js:473:  window.addEventListener('DOMContentLoaded', init);
+
+===== JS NATIVE BRIDGE CALLS =====
+web/js/app.js:7:  settings: JSON.parse(localStorage.getItem('qfs.settings') || '{"theme":"dark","lang":"ar","autosave":true}'),
+web/js/app.js:8:  activity: JSON.parse(localStorage.getItem('qfs.activity') || '[]'),
+web/js/app.js:9:  trash: JSON.parse(localStorage.getItem('qfs.trash') || '[]'),
+web/js/app.js:10:  projects: JSON.parse(localStorage.getItem('qfs.projects') || '[]')
+web/js/app.js:15:const native = () => typeof window.AndroidBridge !== 'undefined';
+web/js/app.js:19:function log(action, detail=''){ state.activity.unshift({time:new Date().toISOString(),action,detail}); state.activity=state.activity.slice(0,300); localStorage.setItem('qfs.activity',JSON.stringify(state.activity)); renderActivity(); }
+web/js/app.js:20:function call(name,args={}) {
+web/js/app.js:24:    window.__qfsCallbacks ||= {};
+web/js/app.js:25:    window.__qfsCallbacks[id]={resolve,reject};
+web/js/app.js:26:    try { window.AndroidBridge.call(name, JSON.stringify({...args,id})); } catch(e){ reject(e); }
+web/js/app.js:29:window.qfsResult = function(id, ok, payload) {
+web/js/app.js:30:  const cb = window.__qfsCallbacks?.[id];
+web/js/app.js:33:  delete window.__qfsCallbacks[id];
+web/js/app.js:87:    'qfs.settings',
+web/js/app.js:108:      const saved=await call('getWorkspace');
+web/js/app.js:197:  // QFS 1.3.0 - قسم ملفاتك
+web/js/app.js:234:  $('#clearActivity').onclick=()=>{state.activity=[];localStorage.removeItem('qfs.activity');renderActivity()};
+web/js/app.js:239:/* QFS 1.3.0 - User Files */
+web/js/app.js:248:    const r = await call('chooseUserFilesFolder');
+web/js/app.js:275:  const r = await call('list', {
+web/js/app.js:307:    await call('rename',{
+web/js/app.js:330:    await call('delete',{
+web/js/app.js:519:    await call('openExternal', {
+web/js/app.js:565:      const r=await call('chooseFolder');
+web/js/app.js:574:    const r=await call('list', {uri});
+web/js/app.js:591:  let a=[...state.entries].filter(e => e.name !== '.qfs_trash');
+web/js/app.js:625:  else {try{await call('openExternal',{uri:e.uri,mime:e.mime||guessMime(e.name)});log('فتح خارجي',e.name)}catch(err){toast(err.message)}}
+web/js/app.js:632:    const r=await call('read',{uri:e.uri});
+web/js/app.js:659:    const r = await call('chooseFile');
+web/js/app.js:677:      await call('openExternal',{
+web/js/app.js:700:  try{await call('write',{uri:state.editorUri,content:$('#editor').value});state.editorDirty=false;log('حفظ',state.editorName);toast('تم الحفظ')}catch(e){toast(e.message)}
+web/js/app.js:704:  try{const r=await call('createFile',{parent:state.cwd,name,mime:guessMime(name)});state.editorUri=r.uri;state.editorName=name;state.editorDirty=false;await loadDir();log('حفظ باسم',name)}catch(e){toast(e.message)}
+web/js/app.js:719:  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parent:state.cwd,name,mime:guessMime(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js:720:  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parent:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js:725:  if(e && e.name === '.qfs_trash'){
+web/js/app.js:735:  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:736:  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{sourceUri:e.uri,targetParentUri:dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+web/js/app.js:737:  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{sourceUri:e.uri,sourceParentUri:state.cwd,targetParentUri:dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:738:  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{sourceUri:e.uri,targetParentUri:state.cwd});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:739:  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:740:  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+web/js/app.js:744:  if(e.name === '.qfs_trash'){
+web/js/app.js:761:    const moved=await call('move',{
+web/js/app.js:786:      'qfs.trash',
+web/js/app.js:807:    const p=await call('createFolder',{parent:state.cwd,name});
+web/js/app.js:810:      await call('createFile',{parentUri:dir,name:n,mime:m});
+web/js/app.js:811:    state.projects.unshift({name,uri:dir,createdAt:Date.now()});localStorage.setItem('qfs.projects',JSON.stringify(state.projects));log('إنشاء مشروع',name);renderProjects();loadDir();
+web/js/app.js:821:  try{const r=await call('exec',{command:cmd,timeout:10000});$('#consoleOut').textContent+=`${r.output||''}${r.error?('\\n'+r.error):''}\\n`;log('طرفية',cmd)}catch(e){$('#consoleOut').textContent+=`ERROR: ${e.message}\\n`}
+web/js/app.js:837:  $('#setSave').onclick=()=>{state.settings.lang=$('#setLang').value;state.settings.autosave=$('#setAuto').checked;localStorage.setItem('qfs.settings',JSON.stringify(state.settings));closeModal();toast('تم حفظ الإعدادات')};
+web/js/app.js:844:  const saved = localStorage.getItem('qfs.trashFolderUri') || '';
+web/js/app.js:848:      const existing = await call('list', {
+web/js/app.js:857:        x => x.uri === saved && x.name === '.qfs_trash'
+web/js/app.js:867:    localStorage.removeItem('qfs.trashFolderUri');
+web/js/app.js:871:    const existing = await call('list', {
+web/js/app.js:880:      x => x.name === '.qfs_trash' && x.dir
+web/js/app.js:885:        'qfs.trashFolderUri',
+web/js/app.js:895:  const r = await call('createFolder', {
+web/js/app.js:897:    name: '.qfs_trash'
+web/js/app.js:909:    'qfs.trashFolderUri',
+web/js/app.js:957:    const moved = await call('move', {
+web/js/app.js:970:      const renamed = await call('rename', {
+web/js/app.js:983:      'qfs.trash',
+web/js/app.js:1018:    await call('delete', {
+web/js/app.js:1025:      'qfs.trash',
+web/js/app.js:1060:      await call('delete', {
+web/js/app.js:1074:    'qfs.trash',
+web/js/app.js:1109:    if (window.QFSi18n) {
+web/js/app.js:1110:      await QFSi18n.load(
+web/js/app.js:1111:        localStorage.getItem('qfs.lang') || 'ar'
+web/js/app.js:1115:    if (window.QFSUpdater) {
+web/js/app.js:1118:        await QFSUpdater.check();
+web/js/app.js:1121:        QFSUpdater.show(
+web/js/editor/file-actions.js:5:    const existing=QFSEditor.tabs.findIndex(
+web/js/editor/file-actions.js:10:      QFSEditor.activate(existing);
+web/js/editor/file-actions.js:14:    QFSEditor.newTab();
+web/js/editor/file-actions.js:15:    loadEditorTab(QFSEditor.current());
+web/js/editor/file-actions.js:23:    editor.readOnly=QFSEditor.settings.readOnly;
+web/js/editor/file-actions.js:30:    if(window.qfsEditorCore){
+web/js/editor/file-actions.js:31:      qfsEditorCore.updateStats();
+web/js/editor/file-actions.js:36:    const tab=QFSEditor.current();
+web/js/editor/file-actions.js:51:      await call('write',{
+web/js/editor/file-actions.js:62:      QFSEditor.render();
+web/js/editor/file-actions.js:73:    QFSEditor.close();
+web/js/editor/file-actions.js:82:   QFS 1.3.0 - LIVE DIRTY STATE
+web/js/editor/file-actions.js:90:    if (!editor || editor.dataset.qfsDirtyBound === '1') {
+web/js/editor/file-actions.js:94:    editor.dataset.qfsDirtyBound = '1';
+web/js/editor/file-actions.js:97:      const tab = QFSEditor.current();
+web/js/editor/file-actions.js:106:        QFSEditor.render();
+web/js/editor/file-actions.js:109:      if (typeof window.QFSUpdateCaretStatus === 'function') {
+web/js/editor/file-actions.js:110:        window.QFSUpdateCaretStatus();
+web/js/editor/file-actions.js:115:  window.QFSBindLiveDirtyState = bindLiveDirtyState;
+web/js/editor/file-actions.js:124:/* QFS 1.3.0 - activate live dirty tracking */
+web/js/editor/file-actions.js:125:if (typeof window.QFSBindLiveDirtyState === 'function') {
+web/js/editor/file-actions.js:126:  window.QFSBindLiveDirtyState();
+web/js/editor/shortcuts.js:27:      qfsEditorCore?.find();
+web/js/editor/shortcuts.js:32:      qfsEditorCore?.replace();
+web/js/editor/shortcuts.js:37:      qfsEditorCore?.gotoLine();
+web/js/editor/session.js:3:    const dirty=QFSEditor?.tabs?.some(t=>t.dirty);
+web/js/editor/session.js:13:      const data=QFSEditor.tabs.map(t=>({
+web/js/editor/session.js:20:        'qfs.openTabs',
+web/js/editor/mini-toolbar.js:16:  window.qfsMini={
+web/js/i18n.js:3:window.QFSi18n = (() => {
+web/js/i18n.js:12:  let lang = localStorage.getItem('qfs.lang') || 'ar';
+web/js/i18n.js:28:      localStorage.setItem('qfs.lang', code);
+web/js/editor-core.js:7:    fontSize: Number(localStorage.getItem('qfs.editor.fontSize') || 15),
+web/js/editor-core.js:8:    wrap: localStorage.getItem('qfs.editor.wrap') !== 'false',
+web/js/editor-core.js:157:    localStorage.setItem('qfs.editor.wrap',editorState.wrap);
+web/js/editor-core.js:173:      'qfs.editor.fontSize',
+web/js/editor-core.js:305:     QFS_SYNTAX_V1
+web/js/editor-core.js:308:  const QFS_SYNTAX_V1 = true;
+web/js/editor-core.js:372:    return `<span class="qfs-token-${cls}">${text}</span>`;
+web/js/editor-core.js:558:    const layer = $('qfsHighlight');
+web/js/editor-core.js:571:     QFS_PRO_EDITOR_V1
+web/js/editor-core.js:579:    let gutter = document.getElementById('qfsLineNumbers');
+web/js/editor-core.js:581:    if(!layout || !layout.classList.contains('qfs-editor-layout')){
+web/js/editor-core.js:583:      layout.className = 'qfs-editor-layout';
+web/js/editor-core.js:586:      wrap.className = 'qfs-editor-wrap';
+web/js/editor-core.js:593:    gutter = document.getElementById('qfsLineNumbers');
+web/js/editor-core.js:597:      gutter.id = 'qfsLineNumbers';
+web/js/editor-core.js:598:      gutter.className = 'qfs-line-numbers';
+web/js/editor-core.js:606:    if(!e.dataset.qfsVisualBound){
+web/js/editor-core.js:607:      e.dataset.qfsVisualBound = '1';
+web/js/editor-core.js:627:    const gutter = document.getElementById('qfsLineNumbers');
+web/js/editor-core.js:650:    const gutter = document.getElementById('qfsLineNumbers');
+web/js/editor-core.js:665:    const gutter = document.getElementById('qfsLineNumbers');
+web/js/editor-core.js:1066:  window.qfsEditorCore={
+web/js/editor-core.js:1090:   QFS 1.3.0 - EDITOR CARET STATUS
+web/js/editor-core.js:1127:    const gutter = document.querySelector('.qfs-line-numbers');
+web/js/editor-core.js:1148:    if(!e || e.dataset.qfsCaretStatus === '1'){
+web/js/editor-core.js:1152:    e.dataset.qfsCaretStatus = '1';
+web/js/editor-core.js:1173:  window.QFSUpdateCaretStatus = updateCaretStatus;
+web/js/editor-core.js:1174:  window.QFSBindCaretStatus = bindCaretStatus;
+web/js/updater.js:3:window.QFSUpdater = (() => {
+web/js/updater.js:12:  async function nativeCall(command, args = {}) {
+web/js/updater.js:14:      return window.call(command, args);
+web/js/updater.js:17:    if (window.AndroidBridge &&
+web/js/updater.js:18:        typeof window.AndroidBridge.call === 'function') {
+web/js/updater.js:30:        window.__qfsCallbacks ||= {};
+web/js/updater.js:32:        window.__qfsCallbacks[id] = {
+web/js/updater.js:38:          window.AndroidBridge.call(
+web/js/updater.js:46:          delete window.__qfsCallbacks[id];
+web/js/updater.js:57:      const info = await nativeCall('updateAppInfo');
+web/js/updater.js:90:        await nativeCall(
+web/js/updater.js:131:        await nativeCall(
+web/js/updater.js:147:          await nativeCall(
+web/js/core/editor-state.js:4:  window.QFSEditor = {
+web/js/core/editor-state.js:107:      const box=document.getElementById('qfsTabs');
+web/js/core/editor-state.js:115:        el.className='qfs-tab'+
+web/js/core/editor-state.js:137:      plus.className='qfs-tab-add';
+web/js/editor.js:453:  window.QFSEditor = {
+
+===== ALL BRIDGE COMMANDS — ACTIVE JAVA =====
+
+===== BRIDGE JAVASCRIPT INTERFACE METHODS =====
+grep: Unmatched ( or \(
+
+===== MAIN ACTIVITY BRIDGE CONNECTION =====
+22:import com.quickfilestudio.app.bridge.AndroidBridge;
+72:        s.setJavaScriptEnabled(true);
+86:        AndroidBridge bridge = new AndroidBridge(
+88:                new AndroidBridge.Callback() {
+101:        webView.addJavascriptInterface(bridge, "AndroidBridge");
+102:        webView.addJavascriptInterface(bridge, "QFS");
+104:        webView.loadUrl("file:///android_asset/www/index.html");
+567:    public class LegacyAndroidBridge {
+571:        LegacyAndroidBridge(Context context) {
+1637:                    "AndroidBridge"
+
+===== WEBVIEW CONSOLE / ERRORS =====
+web/js/app.js.before-file-picker:25:    try { window.AndroidBridge.call(name, JSON.stringify({...args,id})); } catch(e){ reject(e); }
+web/js/app.js.before-file-picker:38:    }catch(e){}
+web/js/app.js.before-file-picker:49:  }catch(e){
+web/js/app.js.before-file-picker:68:    }catch(e){console.warn(e)}
+web/js/app.js.before-file-picker:106:  }catch(e){toast(e.message)}
+web/js/app.js.before-file-picker:122:  }catch(e){toast(e.message)}
+web/js/app.js.before-file-picker:150:  else {try{await call('openExternal',{uri:e.uri,mime:e.mime||guessMime(e.name)});log('فتح خارجي',e.name)}catch(err){toast(err.message)}}
+web/js/app.js.before-file-picker:157:  catch(err){toast(err.message)}
+web/js/app.js.before-file-picker:165:  try{await call('write',{uri:state.editorUri,text:$('#editor').value});state.editorDirty=false;log('حفظ',state.editorName);toast('تم الحفظ')}catch(e){toast(e.message)}
+web/js/app.js.before-file-picker:169:  try{const r=await call('createFile',{parent:state.cwd,name,mime:guessMime(name),text:$('#editor').value});state.editorUri=r.uri;state.editorName=name;state.editorDirty=false;await loadDir();log('حفظ باسم',name)}catch(e){toast(e.message)}
+web/js/app.js.before-file-picker:179:  try{if(n.endsWith('.json'))$('#editor').value=JSON.stringify(JSON.parse(v),null,2);else if(n.endsWith('.html'))$('#editor').value=v.replace(/></g,'>\\n<');else return toast('لا يوجد منسق مدمج لهذا النوع');updateEditorStats()}catch(e){toast('صيغة غير صحيحة')}
+web/js/app.js.before-file-picker:184:  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parent:state.cwd,name,mime:guessMime(name),text:defaultContent(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.before-file-picker:185:  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parent:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.before-file-picker:187:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+web/js/app.js.before-file-picker:195:  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-file-picker:196:  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{uri:e.uri,dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+web/js/app.js.before-file-picker:197:  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{uri:e.uri,dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-file-picker:198:  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{uri:e.uri});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-file-picker:199:  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-file-picker:200:  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+web/js/app.js.before-file-picker:201:  $('#ctxDelete').onclick=async()=>{closeModal();if(!confirm(`حذف ${e.name}؟`))return;try{const r=await call('delete',{uri:e.uri});state.trash.unshift({name:e.name,uri:e.uri,deletedAt:Date.now(),restorable:r.restorable!==false});localStorage.setItem('qfs.trash',JSON.stringify(state.trash));log('حذف',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-file-picker:212:  }catch(e){toast(e.message)}
+web/js/app.js.before-file-picker:221:  try{const r=await call('exec',{command:cmd,timeout:10000});$('#consoleOut').textContent+=`${r.output||''}${r.error?('\\n'+r.error):''}\\n`;log('طرفية',cmd)}catch(e){$('#consoleOut').textContent+=`ERROR: ${e.message}\\n`}
+web/js/app.js.before-file-picker:225:function jsonPretty(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value),null,2)}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.before-file-picker:226:function jsonMin(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value))}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.before-file-picker:227:function b64Enc(){try{$('#b64Tool').value=btoa(unescape(encodeURIComponent($('#b64Tool').value)))}catch(e){toast(e.message)}}
+web/js/app.js.before-file-picker:228:function b64Dec(){try{$('#b64Tool').value=decodeURIComponent(escape(atob($('#b64Tool').value)))}catch(e){toast('Base64 غير صحيح')}}
+web/js/app.js.before-file-picker:230:function urlDec(){try{$('#urlTool').value=decodeURIComponent($('#urlTool').value)}catch(e){toast('URL غير صحيح')}}
+web/js/app.js.before-file-picker:231:function regexRun(){try{const r=new RegExp($('#regexPattern').value,'g');const s=$('#regexText').value;$('#regexOut').textContent=JSON.stringify([...s.matchAll(r)].map(x=>({match:x[0],index:x.index})),null,2)}catch(e){$('#regexOut').textContent=e.message}}
+web/js/app.js.before-file-picker:240:window.restoreTrash=async i=>{const x=state.trash[i];try{await call('restore',{uri:x.uri,parent:state.cwd,name:x.name});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('استعادة',x.name);loadDir()}catch(e){toast('لا يمكن الاستعادة: '+e.message)}}
+web/js/app.js.before-file-picker:241:window.permanentTrash=async i=>{const x=state.trash[i];try{await call('deletePermanent',{uri:x.uri});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('حذف نهائي',x.name)}catch(e){toast(e.message)}}
+web/js/app.js.before-file-picker:276:  } catch (error) {
+web/js/app.js.before-big-ui:25:    try { window.AndroidBridge.call(name, JSON.stringify({...args,id})); } catch(e){ reject(e); }
+web/js/app.js.before-big-ui:38:    }catch(e){}
+web/js/app.js.before-big-ui:49:  }catch(e){
+web/js/app.js.before-big-ui:68:    }catch(e){console.warn(e)}
+web/js/app.js.before-big-ui:106:  }catch(e){toast(e.message)}
+web/js/app.js.before-big-ui:122:  }catch(e){toast(e.message)}
+web/js/app.js.before-big-ui:150:  else {try{await call('openExternal',{uri:e.uri,mime:e.mime||guessMime(e.name)});log('فتح خارجي',e.name)}catch(err){toast(err.message)}}
+web/js/app.js.before-big-ui:157:  catch(err){toast(err.message)}
+web/js/app.js.before-big-ui:165:  try{await call('write',{uri:state.editorUri,text:$('#editor').value});state.editorDirty=false;log('حفظ',state.editorName);toast('تم الحفظ')}catch(e){toast(e.message)}
+web/js/app.js.before-big-ui:169:  try{const r=await call('createFile',{parent:state.cwd,name,mime:guessMime(name),text:$('#editor').value});state.editorUri=r.uri;state.editorName=name;state.editorDirty=false;await loadDir();log('حفظ باسم',name)}catch(e){toast(e.message)}
+web/js/app.js.before-big-ui:179:  try{if(n.endsWith('.json'))$('#editor').value=JSON.stringify(JSON.parse(v),null,2);else if(n.endsWith('.html'))$('#editor').value=v.replace(/></g,'>\\n<');else return toast('لا يوجد منسق مدمج لهذا النوع');updateEditorStats()}catch(e){toast('صيغة غير صحيحة')}
+web/js/app.js.before-big-ui:184:  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parent:state.cwd,name,mime:guessMime(name),text:defaultContent(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.before-big-ui:185:  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parent:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.before-big-ui:187:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+web/js/app.js.before-big-ui:195:  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-big-ui:196:  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{uri:e.uri,dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+web/js/app.js.before-big-ui:197:  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{uri:e.uri,dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-big-ui:198:  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{uri:e.uri});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-big-ui:199:  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-big-ui:200:  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+web/js/app.js.before-big-ui:201:  $('#ctxDelete').onclick=async()=>{closeModal();if(!confirm(`حذف ${e.name}؟`))return;try{const r=await call('delete',{uri:e.uri});state.trash.unshift({name:e.name,uri:e.uri,deletedAt:Date.now(),restorable:r.restorable!==false});localStorage.setItem('qfs.trash',JSON.stringify(state.trash));log('حذف',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-big-ui:212:  }catch(e){toast(e.message)}
+web/js/app.js.before-big-ui:221:  try{const r=await call('exec',{command:cmd,timeout:10000});$('#consoleOut').textContent+=`${r.output||''}${r.error?('\\n'+r.error):''}\\n`;log('طرفية',cmd)}catch(e){$('#consoleOut').textContent+=`ERROR: ${e.message}\\n`}
+web/js/app.js.before-big-ui:225:function jsonPretty(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value),null,2)}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.before-big-ui:226:function jsonMin(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value))}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.before-big-ui:227:function b64Enc(){try{$('#b64Tool').value=btoa(unescape(encodeURIComponent($('#b64Tool').value)))}catch(e){toast(e.message)}}
+web/js/app.js.before-big-ui:228:function b64Dec(){try{$('#b64Tool').value=decodeURIComponent(escape(atob($('#b64Tool').value)))}catch(e){toast('Base64 غير صحيح')}}
+web/js/app.js.before-big-ui:230:function urlDec(){try{$('#urlTool').value=decodeURIComponent($('#urlTool').value)}catch(e){toast('URL غير صحيح')}}
+web/js/app.js.before-big-ui:231:function regexRun(){try{const r=new RegExp($('#regexPattern').value,'g');const s=$('#regexText').value;$('#regexOut').textContent=JSON.stringify([...s.matchAll(r)].map(x=>({match:x[0],index:x.index})),null,2)}catch(e){$('#regexOut').textContent=e.message}}
+web/js/app.js.before-big-ui:240:window.restoreTrash=async i=>{const x=state.trash[i];try{await call('restore',{uri:x.uri,parent:state.cwd,name:x.name});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('استعادة',x.name);loadDir()}catch(e){toast('لا يمكن الاستعادة: '+e.message)}}
+web/js/app.js.before-big-ui:241:window.permanentTrash=async i=>{const x=state.trash[i];try{await call('deletePermanent',{uri:x.uri});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('حذف نهائي',x.name)}catch(e){toast(e.message)}}
+web/js/app.js:26:    try { window.AndroidBridge.call(name, JSON.stringify({...args,id})); } catch(e){ reject(e); }
+web/js/app.js:38:  } catch (_) {}
+web/js/app.js:127:        }catch(e){
+web/js/app.js:148:        }catch(e){
+web/js/app.js:174:    }catch(e){
+web/js/app.js:264:  }catch(e){
+web/js/app.js:265:    console.error(e);
+web/js/app.js:314:  }catch(e){
+web/js/app.js:315:    console.error(e);
+web/js/app.js:336:  }catch(e){
+web/js/app.js:337:    console.error(e);
+web/js/app.js:352:  }catch(e){
+web/js/app.js:525:  }catch(e){
+web/js/app.js:569:  }catch(e){toast(e.message)}
+web/js/app.js:585:  }catch(e){toast(e.message)}
+web/js/app.js:625:  else {try{await call('openExternal',{uri:e.uri,mime:e.mime||guessMime(e.name)});log('فتح خارجي',e.name)}catch(err){toast(err.message)}}
+web/js/app.js:646:  }catch(err){
+web/js/app.js:683:  }catch(e){
+web/js/app.js:700:  try{await call('write',{uri:state.editorUri,content:$('#editor').value});state.editorDirty=false;log('حفظ',state.editorName);toast('تم الحفظ')}catch(e){toast(e.message)}
+web/js/app.js:704:  try{const r=await call('createFile',{parent:state.cwd,name,mime:guessMime(name)});state.editorUri=r.uri;state.editorName=name;state.editorDirty=false;await loadDir();log('حفظ باسم',name)}catch(e){toast(e.message)}
+web/js/app.js:714:  try{if(n.endsWith('.json'))$('#editor').value=JSON.stringify(JSON.parse(v),null,2);else if(n.endsWith('.html'))$('#editor').value=v.replace(/></g,'>\\n<');else return toast('لا يوجد منسق مدمج لهذا النوع');updateEditorStats()}catch(e){toast('صيغة غير صحيحة')}
+web/js/app.js:719:  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parent:state.cwd,name,mime:guessMime(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js:720:  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parent:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js:722:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+web/js/app.js:735:  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:736:  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{sourceUri:e.uri,targetParentUri:dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+web/js/app.js:737:  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{sourceUri:e.uri,sourceParentUri:state.cwd,targetParentUri:dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:738:  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{sourceUri:e.uri,targetParentUri:state.cwd});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:739:  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:740:  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+web/js/app.js:795:  }catch(x){
+web/js/app.js:812:  }catch(e){toast(e.message)}
+web/js/app.js:821:  try{const r=await call('exec',{command:cmd,timeout:10000});$('#consoleOut').textContent+=`${r.output||''}${r.error?('\\n'+r.error):''}\\n`;log('طرفية',cmd)}catch(e){$('#consoleOut').textContent+=`ERROR: ${e.message}\\n`}
+web/js/app.js:825:function jsonPretty(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value),null,2)}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js:826:function jsonMin(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value))}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js:827:function b64Enc(){try{$('#b64Tool').value=btoa(unescape(encodeURIComponent($('#b64Tool').value)))}catch(e){toast(e.message)}}
+web/js/app.js:828:function b64Dec(){try{$('#b64Tool').value=decodeURIComponent(escape(atob($('#b64Tool').value)))}catch(e){toast('Base64 غير صحيح')}}
+web/js/app.js:830:function urlDec(){try{$('#urlTool').value=decodeURIComponent($('#urlTool').value)}catch(e){toast('URL غير صحيح')}}
+web/js/app.js:831:function regexRun(){try{const r=new RegExp($('#regexPattern').value,'g');const s=$('#regexText').value;$('#regexOut').textContent=JSON.stringify([...s.matchAll(r)].map(x=>({match:x[0],index:x.index})),null,2)}catch(e){$('#regexOut').textContent=e.message}}
+web/js/app.js:863:    }catch(e){
+web/js/app.js:891:  }catch(e){
+web/js/app.js:996:  }catch(e){
+web/js/app.js:997:    console.error(e);
+web/js/app.js:1034:  }catch(e){
+web/js/app.js:1035:    console.error(e);
+web/js/app.js:1065:    }catch(e){
+web/js/app.js:1067:      console.error('Trash delete failed:', item, e);
+web/js/app.js:1127:  } catch (error) {
+web/js/app.js.backup-sidebar-fix:25:    try { window.AndroidBridge.call(name, JSON.stringify({...args,id})); } catch(e){ reject(e); }
+web/js/app.js.backup-sidebar-fix:37:  } catch (_) {}
+web/js/app.js.backup-sidebar-fix:61:    }catch(e){console.warn(e)}
+web/js/app.js.backup-sidebar-fix:111:  }catch(e){toast(e.message)}
+web/js/app.js.backup-sidebar-fix:127:  }catch(e){toast(e.message)}
+web/js/app.js.backup-sidebar-fix:155:  else {try{await call('openExternal',{uri:e.uri,mime:e.mime||guessMime(e.name)});log('فتح خارجي',e.name)}catch(err){toast(err.message)}}
+web/js/app.js.backup-sidebar-fix:162:  catch(err){toast(err.message)}
+web/js/app.js.backup-sidebar-fix:196:  }catch(e){
+web/js/app.js.backup-sidebar-fix:202:  try{await call('write',{uri:state.editorUri,content:$('#editor').value});state.editorDirty=false;log('حفظ',state.editorName);toast('تم الحفظ')}catch(e){toast(e.message)}
+web/js/app.js.backup-sidebar-fix:206:  try{const r=await call('createFile',{parentUri:state.cwd,name,mime:guessMime(name)});state.editorUri=r.uri;state.editorName=name;state.editorDirty=false;await loadDir();log('حفظ باسم',name)}catch(e){toast(e.message)}
+web/js/app.js.backup-sidebar-fix:216:  try{if(n.endsWith('.json'))$('#editor').value=JSON.stringify(JSON.parse(v),null,2);else if(n.endsWith('.html'))$('#editor').value=v.replace(/></g,'>\\n<');else return toast('لا يوجد منسق مدمج لهذا النوع');updateEditorStats()}catch(e){toast('صيغة غير صحيحة')}
+web/js/app.js.backup-sidebar-fix:221:  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parentUri:state.cwd,name,mime:guessMime(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.backup-sidebar-fix:222:  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parentUri:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.backup-sidebar-fix:224:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+web/js/app.js.backup-sidebar-fix:232:  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.backup-sidebar-fix:233:  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{sourceUri:e.uri,targetParentUri:dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+web/js/app.js.backup-sidebar-fix:234:  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{sourceUri:e.uri,targetParentUri:dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.backup-sidebar-fix:235:  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{sourceUri:e.uri,targetParentUri:state.cwd});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.backup-sidebar-fix:236:  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.backup-sidebar-fix:237:  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+web/js/app.js.backup-sidebar-fix:238:  $('#ctxDelete').onclick=async()=>{closeModal();if(!confirm(`حذف ${e.name}؟`))return;try{const r=await call('delete',{uri:e.uri});state.trash.unshift({name:e.name,uri:e.uri,deletedAt:Date.now(),restorable:r.restorable!==false});localStorage.setItem('qfs.trash',JSON.stringify(state.trash));log('حذف',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.backup-sidebar-fix:249:  }catch(e){toast(e.message)}
+web/js/app.js.backup-sidebar-fix:258:  try{const r=await call('exec',{command:cmd,timeout:10000});$('#consoleOut').textContent+=`${r.output||''}${r.error?('\\n'+r.error):''}\\n`;log('طرفية',cmd)}catch(e){$('#consoleOut').textContent+=`ERROR: ${e.message}\\n`}
+web/js/app.js.backup-sidebar-fix:262:function jsonPretty(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value),null,2)}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.backup-sidebar-fix:263:function jsonMin(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value))}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.backup-sidebar-fix:264:function b64Enc(){try{$('#b64Tool').value=btoa(unescape(encodeURIComponent($('#b64Tool').value)))}catch(e){toast(e.message)}}
+web/js/app.js.backup-sidebar-fix:265:function b64Dec(){try{$('#b64Tool').value=decodeURIComponent(escape(atob($('#b64Tool').value)))}catch(e){toast('Base64 غير صحيح')}}
+web/js/app.js.backup-sidebar-fix:267:function urlDec(){try{$('#urlTool').value=decodeURIComponent($('#urlTool').value)}catch(e){toast('URL غير صحيح')}}
+web/js/app.js.backup-sidebar-fix:268:function regexRun(){try{const r=new RegExp($('#regexPattern').value,'g');const s=$('#regexText').value;$('#regexOut').textContent=JSON.stringify([...s.matchAll(r)].map(x=>({match:x[0],index:x.index})),null,2)}catch(e){$('#regexOut').textContent=e.message}}
+web/js/app.js.backup-sidebar-fix:277:window.restoreTrash=async i=>{const x=state.trash[i];try{await call('restore',{uri:x.uri,parent:state.cwd,name:x.name});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('استعادة',x.name);loadDir()}catch(e){toast('لا يمكن الاستعادة: '+e.message)}}
+web/js/app.js.backup-sidebar-fix:278:window.permanentTrash=async i=>{const x=state.trash[i];try{await call('deletePermanent',{uri:x.uri});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('حذف نهائي',x.name)}catch(e){toast(e.message)}}
+web/js/app.js.backup-sidebar-fix:313:  } catch (error) {
+web/js/app.js.before-theme-1.2.0:25:    try { window.AndroidBridge.call(name, JSON.stringify({...args,id})); } catch(e){ reject(e); }
+web/js/app.js.before-theme-1.2.0:37:  } catch (_) {}
+web/js/app.js.before-theme-1.2.0:61:    }catch(e){console.warn(e)}
+web/js/app.js.before-theme-1.2.0:115:  }catch(e){toast(e.message)}
+web/js/app.js.before-theme-1.2.0:131:  }catch(e){toast(e.message)}
+web/js/app.js.before-theme-1.2.0:159:  else {try{await call('openExternal',{uri:e.uri,mime:e.mime||guessMime(e.name)});log('فتح خارجي',e.name)}catch(err){toast(err.message)}}
+web/js/app.js.before-theme-1.2.0:166:  catch(err){toast(err.message)}
+web/js/app.js.before-theme-1.2.0:200:  }catch(e){
+web/js/app.js.before-theme-1.2.0:206:  try{await call('write',{uri:state.editorUri,content:$('#editor').value});state.editorDirty=false;log('حفظ',state.editorName);toast('تم الحفظ')}catch(e){toast(e.message)}
+web/js/app.js.before-theme-1.2.0:210:  try{const r=await call('createFile',{parentUri:state.cwd,name,mime:guessMime(name)});state.editorUri=r.uri;state.editorName=name;state.editorDirty=false;await loadDir();log('حفظ باسم',name)}catch(e){toast(e.message)}
+web/js/app.js.before-theme-1.2.0:220:  try{if(n.endsWith('.json'))$('#editor').value=JSON.stringify(JSON.parse(v),null,2);else if(n.endsWith('.html'))$('#editor').value=v.replace(/></g,'>\\n<');else return toast('لا يوجد منسق مدمج لهذا النوع');updateEditorStats()}catch(e){toast('صيغة غير صحيحة')}
+web/js/app.js.before-theme-1.2.0:225:  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parentUri:state.cwd,name,mime:guessMime(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.before-theme-1.2.0:226:  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parentUri:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.before-theme-1.2.0:228:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+web/js/app.js.before-theme-1.2.0:236:  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-theme-1.2.0:237:  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{sourceUri:e.uri,targetParentUri:dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+web/js/app.js.before-theme-1.2.0:238:  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{sourceUri:e.uri,targetParentUri:dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-theme-1.2.0:239:  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{sourceUri:e.uri,targetParentUri:state.cwd});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-theme-1.2.0:240:  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-theme-1.2.0:241:  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+web/js/app.js.before-theme-1.2.0:242:  $('#ctxDelete').onclick=async()=>{closeModal();if(!confirm(`حذف ${e.name}؟`))return;try{const r=await call('delete',{uri:e.uri});state.trash.unshift({name:e.name,uri:e.uri,deletedAt:Date.now(),restorable:r.restorable!==false});localStorage.setItem('qfs.trash',JSON.stringify(state.trash));log('حذف',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-theme-1.2.0:253:  }catch(e){toast(e.message)}
+web/js/app.js.before-theme-1.2.0:262:  try{const r=await call('exec',{command:cmd,timeout:10000});$('#consoleOut').textContent+=`${r.output||''}${r.error?('\\n'+r.error):''}\\n`;log('طرفية',cmd)}catch(e){$('#consoleOut').textContent+=`ERROR: ${e.message}\\n`}
+web/js/app.js.before-theme-1.2.0:266:function jsonPretty(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value),null,2)}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.before-theme-1.2.0:267:function jsonMin(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value))}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.before-theme-1.2.0:268:function b64Enc(){try{$('#b64Tool').value=btoa(unescape(encodeURIComponent($('#b64Tool').value)))}catch(e){toast(e.message)}}
+web/js/app.js.before-theme-1.2.0:269:function b64Dec(){try{$('#b64Tool').value=decodeURIComponent(escape(atob($('#b64Tool').value)))}catch(e){toast('Base64 غير صحيح')}}
+web/js/app.js.before-theme-1.2.0:271:function urlDec(){try{$('#urlTool').value=decodeURIComponent($('#urlTool').value)}catch(e){toast('URL غير صحيح')}}
+web/js/app.js.before-theme-1.2.0:272:function regexRun(){try{const r=new RegExp($('#regexPattern').value,'g');const s=$('#regexText').value;$('#regexOut').textContent=JSON.stringify([...s.matchAll(r)].map(x=>({match:x[0],index:x.index})),null,2)}catch(e){$('#regexOut').textContent=e.message}}
+web/js/app.js.before-theme-1.2.0:281:window.restoreTrash=async i=>{const x=state.trash[i];try{await call('restore',{uri:x.uri,parent:state.cwd,name:x.name});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('استعادة',x.name);loadDir()}catch(e){toast('لا يمكن الاستعادة: '+e.message)}}
+web/js/app.js.before-theme-1.2.0:282:window.permanentTrash=async i=>{const x=state.trash[i];try{await call('deletePermanent',{uri:x.uri});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('حذف نهائي',x.name)}catch(e){toast(e.message)}}
+web/js/app.js.before-theme-1.2.0:317:  } catch (error) {
+web/js/app.js.before-user-files-cleanup:26:    try { window.AndroidBridge.call(name, JSON.stringify({...args,id})); } catch(e){ reject(e); }
+web/js/app.js.before-user-files-cleanup:38:  } catch (_) {}
+web/js/app.js.before-user-files-cleanup:126:        }catch(e){
+web/js/app.js.before-user-files-cleanup:147:        }catch(e){
+web/js/app.js.before-user-files-cleanup:173:    }catch(e){
+web/js/app.js.before-user-files-cleanup:257:  }catch(e){
+web/js/app.js.before-user-files-cleanup:258:    console.error(e);
+web/js/app.js.before-user-files-cleanup:305:  }catch(e){
+web/js/app.js.before-user-files-cleanup:306:    console.error(e);
+web/js/app.js.before-user-files-cleanup:332:  }catch(e){
+web/js/app.js.before-user-files-cleanup:333:    console.error(e);
+web/js/app.js.before-user-files-cleanup:360:  }catch(e){
+web/js/app.js.before-user-files-cleanup:361:    console.error(e);
+web/js/app.js.before-user-files-cleanup:382:  }catch(e){
+web/js/app.js.before-user-files-cleanup:383:    console.error(e);
+web/js/app.js.before-user-files-cleanup:398:  }catch(e){
+web/js/app.js.before-user-files-cleanup:568:  }catch(e){
+web/js/app.js.before-user-files-cleanup:612:  }catch(e){toast(e.message)}
+web/js/app.js.before-user-files-cleanup:628:  }catch(e){toast(e.message)}
+web/js/app.js.before-user-files-cleanup:656:  else {try{await call('openExternal',{uri:e.uri,mime:e.mime||guessMime(e.name)});log('فتح خارجي',e.name)}catch(err){toast(err.message)}}
+web/js/app.js.before-user-files-cleanup:663:  catch(err){toast(err.message)}
+web/js/app.js.before-user-files-cleanup:697:  }catch(e){
+web/js/app.js.before-user-files-cleanup:703:  try{await call('write',{uri:state.editorUri,content:$('#editor').value});state.editorDirty=false;log('حفظ',state.editorName);toast('تم الحفظ')}catch(e){toast(e.message)}
+web/js/app.js.before-user-files-cleanup:707:  try{const r=await call('createFile',{parentUri:state.cwd,name,mime:guessMime(name)});state.editorUri=r.uri;state.editorName=name;state.editorDirty=false;await loadDir();log('حفظ باسم',name)}catch(e){toast(e.message)}
+web/js/app.js.before-user-files-cleanup:717:  try{if(n.endsWith('.json'))$('#editor').value=JSON.stringify(JSON.parse(v),null,2);else if(n.endsWith('.html'))$('#editor').value=v.replace(/></g,'>\\n<');else return toast('لا يوجد منسق مدمج لهذا النوع');updateEditorStats()}catch(e){toast('صيغة غير صحيحة')}
+web/js/app.js.before-user-files-cleanup:722:  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parentUri:state.cwd,name,mime:guessMime(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.before-user-files-cleanup:723:  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parent:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.before-user-files-cleanup:725:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+web/js/app.js.before-user-files-cleanup:738:  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-user-files-cleanup:739:  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{sourceUri:e.uri,targetParentUri:dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+web/js/app.js.before-user-files-cleanup:740:  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{sourceUri:e.uri,sourceParentUri:state.cwd,targetParentUri:dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-user-files-cleanup:741:  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{sourceUri:e.uri,targetParentUri:state.cwd});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-user-files-cleanup:742:  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-user-files-cleanup:743:  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+web/js/app.js.before-user-files-cleanup:798:  }catch(x){
+web/js/app.js.before-user-files-cleanup:815:  }catch(e){toast(e.message)}
+web/js/app.js.before-user-files-cleanup:824:  try{const r=await call('exec',{command:cmd,timeout:10000});$('#consoleOut').textContent+=`${r.output||''}${r.error?('\\n'+r.error):''}\\n`;log('طرفية',cmd)}catch(e){$('#consoleOut').textContent+=`ERROR: ${e.message}\\n`}
+web/js/app.js.before-user-files-cleanup:828:function jsonPretty(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value),null,2)}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.before-user-files-cleanup:829:function jsonMin(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value))}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.before-user-files-cleanup:830:function b64Enc(){try{$('#b64Tool').value=btoa(unescape(encodeURIComponent($('#b64Tool').value)))}catch(e){toast(e.message)}}
+web/js/app.js.before-user-files-cleanup:831:function b64Dec(){try{$('#b64Tool').value=decodeURIComponent(escape(atob($('#b64Tool').value)))}catch(e){toast('Base64 غير صحيح')}}
+web/js/app.js.before-user-files-cleanup:833:function urlDec(){try{$('#urlTool').value=decodeURIComponent($('#urlTool').value)}catch(e){toast('URL غير صحيح')}}
+web/js/app.js.before-user-files-cleanup:834:function regexRun(){try{const r=new RegExp($('#regexPattern').value,'g');const s=$('#regexText').value;$('#regexOut').textContent=JSON.stringify([...s.matchAll(r)].map(x=>({match:x[0],index:x.index})),null,2)}catch(e){$('#regexOut').textContent=e.message}}
+web/js/app.js.before-user-files-cleanup:866:    }catch(e){
+web/js/app.js.before-user-files-cleanup:894:  }catch(e){
+web/js/app.js.before-user-files-cleanup:999:  }catch(e){
+web/js/app.js.before-user-files-cleanup:1000:    console.error(e);
+web/js/app.js.before-user-files-cleanup:1037:  }catch(e){
+web/js/app.js.before-user-files-cleanup:1038:    console.error(e);
+web/js/app.js.before-user-files-cleanup:1068:    }catch(e){
+web/js/app.js.before-user-files-cleanup:1070:      console.error('Trash delete failed:', item, e);
+web/js/app.js.before-user-files-cleanup:1130:  } catch (error) {
+web/js/editor/file-actions.js:64:    }catch(error){
+web/js/i18n.js:38:    } catch (error) {
+web/js/i18n.js:39:      console.error(error);
+web/js/editor-core.js:315:    }catch(_){
+web/js/editor-core.js:852:      }catch(err){
+web/js/editor-core.js:927:      }catch(err){
+web/js/editor-core.js:963:    }catch(_){}
+web/js/editor-core.js:967:    }catch(_){}
+web/js/editor-core.js:972:    }catch(_){}
+web/js/app.js.bak:25:    try { window.AndroidBridge.call(name, JSON.stringify({...args,id})); } catch(e){ reject(e); }
+web/js/app.js.bak:37:  } catch (_) {}
+web/js/app.js.bak:61:    }catch(e){console.warn(e)}
+web/js/app.js.bak:100:  }catch(e){toast(e.message)}
+web/js/app.js.bak:116:  }catch(e){toast(e.message)}
+web/js/app.js.bak:144:  else {try{await call('openExternal',{uri:e.uri,mime:e.mime||guessMime(e.name)});log('فتح خارجي',e.name)}catch(err){toast(err.message)}}
+web/js/app.js.bak:151:  catch(err){toast(err.message)}
+web/js/app.js.bak:185:  }catch(e){
+web/js/app.js.bak:191:  try{await call('write',{uri:state.editorUri,content:$('#editor').value});state.editorDirty=false;log('حفظ',state.editorName);toast('تم الحفظ')}catch(e){toast(e.message)}
+web/js/app.js.bak:195:  try{const r=await call('createFile',{parentUri:state.cwd,name,mime:guessMime(name)});state.editorUri=r.uri;state.editorName=name;state.editorDirty=false;await loadDir();log('حفظ باسم',name)}catch(e){toast(e.message)}
+web/js/app.js.bak:205:  try{if(n.endsWith('.json'))$('#editor').value=JSON.stringify(JSON.parse(v),null,2);else if(n.endsWith('.html'))$('#editor').value=v.replace(/></g,'>\\n<');else return toast('لا يوجد منسق مدمج لهذا النوع');updateEditorStats()}catch(e){toast('صيغة غير صحيحة')}
+web/js/app.js.bak:210:  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parentUri:state.cwd,name,mime:guessMime(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.bak:211:  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parentUri:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.bak:213:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+web/js/app.js.bak:221:  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.bak:222:  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{sourceUri:e.uri,targetParentUri:dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+web/js/app.js.bak:223:  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{sourceUri:e.uri,targetParentUri:dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.bak:224:  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{sourceUri:e.uri,targetParentUri:state.cwd});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.bak:225:  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.bak:226:  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+web/js/app.js.bak:227:  $('#ctxDelete').onclick=async()=>{closeModal();if(!confirm(`حذف ${e.name}؟`))return;try{const r=await call('delete',{uri:e.uri});state.trash.unshift({name:e.name,uri:e.uri,deletedAt:Date.now(),restorable:r.restorable!==false});localStorage.setItem('qfs.trash',JSON.stringify(state.trash));log('حذف',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.bak:238:  }catch(e){toast(e.message)}
+web/js/app.js.bak:247:  try{const r=await call('exec',{command:cmd,timeout:10000});$('#consoleOut').textContent+=`${r.output||''}${r.error?('\\n'+r.error):''}\\n`;log('طرفية',cmd)}catch(e){$('#consoleOut').textContent+=`ERROR: ${e.message}\\n`}
+web/js/app.js.bak:251:function jsonPretty(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value),null,2)}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.bak:252:function jsonMin(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value))}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.bak:253:function b64Enc(){try{$('#b64Tool').value=btoa(unescape(encodeURIComponent($('#b64Tool').value)))}catch(e){toast(e.message)}}
+web/js/app.js.bak:254:function b64Dec(){try{$('#b64Tool').value=decodeURIComponent(escape(atob($('#b64Tool').value)))}catch(e){toast('Base64 غير صحيح')}}
+web/js/app.js.bak:256:function urlDec(){try{$('#urlTool').value=decodeURIComponent($('#urlTool').value)}catch(e){toast('URL غير صحيح')}}
+web/js/app.js.bak:257:function regexRun(){try{const r=new RegExp($('#regexPattern').value,'g');const s=$('#regexText').value;$('#regexOut').textContent=JSON.stringify([...s.matchAll(r)].map(x=>({match:x[0],index:x.index})),null,2)}catch(e){$('#regexOut').textContent=e.message}}
+web/js/app.js.bak:266:window.restoreTrash=async i=>{const x=state.trash[i];try{await call('restore',{uri:x.uri,parent:state.cwd,name:x.name});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('استعادة',x.name);loadDir()}catch(e){toast('لا يمكن الاستعادة: '+e.message)}}
+web/js/app.js.bak:267:window.permanentTrash=async i=>{const x=state.trash[i];try{await call('deletePermanent',{uri:x.uri});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('حذف نهائي',x.name)}catch(e){toast(e.message)}}
+web/js/app.js.bak:302:  } catch (error) {
+web/js/app.js.backup:25:    try { window.AndroidBridge.call(name, JSON.stringify({...args,id})); } catch(e){ reject(e); }
+web/js/app.js.backup:37:    }catch(e){console.warn(e)}
+web/js/app.js.backup:75:  }catch(e){toast(e.message)}
+web/js/app.js.backup:82:  }catch(e){toast(e.message)}
+web/js/app.js.backup:110:  else {try{await call('openExternal',{uri:e.uri,mime:e.mime||guessMime(e.name)});log('فتح خارجي',e.name)}catch(err){toast(err.message)}}
+web/js/app.js.backup:117:  catch(err){toast(err.message)}
+web/js/app.js.backup:125:  try{await call('write',{uri:state.editorUri,text:$('#editor').value});state.editorDirty=false;log('حفظ',state.editorName);toast('تم الحفظ')}catch(e){toast(e.message)}
+web/js/app.js.backup:129:  try{const r=await call('createFile',{parent:state.cwd,name,mime:guessMime(name),text:$('#editor').value});state.editorUri=r.uri;state.editorName=name;state.editorDirty=false;await loadDir();log('حفظ باسم',name)}catch(e){toast(e.message)}
+web/js/app.js.backup:139:  try{if(n.endsWith('.json'))$('#editor').value=JSON.stringify(JSON.parse(v),null,2);else if(n.endsWith('.html'))$('#editor').value=v.replace(/></g,'>\\n<');else return toast('لا يوجد منسق مدمج لهذا النوع');updateEditorStats()}catch(e){toast('صيغة غير صحيحة')}
+web/js/app.js.backup:144:  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parent:state.cwd,name,mime:guessMime(name),text:defaultContent(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.backup:145:  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parent:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.backup:147:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+web/js/app.js.backup:155:  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.backup:156:  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{uri:e.uri,dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+web/js/app.js.backup:157:  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{uri:e.uri,dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.backup:158:  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{uri:e.uri});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.backup:159:  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.backup:160:  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+web/js/app.js.backup:161:  $('#ctxDelete').onclick=async()=>{closeModal();if(!confirm(`حذف ${e.name}؟`))return;try{const r=await call('delete',{uri:e.uri});state.trash.unshift({name:e.name,uri:e.uri,deletedAt:Date.now(),restorable:r.restorable!==false});localStorage.setItem('qfs.trash',JSON.stringify(state.trash));log('حذف',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.backup:172:  }catch(e){toast(e.message)}
+web/js/app.js.backup:181:  try{const r=await call('exec',{command:cmd,timeout:10000});$('#consoleOut').textContent+=`${r.output||''}${r.error?('\\n'+r.error):''}\\n`;log('طرفية',cmd)}catch(e){$('#consoleOut').textContent+=`ERROR: ${e.message}\\n`}
+web/js/app.js.backup:185:function jsonPretty(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value),null,2)}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.backup:186:function jsonMin(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value))}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.backup:187:function b64Enc(){try{$('#b64Tool').value=btoa(unescape(encodeURIComponent($('#b64Tool').value)))}catch(e){toast(e.message)}}
+web/js/app.js.backup:188:function b64Dec(){try{$('#b64Tool').value=decodeURIComponent(escape(atob($('#b64Tool').value)))}catch(e){toast('Base64 غير صحيح')}}
+web/js/app.js.backup:190:function urlDec(){try{$('#urlTool').value=decodeURIComponent($('#urlTool').value)}catch(e){toast('URL غير صحيح')}}
+web/js/app.js.backup:191:function regexRun(){try{const r=new RegExp($('#regexPattern').value,'g');const s=$('#regexText').value;$('#regexOut').textContent=JSON.stringify([...s.matchAll(r)].map(x=>({match:x[0],index:x.index})),null,2)}catch(e){$('#regexOut').textContent=e.message}}
+web/js/app.js.backup:200:window.restoreTrash=async i=>{const x=state.trash[i];try{await call('restore',{uri:x.uri,parent:state.cwd,name:x.name});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('استعادة',x.name);loadDir()}catch(e){toast('لا يمكن الاستعادة: '+e.message)}}
+web/js/app.js.backup:201:window.permanentTrash=async i=>{const x=state.trash[i];try{await call('deletePermanent',{uri:x.uri});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('حذف نهائي',x.name)}catch(e){toast(e.message)}}
+web/js/updater.js:45:        } catch (error) {
+web/js/updater.js:66:    } catch (_) {
+web/js/updater.js:97:    } catch (error) {
+web/js/updater.js:315:        } catch (error) {
+web/js/app.js.before-user-files-restore:26:    try { window.AndroidBridge.call(name, JSON.stringify({...args,id})); } catch(e){ reject(e); }
+web/js/app.js.before-user-files-restore:38:  } catch (_) {}
+web/js/app.js.before-user-files-restore:117:        }catch(e){
+web/js/app.js.before-user-files-restore:130:    }catch(e){console.warn(e)}
+web/js/app.js.before-user-files-restore:210:  }catch(e){
+web/js/app.js.before-user-files-restore:211:    console.error(e);
+web/js/app.js.before-user-files-restore:247:  }catch(e){
+web/js/app.js.before-user-files-restore:417:  }catch(e){
+web/js/app.js.before-user-files-restore:461:  }catch(e){toast(e.message)}
+web/js/app.js.before-user-files-restore:477:  }catch(e){toast(e.message)}
+web/js/app.js.before-user-files-restore:505:  else {try{await call('openExternal',{uri:e.uri,mime:e.mime||guessMime(e.name)});log('فتح خارجي',e.name)}catch(err){toast(err.message)}}
+web/js/app.js.before-user-files-restore:512:  catch(err){toast(err.message)}
+web/js/app.js.before-user-files-restore:546:  }catch(e){
+web/js/app.js.before-user-files-restore:552:  try{await call('write',{uri:state.editorUri,content:$('#editor').value});state.editorDirty=false;log('حفظ',state.editorName);toast('تم الحفظ')}catch(e){toast(e.message)}
+web/js/app.js.before-user-files-restore:556:  try{const r=await call('createFile',{parentUri:state.cwd,name,mime:guessMime(name)});state.editorUri=r.uri;state.editorName=name;state.editorDirty=false;await loadDir();log('حفظ باسم',name)}catch(e){toast(e.message)}
+web/js/app.js.before-user-files-restore:566:  try{if(n.endsWith('.json'))$('#editor').value=JSON.stringify(JSON.parse(v),null,2);else if(n.endsWith('.html'))$('#editor').value=v.replace(/></g,'>\\n<');else return toast('لا يوجد منسق مدمج لهذا النوع');updateEditorStats()}catch(e){toast('صيغة غير صحيحة')}
+web/js/app.js.before-user-files-restore:571:  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parentUri:state.cwd,name,mime:guessMime(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.before-user-files-restore:572:  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parent:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.before-user-files-restore:574:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+web/js/app.js.before-user-files-restore:587:  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-user-files-restore:588:  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{sourceUri:e.uri,targetParentUri:dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+web/js/app.js.before-user-files-restore:589:  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{sourceUri:e.uri,sourceParentUri:state.cwd,targetParentUri:dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-user-files-restore:590:  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{sourceUri:e.uri,targetParentUri:state.cwd});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-user-files-restore:591:  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-user-files-restore:592:  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+web/js/app.js.before-user-files-restore:647:  }catch(x){
+web/js/app.js.before-user-files-restore:664:  }catch(e){toast(e.message)}
+web/js/app.js.before-user-files-restore:673:  try{const r=await call('exec',{command:cmd,timeout:10000});$('#consoleOut').textContent+=`${r.output||''}${r.error?('\\n'+r.error):''}\\n`;log('طرفية',cmd)}catch(e){$('#consoleOut').textContent+=`ERROR: ${e.message}\\n`}
+web/js/app.js.before-user-files-restore:677:function jsonPretty(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value),null,2)}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.before-user-files-restore:678:function jsonMin(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value))}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.before-user-files-restore:679:function b64Enc(){try{$('#b64Tool').value=btoa(unescape(encodeURIComponent($('#b64Tool').value)))}catch(e){toast(e.message)}}
+web/js/app.js.before-user-files-restore:680:function b64Dec(){try{$('#b64Tool').value=decodeURIComponent(escape(atob($('#b64Tool').value)))}catch(e){toast('Base64 غير صحيح')}}
+web/js/app.js.before-user-files-restore:682:function urlDec(){try{$('#urlTool').value=decodeURIComponent($('#urlTool').value)}catch(e){toast('URL غير صحيح')}}
+web/js/app.js.before-user-files-restore:683:function regexRun(){try{const r=new RegExp($('#regexPattern').value,'g');const s=$('#regexText').value;$('#regexOut').textContent=JSON.stringify([...s.matchAll(r)].map(x=>({match:x[0],index:x.index})),null,2)}catch(e){$('#regexOut').textContent=e.message}}
+web/js/app.js.before-user-files-restore:715:    }catch(e){
+web/js/app.js.before-user-files-restore:743:  }catch(e){
+web/js/app.js.before-user-files-restore:848:  }catch(e){
+web/js/app.js.before-user-files-restore:849:    console.error(e);
+web/js/app.js.before-user-files-restore:886:  }catch(e){
+web/js/app.js.before-user-files-restore:887:    console.error(e);
+web/js/app.js.before-user-files-restore:917:    }catch(e){
+web/js/app.js.before-user-files-restore:919:      console.error('Trash delete failed:', item, e);
+web/js/app.js.before-user-files-restore:979:  } catch (error) {
+web/js/app.js.before-1.3.0-user-files:25:    try { window.AndroidBridge.call(name, JSON.stringify({...args,id})); } catch(e){ reject(e); }
+web/js/app.js.before-1.3.0-user-files:37:  } catch (_) {}
+web/js/app.js.before-1.3.0-user-files:113:    }catch(e){console.warn(e)}
+web/js/app.js.before-1.3.0-user-files:170:  }catch(e){toast(e.message)}
+web/js/app.js.before-1.3.0-user-files:186:  }catch(e){toast(e.message)}
+web/js/app.js.before-1.3.0-user-files:214:  else {try{await call('openExternal',{uri:e.uri,mime:e.mime||guessMime(e.name)});log('فتح خارجي',e.name)}catch(err){toast(err.message)}}
+web/js/app.js.before-1.3.0-user-files:221:  catch(err){toast(err.message)}
+web/js/app.js.before-1.3.0-user-files:255:  }catch(e){
+web/js/app.js.before-1.3.0-user-files:261:  try{await call('write',{uri:state.editorUri,content:$('#editor').value});state.editorDirty=false;log('حفظ',state.editorName);toast('تم الحفظ')}catch(e){toast(e.message)}
+web/js/app.js.before-1.3.0-user-files:265:  try{const r=await call('createFile',{parentUri:state.cwd,name,mime:guessMime(name)});state.editorUri=r.uri;state.editorName=name;state.editorDirty=false;await loadDir();log('حفظ باسم',name)}catch(e){toast(e.message)}
+web/js/app.js.before-1.3.0-user-files:275:  try{if(n.endsWith('.json'))$('#editor').value=JSON.stringify(JSON.parse(v),null,2);else if(n.endsWith('.html'))$('#editor').value=v.replace(/></g,'>\\n<');else return toast('لا يوجد منسق مدمج لهذا النوع');updateEditorStats()}catch(e){toast('صيغة غير صحيحة')}
+web/js/app.js.before-1.3.0-user-files:280:  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parentUri:state.cwd,name,mime:guessMime(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.before-1.3.0-user-files:281:  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parentUri:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js.before-1.3.0-user-files:283:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+web/js/app.js.before-1.3.0-user-files:291:  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-1.3.0-user-files:292:  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{sourceUri:e.uri,targetParentUri:dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+web/js/app.js.before-1.3.0-user-files:293:  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{sourceUri:e.uri,targetParentUri:dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-1.3.0-user-files:294:  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{sourceUri:e.uri,targetParentUri:state.cwd});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-1.3.0-user-files:295:  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-1.3.0-user-files:296:  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+web/js/app.js.before-1.3.0-user-files:297:  $('#ctxDelete').onclick=async()=>{closeModal();if(!confirm(`حذف ${e.name}؟`))return;try{const r=await call('delete',{uri:e.uri});state.trash.unshift({name:e.name,uri:e.uri,deletedAt:Date.now(),restorable:r.restorable!==false});localStorage.setItem('qfs.trash',JSON.stringify(state.trash));log('حذف',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js.before-1.3.0-user-files:308:  }catch(e){toast(e.message)}
+web/js/app.js.before-1.3.0-user-files:317:  try{const r=await call('exec',{command:cmd,timeout:10000});$('#consoleOut').textContent+=`${r.output||''}${r.error?('\\n'+r.error):''}\\n`;log('طرفية',cmd)}catch(e){$('#consoleOut').textContent+=`ERROR: ${e.message}\\n`}
+web/js/app.js.before-1.3.0-user-files:321:function jsonPretty(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value),null,2)}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.before-1.3.0-user-files:322:function jsonMin(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value))}catch(e){toast('JSON غير صحيح')}}
+web/js/app.js.before-1.3.0-user-files:323:function b64Enc(){try{$('#b64Tool').value=btoa(unescape(encodeURIComponent($('#b64Tool').value)))}catch(e){toast(e.message)}}
+web/js/app.js.before-1.3.0-user-files:324:function b64Dec(){try{$('#b64Tool').value=decodeURIComponent(escape(atob($('#b64Tool').value)))}catch(e){toast('Base64 غير صحيح')}}
+web/js/app.js.before-1.3.0-user-files:326:function urlDec(){try{$('#urlTool').value=decodeURIComponent($('#urlTool').value)}catch(e){toast('URL غير صحيح')}}
+web/js/app.js.before-1.3.0-user-files:327:function regexRun(){try{const r=new RegExp($('#regexPattern').value,'g');const s=$('#regexText').value;$('#regexOut').textContent=JSON.stringify([...s.matchAll(r)].map(x=>({match:x[0],index:x.index})),null,2)}catch(e){$('#regexOut').textContent=e.message}}
+web/js/app.js.before-1.3.0-user-files:336:window.restoreTrash=async i=>{const x=state.trash[i];try{await call('restore',{uri:x.uri,parent:state.cwd,name:x.name});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('استعادة',x.name);loadDir()}catch(e){toast('لا يمكن الاستعادة: '+e.message)}}
+web/js/app.js.before-1.3.0-user-files:337:window.permanentTrash=async i=>{const x=state.trash[i];try{await call('deletePermanent',{uri:x.uri});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('حذف نهائي',x.name)}catch(e){toast(e.message)}}
+web/js/app.js.before-1.3.0-user-files:372:  } catch (error) {
+
+===== PLACEHOLDERS / FAKE FEATURES =====
+web/js/i18n.js:57:    document.querySelectorAll('[data-i18n-placeholder]')
+web/js/i18n.js:60:        element.placeholder =
+web/js/i18n.js:61:          t(element.dataset.i18nPlaceholder);
+web/js/updater.js:5:  const UPDATE_URL = 'https://YOUR-DOMAIN.example/update/version.json';
+web/index.html:71:input::placeholder,
+web/index.html:72:textarea::placeholder{
+web/index.html:185:            placeholder="بحث في ملفاتك ومجلداتك..."
+web/index.html:233:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+web/index.html:330:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+web/index.html:331:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+web/index.html:340:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+web/css/app.css:1102:input::placeholder,
+web/css/app.css:1103:textarea::placeholder {
+web/locales/en.json:38:  "terminal.placeholder": "Enter a command...",
+web/locales/en.json:42:  "search.placeholder": "Search files and projects...",
+web/locales/ru.json:38:  "terminal.placeholder": "Введите команду...",
+web/locales/ru.json:42:  "search.placeholder": "Поиск файлов и проектов...",
+web/locales/tr.json:38:  "terminal.placeholder": "Komut girin...",
+web/locales/tr.json:42:  "search.placeholder": "Dosya ve proje ara...",
+web/locales/ar.json:38:  "terminal.placeholder": "اكتب أمرًا...",
+web/locales/ar.json:42:  "search.placeholder": "ابحث في الملفات والمشاريع...",
+
+===== APK / BUILD INFO =====
+11:    compileSdk 35
+14:        applicationId "com.quickfilestudio.app"
+15:        minSdk 23
+16:        targetSdk 35
+17:        versionCode 121
+18:        versionName "1.2.1"
+
+===== JAVASCRIPT SYNTAX =====
+
+===== JAVA COMPILE =====
+
+===== END =====

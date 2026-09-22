@@ -1,0 +1,285 @@
+'use strict';
+
+const state = {
+  cwd: null, root: null, entries: [], selected: new Set(), sort: 'name',
+  editorUri: null, editorName: '', editorDirty: false,
+  settings: JSON.parse(localStorage.getItem('qfs.settings') || '{"theme":"dark","lang":"ar","autosave":true}'),
+  activity: JSON.parse(localStorage.getItem('qfs.activity') || '[]'),
+  trash: JSON.parse(localStorage.getItem('qfs.trash') || '[]'),
+  projects: JSON.parse(localStorage.getItem('qfs.projects') || '[]')
+};
+
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const native = () => typeof window.AndroidBridge !== 'undefined';
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const bytes = n => { n=Number(n)||0; const u=['B','KB','MB','GB']; let i=0; while(n>=1024&&i<3){n/=1024;i++} return `${n.toFixed(i?1:0)} ${u[i]}`; };
+const toast = msg => { $('#statusText').textContent = msg; clearTimeout(toast.t); toast.t=setTimeout(()=>$('#statusText').textContent='جاهز',2200); };
+function log(action, detail=''){ state.activity.unshift({time:new Date().toISOString(),action,detail}); state.activity=state.activity.slice(0,300); localStorage.setItem('qfs.activity',JSON.stringify(state.activity)); renderActivity(); }
+function call(name,args={}) {
+  if (!native()) return Promise.reject(new Error('Native Android bridge unavailable'));
+  return new Promise((resolve,reject)=>{
+    const id='cb_'+Date.now()+'_'+Math.random().toString(36).slice(2);
+    window.__qfsCallbacks ||= {};
+    window.__qfsCallbacks[id]={resolve,reject};
+    try { window.AndroidBridge.call(name, JSON.stringify({...args,id})); } catch(e){ reject(e); }
+  });
+}
+window.qfsResult = function(id, ok, payload){
+  const cb=window.__qfsCallbacks?.[id];
+  if(!cb)return;
+  delete window.__qfsCallbacks[id];
+
+  if(!ok){
+    let message = payload;
+    try{
+      const parsed = typeof payload === 'string' ? JSON.parse(payload) : payload;
+      message = parsed?.error || parsed?.message || String(payload);
+    }catch(e){}
+    cb.reject(new Error(message || 'حدث خطأ غير معروف'));
+    return;
+  }
+
+  let value = payload;
+
+  try{
+    if(typeof payload === 'string'){
+      value = JSON.parse(payload);
+    }
+  }catch(e){
+    value = payload;
+  }
+
+  cb.resolve(value);
+};
+
+async function init(){
+  bind();
+  renderActivity(); renderTrash(); renderProjects();
+  if(native()){
+    try{
+      const saved=await call('getWorkspace');
+      const root=saved?.uri || saved?.treeUri || '';
+      if(root){
+        state.root=root;
+        state.cwd=root;
+        await loadDir();
+      }
+    }catch(e){console.warn(e)}
+  } else toast('وضع المتصفح');
+}
+function bind(){
+  $('#menuBtn').onclick=()=>$('#sidebar').classList.toggle('open');
+  $$('.nav').forEach(b=>b.onclick=()=>showPage(b.dataset.page));
+  $('#chooseFolderBtn').onclick=chooseFolder;
+  $('#refreshBtn').onclick=loadDir;
+  $('#selectAllBtn').onclick=()=>{state.entries.forEach(e=>state.selected.add(e.uri));renderFiles()};
+  $('#newBtn').onclick=newItemMenu;
+  $('#searchBtn').onclick=()=>$('#searchRow').classList.toggle('hidden');
+  $('#fileSearch').oninput=renderFiles;
+  $('#sortSelect').onchange=e=>{state.sort=e.target.value;renderFiles()};
+  $('#settingsBtn').onclick=settingsModal;
+  $('#saveEditorBtn').onclick=saveEditor;
+  $('#saveAsBtn').onclick=saveAs;
+  $('#openEditorBtn').onclick=openEditorPicker;
+  $('#previewBtn').onclick=previewHtml;
+  $('#formatBtn').onclick=formatEditor;
+  $('#editor').oninput=()=>{state.editorDirty=true;updateEditorStats(); if(state.settings.autosave){clearTimeout(window.auto);window.auto=setTimeout(saveEditor,900)}};
+  $('#newProjectBtn').onclick=newProject;
+  $('#clearConsole').onclick=()=>$('#consoleOut').textContent='';
+  $('#runCmd').onclick=runCmd;
+  $('#cmdInput').onkeydown=e=>{if(e.key==='Enter')runCmd()};
+  $('#emptyTrash').onclick=emptyTrash;
+  $('#clearActivity').onclick=()=>{state.activity=[];localStorage.removeItem('qfs.activity');renderActivity()};
+  ['jsonPretty','jsonMin','b64Enc','b64Dec','urlEnc','urlDec','regexRun','hashRun','uuidRun'].forEach(id=>$('#'+id).onclick=window[id]);
+  $('#colorPick').oninput=e=>$('#colorOut').value=e.target.value;
+}
+function showPage(p){$$('.page').forEach(x=>x.classList.toggle('active',x.id==='page-'+p));$$('.nav').forEach(x=>x.classList.toggle('active',x.dataset.page===p));if(p==='trash')renderTrash();if(p==='activity')renderActivity();if(p==='projects')renderProjects();$('#sidebar').classList.remove('open')}
+
+async function chooseFolder(){
+  try{
+    if(native()){
+      const r=await call('chooseFolder');
+      if(!r?.uri) return;
+      state.root=r.uri;state.cwd=r.uri;log('اختيار مجلد',r.name||r.uri);await loadDir();
+    } else $('#fallbackFolder').click();
+  }catch(e){toast(e.message)}
+}
+async function loadDir(uri=state.cwd){
+  if(!uri){toast('اختر مجلدًا أولًا');return}
+  try{
+    const r=await call('list', {uri});
+    state.cwd=uri;
+    state.entries=Array.isArray(r) ? r : (Array.isArray(r?.items) ? r.items : []);
+    state.entries=state.entries.map(e=>({
+      ...e,
+      uri:e.uri || e.documentUri || ''
+    }));
+    state.selected.clear();
+    renderCrumbs();
+    renderFiles();
+    toast(`${state.entries.length} عنصر`);
+  }catch(e){toast(e.message)}
+}
+function renderCrumbs(){
+  $('#crumbs').innerHTML=`<button class="crumb" onclick="loadDir(state.root)">🏠 الجذر</button>${state.cwd&&state.cwd!==state.root?'<span>›</span><span class="crumb">المجلد الحالي</span>':''}`;
+}
+function renderFiles(){
+  let a=[...state.entries];
+  const q=$('#fileSearch').value.trim().toLowerCase(); if(q)a=a.filter(e=>e.name.toLowerCase().includes(q));
+  a.sort((x,y)=>state.sort==='size'?(y.size||0)-(x.size||0):state.sort==='date'?((y.modified||0)-(x.modified||0)):state.sort==='type'?(x.mime||'').localeCompare(y.mime||''):x.name.localeCompare(y.name,'ar',{numeric:true}));
+  $('#fileCount').textContent=`${a.length} عنصر`;
+  $('#fileGrid').innerHTML=a.map(e=>`<div class="file ${state.selected.has(e.uri)?'selected':''}" data-uri="${esc(e.uri)}">
+    <div class="file-icon">${e.dir?'📁':icon(e.name)}</div>
+    <div class="file-name" title="${esc(e.name)}">${esc(e.name)}</div>
+    <div class="file-meta"><span>${e.dir?'مجلد':bytes(e.size)}</span><span>${e.dir?'':ext(e.name)}</span></div>
+  </div>`).join('');
+  $$('.file').forEach(el=>{
+    const uri=el.dataset.uri, e=state.entries.find(x=>x.uri===uri);
+    el.onclick=ev=>{if(ev.ctrlKey||ev.metaKey){state.selected.has(uri)?state.selected.delete(uri):state.selected.add(uri);renderFiles();return}openEntry(e)};
+    el.oncontextmenu=ev=>{ev.preventDefault();contextMenu(e)};
+  });
+}
+function icon(n){const x=ext(n);return x==='js'||x==='ts'||x==='py'||x==='java'||x==='kt'?'🧩':x==='html'||x==='css'?'🌐':x==='json'?'🗂️':x==='md'?'📘':['png','jpg','jpeg','webp','gif'].includes(x)?'🖼️':['mp4','mkv','webm'].includes(x)?'🎬':['mp3','wav','ogg'].includes(x)?'🎵':x==='pdf'?'📕':'📄'}
+function ext(n){return (n.split('.').pop()||'').toLowerCase()}
+
+async function openEntry(e){
+  if(e.dir){await loadDir(e.uri);return}
+  if(isText(e.name)){await openEditor(e);showPage('editor')}
+  else if(ext(e.name)==='html'){await openEditor(e);showPage('editor')}
+  else {try{await call('openExternal',{uri:e.uri,mime:e.mime||guessMime(e.name)});log('فتح خارجي',e.name)}catch(err){toast(err.message)}}
+}
+function isText(n){return /\\.(txt|md|json|js|ts|css|html|xml|py|java|kt|c|cpp|h|hpp|sh|yml|yaml|ini|csv|sql|log|gradle|properties)$/i.test(n)}
+function guessMime(n){const x=ext(n);return ({pdf:'application/pdf',png:'image/png',jpg:'image/jpeg',jpeg:'image/jpeg',webp:'image/webp',gif:'image/gif',mp4:'video/mp4',mp3:'audio/mpeg',html:'text/html',json:'application/json'})[x]||'application/octet-stream'}
+
+async function openEditor(e){
+  try{const r=await call('read',{uri:e.uri});state.editorUri=e.uri;state.editorName=e.name;state.editorDirty=false;$('#editor').value=r.text||'';$('#editorPath').textContent=e.name;updateEditorStats();log('فتح للتحرير',e.name)}
+  catch(err){toast(err.message)}
+}
+async function openEditorPicker(){
+  const text=prompt('أدخل اسم الملف داخل المجلد الحالي:'); if(!text)return;
+  const e=state.entries.find(x=>x.name===text); if(e&&!e.dir)openEditor(e); else toast('الملف غير موجود');
+}
+async function saveEditor(){
+  if(!state.editorUri)return toast('لا يوجد ملف');
+  try{await call('write',{uri:state.editorUri,text:$('#editor').value});state.editorDirty=false;log('حفظ',state.editorName);toast('تم الحفظ')}catch(e){toast(e.message)}
+}
+async function saveAs(){
+  const name=prompt('اسم الملف الجديد',state.editorName||'new.txt'); if(!name)return;
+  try{const r=await call('createFile',{parent:state.cwd,name,mime:guessMime(name),text:$('#editor').value});state.editorUri=r.uri;state.editorName=name;state.editorDirty=false;await loadDir();log('حفظ باسم',name)}catch(e){toast(e.message)}
+}
+function updateEditorStats(){const v=$('#editor').value;const lines=v.split('\\n').length;const chars=v.length;$('#editorStats').textContent=`${lines} سطر · ${chars} حرف${state.editorDirty?' · غير محفوظ':''}`}
+async function previewHtml(){
+  if(!state.editorUri)return toast('افتح ملف HTML أولًا');
+  if(!/\\.html?$/i.test(state.editorName))return toast('المعاينة لملفات HTML');
+  const html=$('#editor').value;const w=window.open();if(w){w.document.open();w.document.write(html);w.document.close()}else toast('تعذر فتح المعاينة');
+}
+function formatEditor(){
+  const n=state.editorName.toLowerCase(),v=$('#editor').value;
+  try{if(n.endsWith('.json'))$('#editor').value=JSON.stringify(JSON.parse(v),null,2);else if(n.endsWith('.html'))$('#editor').value=v.replace(/></g,'>\\n<');else return toast('لا يوجد منسق مدمج لهذا النوع');updateEditorStats()}catch(e){toast('صيغة غير صحيحة')}
+}
+
+function newItemMenu(){
+  modal('جديد',`<div class="modal-actions"><button id="newFile">ملف</button><button id="newFolder">مجلد</button></div>`);
+  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parent:state.cwd,name,mime:guessMime(name),text:defaultContent(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parent:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+}
+function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+
+function contextMenu(e){
+  modal(e.name,`<div class="modal-actions">
+  <button id="ctxOpen">${e.dir?'فتح':'فتح'}</button><button id="ctxRename">إعادة تسمية</button>
+  <button id="ctxCopy">نسخ</button><button id="ctxMove">نقل</button><button id="ctxDup">تكرار</button>
+  <button id="ctxZip">ضغط ZIP</button><button id="ctxHash">SHA-256</button><button id="ctxDelete" class="danger">حذف</button></div>`);
+  $('#ctxOpen').onclick=()=>{closeModal();openEntry(e)};
+  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{uri:e.uri,dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{uri:e.uri,dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{uri:e.uri});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+  $('#ctxDelete').onclick=async()=>{closeModal();if(!confirm(`حذف ${e.name}؟`))return;try{const r=await call('delete',{uri:e.uri});state.trash.unshift({name:e.name,uri:e.uri,deletedAt:Date.now(),restorable:r.restorable!==false});localStorage.setItem('qfs.trash',JSON.stringify(state.trash));log('حذف',e.name);loadDir()}catch(x){toast(x.message)}};
+}
+
+async function newProject(){
+  const name=prompt('اسم المشروع');if(!name)return;
+  try{
+    const p=await call('createFolder',{parent:state.cwd,name});
+    const dir=p.uri;
+    for(const [n,m,t] of [['index.html','text/html',defaultContent('index.html')],['style.css','text/css',defaultContent('style.css')],['app.js','text/javascript',defaultContent('app.js')],['README.md','text/markdown','# '+name+'\\n']])
+      await call('createFile',{parent:dir,name:n,mime:m,text:t});
+    state.projects.unshift({name,uri:dir,createdAt:Date.now()});localStorage.setItem('qfs.projects',JSON.stringify(state.projects));log('إنشاء مشروع',name);renderProjects();loadDir();
+  }catch(e){toast(e.message)}
+}
+function renderProjects(){const el=$('#projectList');el.innerHTML=state.projects.length?state.projects.map((p,i)=>`<div class="card"><b>🧩 ${esc(p.name)}</b><div class="file-meta">${new Date(p.createdAt).toLocaleString()}</div><div class="modal-actions"><button onclick="loadDir('${esc(p.uri)}');showPage('files')">فتح</button><button onclick="openProjectPreview('${i}')">تفاصيل</button></div></div>`).join(''):'<div class="card">لا توجد مشاريع محفوظة.</div>'}
+window.openProjectPreview=i=>{const p=state.projects[i];modal(p.name,`<p>المسار: <code>${esc(p.uri)}</code></p><div class="modal-actions"><button onclick="loadDir('${esc(p.uri)}');showPage('files');closeModal()">فتح المجلد</button></div>`)};
+
+async function runCmd(){
+  const input=$('#cmdInput'),cmd=input.value.trim();if(!cmd)return;
+  $('#consoleOut').textContent+=`$ ${cmd}\\n`;
+  input.value='';
+  try{const r=await call('exec',{command:cmd,timeout:10000});$('#consoleOut').textContent+=`${r.output||''}${r.error?('\\n'+r.error):''}\\n`;log('طرفية',cmd)}catch(e){$('#consoleOut').textContent+=`ERROR: ${e.message}\\n`}
+  $('#consoleOut').scrollTop=$('#consoleOut').scrollHeight;
+}
+
+function jsonPretty(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value),null,2)}catch(e){toast('JSON غير صحيح')}}
+function jsonMin(){try{$('#jsonTool').value=JSON.stringify(JSON.parse($('#jsonTool').value))}catch(e){toast('JSON غير صحيح')}}
+function b64Enc(){try{$('#b64Tool').value=btoa(unescape(encodeURIComponent($('#b64Tool').value)))}catch(e){toast(e.message)}}
+function b64Dec(){try{$('#b64Tool').value=decodeURIComponent(escape(atob($('#b64Tool').value)))}catch(e){toast('Base64 غير صحيح')}}
+function urlEnc(){$('#urlTool').value=encodeURIComponent($('#urlTool').value)}
+function urlDec(){try{$('#urlTool').value=decodeURIComponent($('#urlTool').value)}catch(e){toast('URL غير صحيح')}}
+function regexRun(){try{const r=new RegExp($('#regexPattern').value,'g');const s=$('#regexText').value;$('#regexOut').textContent=JSON.stringify([...s.matchAll(r)].map(x=>({match:x[0],index:x.index})),null,2)}catch(e){$('#regexOut').textContent=e.message}}
+async function hashRun(){const d=new TextEncoder().encode($('#hashText').value),h=await crypto.subtle.digest('SHA-256',d);$('#hashOut').textContent=[...new Uint8Array(h)].map(x=>x.toString(16).padStart(2,'0')).join('')}
+function uuidRun(){$('#uuidOut').textContent=crypto.randomUUID?crypto.randomUUID():([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,c=>(c^crypto.getRandomValues(new Uint8Array(1))[0]&15>>c/4).toString(16))}
+function settingsModal(){
+  modal('الإعدادات',`<label>اللغة</label><select id="setLang"><option value="ar">العربية</option><option value="en">English</option></select><br><br><label><input id="setAuto" type="checkbox"> الحفظ التلقائي للمحرر</label><div class="modal-actions"><button id="setSave" class="primary">حفظ</button></div>`);
+  $('#setLang').value=state.settings.lang;$('#setAuto').checked=state.settings.autosave;
+  $('#setSave').onclick=()=>{state.settings.lang=$('#setLang').value;state.settings.autosave=$('#setAuto').checked;localStorage.setItem('qfs.settings',JSON.stringify(state.settings));closeModal();toast('تم حفظ الإعدادات')};
+}
+function renderTrash(){$('#trashList').innerHTML=state.trash.length?state.trash.map((x,i)=>`<div class="card"><b>🗑️ ${esc(x.name)}</b><div class="file-meta">${new Date(x.deletedAt).toLocaleString()}</div><div class="modal-actions"><button onclick="restoreTrash(${i})">استعادة</button><button class="danger" onclick="permanentTrash(${i})">حذف نهائي</button></div></div>`).join(''):'<div class="card">السلة فارغة.</div>'}
+window.restoreTrash=async i=>{const x=state.trash[i];try{await call('restore',{uri:x.uri,parent:state.cwd,name:x.name});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('استعادة',x.name);loadDir()}catch(e){toast('لا يمكن الاستعادة: '+e.message)}}
+window.permanentTrash=async i=>{const x=state.trash[i];try{await call('deletePermanent',{uri:x.uri});state.trash.splice(i,1);localStorage.setItem('qfs.trash',JSON.stringify(state.trash));renderTrash();log('حذف نهائي',x.name)}catch(e){toast(e.message)}}
+async function emptyTrash(){if(!state.trash.length)return;if(!confirm('إفراغ السلة؟'))return;for(const x of [...state.trash])try{await call('deletePermanent',{uri:x.uri})}catch{}state.trash=[];localStorage.setItem('qfs.trash','[]');renderTrash();log('إفراغ السلة')}
+function renderActivity(){$('#activityList').innerHTML=state.activity.length?state.activity.map(x=>`<div class="card"><b>${esc(x.action)}</b><div class="file-meta">${new Date(x.time).toLocaleString()}</div><div>${esc(x.detail)}</div></div>`).join(''):'<div class="card">لا توجد عمليات.</div>'}
+function modal(title,body){$('#modalTitle').textContent=title;$('#modalBody').innerHTML=body;$('#modal').classList.remove('hidden')}
+function closeModal(){$('#modal').classList.add('hidden');$('#modalBody').innerHTML=''}
+$('#modalClose').onclick=closeModal;$('#modal').onclick=e=>{if(e.target.id==='modal')closeModal()};
+
+init();
+
+/* =========================================================
+   QUICK FILE STUDIO UPDATE CHECK
+   ========================================================= */
+
+window.addEventListener('load', async () => {
+
+  try {
+
+    if (window.QFSi18n) {
+      await QFSi18n.load(
+        localStorage.getItem('qfs.lang') || 'ar'
+      );
+    }
+
+    if (window.QFSUpdater) {
+
+      const result =
+        await QFSUpdater.check();
+
+      if (result.available) {
+        QFSUpdater.show(
+          result.latest
+        );
+      }
+    }
+
+  } catch (error) {
+
+    console.warn(
+      'Startup services:',
+      error
+    );
+  }
+
+});
+

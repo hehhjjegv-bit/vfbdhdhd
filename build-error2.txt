@@ -1,0 +1,109 @@
+======================================
+ Quick File Studio Release
+======================================
+
+Version: 1.1.0
+Code:    110
+
+[1/7] تحديث رقم الإصدار
+تم تحديث build.gradle
+[2/7] مزامنة Web
+[3/7] تنظيف
+[4/7] البناء
+======================================
+ Quick File Studio
+======================================
+Project: /data/data/com.termux/files/home/QuickFileStudio
+SDK:     /data/data/com.termux/files/home/android-sdk
+
+[1/4] Sync web -> Android assets
+[2/4] Checking Gradle
+[3/4] Building
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/data/data/com.termux/files/usr/bin/aapt2' is experimental.
+
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :android:app:generateDebugResValues
+> Task :android:app:javaPreCompileDebug
+> Task :android:app:checkDebugAarMetadata
+> Task :android:app:mapDebugSourceSetPaths
+> Task :android:app:generateDebugResources
+> Task :android:app:packageDebugResources
+> Task :android:app:createDebugCompatibleScreenManifests
+> Task :android:app:extractDeepLinksDebug
+> Task :android:app:parseDebugLocalResources
+> Task :android:app:processDebugMainManifest
+> Task :android:app:mergeDebugResources
+> Task :android:app:processDebugManifest
+> Task :android:app:mergeDebugShaders
+> Task :android:app:compileDebugShaders NO-SOURCE
+> Task :android:app:generateDebugAssets UP-TO-DATE
+> Task :android:app:mergeDebugAssets
+> Task :android:app:processDebugJavaRes NO-SOURCE
+> Task :android:app:compressDebugAssets
+> Task :android:app:checkDebugDuplicateClasses
+> Task :android:app:desugarDebugFileDependencies
+> Task :android:app:mergeDebugJniLibFolders
+> Task :android:app:processDebugManifestForPackage
+> Task :android:app:mergeExtDexDebug
+> Task :android:app:mergeLibDexDebug
+> Task :android:app:mergeDebugJavaResource
+> Task :android:app:mergeDebugNativeLibs NO-SOURCE
+> Task :android:app:stripDebugDebugSymbols NO-SOURCE
+> Task :android:app:validateSigningDebug
+> Task :android:app:writeDebugAppMetadata
+> Task :android:app:writeDebugSigningConfigVersions
+> Task :android:app:processDebugResources
+
+> Task :android:app:compileDebugJavaWithJavac
+Java compiler version 21 has deprecated support for compiling with source/target version 8.
+Try one of the following options:
+    1. [Recommended] Use Java toolchain with a lower language version
+    2. Set a higher source/target version
+    3. Use a lower version of the JDK running the build (if you're not using Java toolchain)
+For more details on how to configure these settings, see https://developer.android.com/build/jdks.
+To suppress this warning, set android.javaCompile.suppressSourceTargetDeprecationWarning=true in gradle.properties.
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+
+> Task :android:app:dexBuilderDebug
+> Task :android:app:mergeProjectDexDebug
+> Task :android:app:packageDebug
+> Task :android:app:createDebugApkListingFileRedirect
+> Task :android:app:assembleDebug
+
+BUILD SUCCESSFUL in 1m 46s
+31 actionable tasks: 31 executed
+
+[4/4] BUILD SUCCESS
+
+APK:
+/data/data/com.termux/files/home/QuickFileStudio/android/app/build/outputs/apk/debug/app-debug.apk
+
+Copied to:
+/data/data/com.termux/files/home/storage/downloads/QuickFileStudio.apk
+[5/7] حساب SHA-256
+80d19186790b7e7cfcfac4204275261a50c3de9d8500c017ea44feb22d37361a
+[6/7] إنشاء Release
+[7/7] مكتمل
+
+======================================
+ RELEASE SUCCESS
+======================================
+
+APK:
+/data/data/com.termux/files/home/QuickFileStudio/releases/QuickFileStudio-1.1.0.apk
+
+SHA256:
+80d19186790b7e7cfcfac4204275261a50c3de9d8500c017ea44feb22d37361a
+
+Update:
+/data/data/com.termux/files/home/QuickFileStudio/releases/update.json
+

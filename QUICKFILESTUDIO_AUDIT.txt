@@ -1,0 +1,1133 @@
+==================================================
+ QUICK FILE STUDIO - FULL AUDIT
+ DATE: Sun Sep 20 10:51:21 HDT 2026
+ ROOT: /data/data/com.termux/files/home/QuickFileStudio
+==================================================
+
+========== FILES ==========
+./.gradle/8.9/checksums/checksums.lock
+./.gradle/8.9/dependencies-accessors/gc.properties
+./.gradle/8.9/executionHistory/executionHistory.bin
+./.gradle/8.9/executionHistory/executionHistory.lock
+./.gradle/8.9/fileChanges/last-build.bin
+./.gradle/8.9/fileHashes/fileHashes.bin
+./.gradle/8.9/fileHashes/fileHashes.lock
+./.gradle/8.9/fileHashes/resourceHashesCache.bin
+./.gradle/8.9/gc.properties
+./.gradle/9.7.1/checksums/checksums.lock
+./.gradle/9.7.1/checksums/md5-checksums.bin
+./.gradle/9.7.1/checksums/sha1-checksums.bin
+./.gradle/9.7.1/executionHistory/executionHistory.bin
+./.gradle/9.7.1/executionHistory/executionHistory.lock
+./.gradle/9.7.1/fileChanges/last-build.bin
+./.gradle/9.7.1/fileHashes/fileHashes.bin
+./.gradle/9.7.1/fileHashes/fileHashes.lock
+./.gradle/9.7.1/fileHashes/resourceHashesCache.bin
+./.gradle/9.7.1/gc.properties
+./.gradle/buildOutputCleanup/buildOutputCleanup.lock
+./.gradle/buildOutputCleanup/cache.properties
+./.gradle/buildOutputCleanup/outputFiles.bin
+./.gradle/vcs-1/gc.properties
+./FEATURES.md
+./QUICKEDIT_SPEC.md
+./README.md
+./android/app/build.gradle
+./android/app/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json
+./android/app/build/intermediates/annotation_processor_list/release/javaPreCompileRelease/annotationProcessors.json
+./android/app/build/intermediates/apk_ide_redirect_file/release/createReleaseApkListingFileRedirect/redirect.txt
+./android/app/build/intermediates/app_metadata/release/writeReleaseAppMetadata/app-metadata.properties
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/css/app.css
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/css/app.css.backup
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/css/app.css.bak
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/css/app.css.before-big-ui
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/css/editor/editor.css
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/index.html
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/app.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/app.js.backup
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/app.js.bak
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/app.js.before-big-ui
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/app.js.before-file-picker
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/core/editor-state.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/editor-core.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/editor.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/editor/file-actions.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/editor/mini-toolbar.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/editor/session.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/editor/shortcuts.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/i18n.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/updater.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/ar.json
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/en.json
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/ru.json
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/tr.json
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css.backup
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css.backup-sidebar-fix
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css.bak
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css.before-big-ui
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css.before-theme-1.2.0
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/editor/editor.css
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/editor/editor.css.backup-v1
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.backup
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.backup-v1
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.bak
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.before-1.3.0-user-files
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.before-big-ui
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.before-theme-1.2.0
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.before-user-files-cleanup
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.backup
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.backup-sidebar-fix
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.bak
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.before-1.3.0-user-files
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.before-big-ui
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.before-file-picker
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.before-theme-1.2.0
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.before-user-files-cleanup
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.before-user-files-restore
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/core/editor-state.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor-core.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor-core.js.backup-v1
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor/file-actions.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor/mini-toolbar.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor/session.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor/shortcuts.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/i18n.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/updater.js
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/ar.json
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/en.json
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/ru.json
+./android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/tr.json
+./android/app/build/intermediates/compatible_screen_manifest/debug/createDebugCompatibleScreenManifests/output-metadata.json
+./android/app/build/intermediates/compatible_screen_manifest/release/createReleaseCompatibleScreenManifests/output-metadata.json
+./android/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar
+./android/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/processReleaseResources/R.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/css/app.css.backup.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/css/app.css.bak.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/css/app.css.before-big-ui.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/css/app.css.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/css/editor/editor.css.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/index.html.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/app.js.backup.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/app.js.bak.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/app.js.before-big-ui.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/app.js.before-file-picker.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/app.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/core/editor-state.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/editor-core.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/editor.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/editor/file-actions.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/editor/mini-toolbar.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/editor/session.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/editor/shortcuts.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/i18n.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/updater.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/locales/ar.json.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/locales/en.json.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/locales/ru.json.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/locales/tr.json.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/app.css.backup-sidebar-fix.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/app.css.backup.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/app.css.bak.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/app.css.before-big-ui.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/app.css.before-theme-1.2.0.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/app.css.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/editor/editor.css.backup-v1.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/editor/editor.css.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.backup-v1.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.backup.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.bak.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.before-1.3.0-user-files.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.before-big-ui.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.before-theme-1.2.0.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.before-user-files-cleanup.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.backup-sidebar-fix.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.backup.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.bak.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.before-1.3.0-user-files.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.before-big-ui.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.before-file-picker.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.before-theme-1.2.0.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.before-user-files-cleanup.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.before-user-files-restore.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/core/editor-state.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor-core.js.backup-v1.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor-core.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor/file-actions.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor/mini-toolbar.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor/session.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor/shortcuts.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/i18n.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/updater.js.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/locales/ar.json.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/locales/en.json.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/locales/ru.json.jar
+./android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/locales/tr.json.jar
+./android/app/build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-8.7.3
+./android/app/build/intermediates/default_proguard_files/global/proguard-android.txt-8.7.3
+./android/app/build/intermediates/default_proguard_files/global/proguard-defaults.txt-8.7.3
+./android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/dirs_bucket_0/graph.bin
+./android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/dirs_bucket_1/graph.bin
+./android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/dirs_bucket_2/graph.bin
+./android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/jar_e343e35ce477bbf997745124aca3c5f4a741afbd025e93447849b3bb4c5c5b91_bucket_0/graph.bin
+./android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/jar_e343e35ce477bbf997745124aca3c5f4a741afbd025e93447849b3bb4c5c5b91_bucket_1/graph.bin
+./android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/jar_e343e35ce477bbf997745124aca3c5f4a741afbd025e93447849b3bb4c5c5b91_bucket_2/graph.bin
+./android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+./android/app/build/intermediates/dex_archive_input_jar_hashes/release/dexBuilderRelease/out
+./android/app/build/intermediates/dex_number_of_buckets_file/release/dexBuilderRelease/out
+./android/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties
+./android/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml
+./android/app/build/intermediates/incremental/debug/mergeDebugResources/merger.xml
+./android/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+./android/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir/values/values.xml
+./android/app/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+./android/app/build/intermediates/incremental/lintVitalAnalyzeRelease/module.xml
+./android/app/build/intermediates/incremental/lintVitalAnalyzeRelease/release-artifact-dependencies.xml
+./android/app/build/intermediates/incremental/lintVitalAnalyzeRelease/release-artifact-libraries.xml
+./android/app/build/intermediates/incremental/lintVitalAnalyzeRelease/release.xml
+./android/app/build/intermediates/incremental/mergeReleaseAssets/merger.xml
+./android/app/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml
+./android/app/build/intermediates/incremental/mergeReleaseShaders/merger.xml
+./android/app/build/intermediates/incremental/packageRelease/tmp/release/dex-renamer-state.txt
+./android/app/build/intermediates/incremental/packageRelease/tmp/release/zip-cache/androidResources
+./android/app/build/intermediates/incremental/packageRelease/tmp/release/zip-cache/javaResources0
+./android/app/build/intermediates/incremental/release-mergeJavaRes/merge-state
+./android/app/build/intermediates/incremental/release/mergeReleaseResources/compile-file-map.properties
+./android/app/build/intermediates/incremental/release/mergeReleaseResources/merged.dir/values/values.xml
+./android/app/build/intermediates/incremental/release/mergeReleaseResources/merger.xml
+./android/app/build/intermediates/incremental/release/packageReleaseResources/compile-file-map.properties
+./android/app/build/intermediates/incremental/release/packageReleaseResources/merged.dir/values/values.xml
+./android/app/build/intermediates/incremental/release/packageReleaseResources/merger.xml
+./android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/MainActivity$1.class
+./android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/MainActivity$LegacyAndroidBridge.class
+./android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/MainActivity.class
+./android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/bridge/AndroidBridge$1.class
+./android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/bridge/AndroidBridge$Callback.class
+./android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/bridge/AndroidBridge.class
+./android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/storage/SafFileManager.class
+./android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/storage/SafPermissionManager.class
+./android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/storage/StreamUtils.class
+./android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/update/UpdateManager.class
+./android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/update/UpdateReceiver.class
+./android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/update/UpdateResultActivity.class
+./android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/MainActivity$1.class
+./android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/MainActivity$LegacyAndroidBridge.class
+./android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/MainActivity.class
+./android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/bridge/AndroidBridge$1.class
+./android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/bridge/AndroidBridge$Callback.class
+./android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/bridge/AndroidBridge.class
+./android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/storage/SafFileManager.class
+./android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/storage/SafPermissionManager.class
+./android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/storage/StreamUtils.class
+./android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/update/UpdateManager.class
+./android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/update/UpdateReceiver.class
+./android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/update/UpdateResultActivity.class
+./android/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/linked-resources-binary-format-debug.ap_
+./android/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/output-metadata.json
+./android/app/build/intermediates/linked_resources_binary_format/release/processReleaseResources/linked-resources-binary-format-release.ap_
+./android/app/build/intermediates/linked_resources_binary_format/release/processReleaseResources/output-metadata.json
+./android/app/build/intermediates/lint-cache/lintVitalAnalyzeRelease/lint-cache-version.txt
+./android/app/build/intermediates/lint-cache/lintVitalReportRelease/lint-cache-version.txt
+./android/app/build/intermediates/lint_vital_intermediate_text_report/release/lintVitalReportRelease/lint-results-release.txt
+./android/app/build/intermediates/lint_vital_partial_results/release/lintVitalAnalyzeRelease/out/lint-resources.xml
+./android/app/build/intermediates/lint_vital_report_lint_model/release/generateReleaseLintVitalReportModel/module.xml
+./android/app/build/intermediates/lint_vital_report_lint_model/release/generateReleaseLintVitalReportModel/release-artifact-dependencies.xml
+./android/app/build/intermediates/lint_vital_report_lint_model/release/generateReleaseLintVitalReportModel/release-artifact-libraries.xml
+./android/app/build/intermediates/lint_vital_report_lint_model/release/generateReleaseLintVitalReportModel/release.xml
+./android/app/build/intermediates/lint_vital_return_value/release/lintVitalReportRelease/return-value-release.txt
+./android/app/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt
+./android/app/build/intermediates/local_only_symbol_list/release/parseReleaseLocalResources/R-def.txt
+./android/app/build/intermediates/manifest_merge_blame_file/debug/processDebugMainManifest/manifest-merger-blame-debug-report.txt
+./android/app/build/intermediates/manifest_merge_blame_file/release/processReleaseMainManifest/manifest-merger-blame-release-report.txt
+./android/app/build/intermediates/merged_java_res/release/mergeReleaseJavaResource/base.jar
+./android/app/build/intermediates/merged_manifest/debug/processDebugMainManifest/AndroidManifest.xml
+./android/app/build/intermediates/merged_manifest/release/processReleaseMainManifest/AndroidManifest.xml
+./android/app/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml
+./android/app/build/intermediates/merged_manifests/debug/processDebugManifest/output-metadata.json
+./android/app/build/intermediates/merged_manifests/release/processReleaseManifest/AndroidManifest.xml
+./android/app/build/intermediates/merged_manifests/release/processReleaseManifest/output-metadata.json
+./android/app/build/intermediates/merged_res/debug/mergeDebugResources/values_values.arsc.flat
+./android/app/build/intermediates/merged_res/release/mergeReleaseResources/values_values.arsc.flat
+./android/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/mergeDebugResources.json
+./android/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values.json
+./android/app/build/intermediates/merged_res_blame_folder/release/mergeReleaseResources/out/multi-v2/mergeReleaseResources.json
+./android/app/build/intermediates/merged_res_blame_folder/release/mergeReleaseResources/out/multi-v2/values.json
+./android/app/build/intermediates/metadata_library_dependencies_report/release/collectReleaseDependencies/dependencies.pb
+./android/app/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json
+./android/app/build/intermediates/navigation_json/release/extractDeepLinksRelease/navigation.json
+./android/app/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt
+./android/app/build/intermediates/nested_resources_validation_report/release/generateReleaseResources/nestedResourcesValidationReport.txt
+./android/app/build/intermediates/optimized_processed_res/release/optimizeReleaseResources/output-metadata.json
+./android/app/build/intermediates/optimized_processed_res/release/optimizeReleaseResources/resources-release-optimize.ap_
+./android/app/build/intermediates/packaged_manifests/debug/processDebugManifestForPackage/AndroidManifest.xml
+./android/app/build/intermediates/packaged_manifests/debug/processDebugManifestForPackage/output-metadata.json
+./android/app/build/intermediates/packaged_manifests/release/processReleaseManifestForPackage/AndroidManifest.xml
+./android/app/build/intermediates/packaged_manifests/release/processReleaseManifestForPackage/output-metadata.json
+./android/app/build/intermediates/packaged_res/debug/packageDebugResources/values/values.xml
+./android/app/build/intermediates/packaged_res/release/packageReleaseResources/values/values.xml
+./android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/bd07c0b708157428d18853ce1bacaa7175aa5795dfbf19ba38441bf0e8a10ff0_2.jar
+./android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/MainActivity$1.dex
+./android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/MainActivity$LegacyAndroidBridge.dex
+./android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/MainActivity.dex
+./android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/bridge/AndroidBridge$1.dex
+./android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/bridge/AndroidBridge$Callback.dex
+./android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/bridge/AndroidBridge.dex
+./android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/storage/SafFileManager.dex
+./android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/storage/SafPermissionManager.dex
+./android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/storage/StreamUtils.dex
+./android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/update/UpdateManager.dex
+./android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/update/UpdateReceiver.dex
+./android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/update/UpdateResultActivity.dex
+./android/app/build/intermediates/runtime_symbol_list/debug/processDebugResources/R.txt
+./android/app/build/intermediates/runtime_symbol_list/release/processReleaseResources/R.txt
+./android/app/build/intermediates/sdk_dependency_data/release/sdkReleaseDependencyData/sdkDependencyData.pb
+./android/app/build/intermediates/signing_config_versions/release/writeReleaseSigningConfigVersions/signing-config-versions.json
+./android/app/build/intermediates/source_set_path_map/debug/mapDebugSourceSetPaths/file-map.txt
+./android/app/build/intermediates/source_set_path_map/release/mapReleaseSourceSetPaths/file-map.txt
+./android/app/build/intermediates/stable_resource_ids_file/debug/processDebugResources/stableIds.txt
+./android/app/build/intermediates/stable_resource_ids_file/release/processReleaseResources/stableIds.txt
+./android/app/build/intermediates/version_control_info_file/release/extractReleaseVersionControlInfo/version-control-info.textproto
+./android/app/build/outputs/apk/release/app-release.apk
+./android/app/build/outputs/apk/release/output-metadata.json
+./android/app/build/outputs/logs/manifest-merger-debug-report.txt
+./android/app/build/outputs/logs/manifest-merger-release-report.txt
+./android/app/build/outputs/sdk-dependencies/release/sdkDependencies.txt
+./android/app/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/AndroidBridge$1.class.uniqueId3
+./android/app/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/AndroidBridge$Callback.class.uniqueId2
+./android/app/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/AndroidBridge.class.uniqueId1
+./android/app/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UpdateManager.class.uniqueId0
+./android/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin
+./android/app/build/tmp/compileReleaseJavaWithJavac/compileTransaction/stash-dir/AndroidBridge$1.class.uniqueId0
+./android/app/build/tmp/compileReleaseJavaWithJavac/compileTransaction/stash-dir/AndroidBridge$Callback.class.uniqueId2
+./android/app/build/tmp/compileReleaseJavaWithJavac/compileTransaction/stash-dir/AndroidBridge.class.uniqueId1
+./android/app/build/tmp/compileReleaseJavaWithJavac/compileTransaction/stash-dir/UpdateManager.class.uniqueId3
+./android/app/build/tmp/compileReleaseJavaWithJavac/previous-compilation-data.bin
+./android/app/src/main/AndroidManifest.xml
+./android/app/src/main/assets/www.before-1.3.0-user-files/css/app.css
+./android/app/src/main/assets/www.before-1.3.0-user-files/css/app.css.backup
+./android/app/src/main/assets/www.before-1.3.0-user-files/css/app.css.bak
+./android/app/src/main/assets/www.before-1.3.0-user-files/css/app.css.before-big-ui
+./android/app/src/main/assets/www.before-1.3.0-user-files/css/editor/editor.css
+./android/app/src/main/assets/www.before-1.3.0-user-files/index.html
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/app.js
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/app.js.backup
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/app.js.bak
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/app.js.before-big-ui
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/app.js.before-file-picker
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/core/editor-state.js
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/editor-core.js
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/editor.js
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/editor/file-actions.js
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/editor/mini-toolbar.js
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/editor/session.js
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/editor/shortcuts.js
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/i18n.js
+./android/app/src/main/assets/www.before-1.3.0-user-files/js/updater.js
+./android/app/src/main/assets/www.before-1.3.0-user-files/locales/ar.json
+./android/app/src/main/assets/www.before-1.3.0-user-files/locales/en.json
+./android/app/src/main/assets/www.before-1.3.0-user-files/locales/ru.json
+./android/app/src/main/assets/www.before-1.3.0-user-files/locales/tr.json
+./android/app/src/main/assets/www/css/app.css
+./android/app/src/main/assets/www/css/app.css.backup
+./android/app/src/main/assets/www/css/app.css.backup-sidebar-fix
+./android/app/src/main/assets/www/css/app.css.bak
+./android/app/src/main/assets/www/css/app.css.before-big-ui
+./android/app/src/main/assets/www/css/app.css.before-theme-1.2.0
+./android/app/src/main/assets/www/css/editor/editor.css
+./android/app/src/main/assets/www/css/editor/editor.css.backup-v1
+./android/app/src/main/assets/www/index.html
+./android/app/src/main/assets/www/index.html.backup
+./android/app/src/main/assets/www/index.html.backup-v1
+./android/app/src/main/assets/www/index.html.bak
+./android/app/src/main/assets/www/index.html.before-1.3.0-user-files
+./android/app/src/main/assets/www/index.html.before-big-ui
+./android/app/src/main/assets/www/index.html.before-theme-1.2.0
+./android/app/src/main/assets/www/index.html.before-user-files-cleanup
+./android/app/src/main/assets/www/js/app.js
+./android/app/src/main/assets/www/js/app.js.backup
+./android/app/src/main/assets/www/js/app.js.backup-sidebar-fix
+./android/app/src/main/assets/www/js/app.js.bak
+./android/app/src/main/assets/www/js/app.js.before-1.3.0-user-files
+./android/app/src/main/assets/www/js/app.js.before-big-ui
+./android/app/src/main/assets/www/js/app.js.before-file-picker
+./android/app/src/main/assets/www/js/app.js.before-theme-1.2.0
+./android/app/src/main/assets/www/js/app.js.before-user-files-cleanup
+./android/app/src/main/assets/www/js/app.js.before-user-files-restore
+./android/app/src/main/assets/www/js/core/editor-state.js
+./android/app/src/main/assets/www/js/editor-core.js
+./android/app/src/main/assets/www/js/editor-core.js.backup-v1
+./android/app/src/main/assets/www/js/editor.js
+./android/app/src/main/assets/www/js/editor/file-actions.js
+./android/app/src/main/assets/www/js/editor/mini-toolbar.js
+./android/app/src/main/assets/www/js/editor/session.js
+./android/app/src/main/assets/www/js/editor/shortcuts.js
+./android/app/src/main/assets/www/js/i18n.js
+./android/app/src/main/assets/www/js/updater.js
+./android/app/src/main/assets/www/locales/ar.json
+./android/app/src/main/assets/www/locales/en.json
+./android/app/src/main/assets/www/locales/ru.json
+./android/app/src/main/assets/www/locales/tr.json
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.backup
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.bak
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.bak2
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-1.3.0-no-startup-permission
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-1.3.0-valid-tree-permission
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-bridge
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-bridge-step2
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-fast-bridge
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-file-picker
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-new-bridge
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-parent-fix
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-user-files
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-user-files-2
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.stage0
+./android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.stage1-backup
+./android/app/src/main/java/com/quickfilestudio/app/bridge/AndroidBridge.java
+./android/app/src/main/java/com/quickfilestudio/app/bridge/AndroidBridge.java.before-fast-bridge
+./android/app/src/main/java/com/quickfilestudio/app/bridge/AndroidBridge.java.before-full-bridge
+./android/app/src/main/java/com/quickfilestudio/app/bridge/AndroidBridge.java.before-mainactivity
+./android/app/src/main/java/com/quickfilestudio/app/bridge/AndroidBridge.java.before-picker
+./android/app/src/main/java/com/quickfilestudio/app/storage/SafFileManager.java
+./android/app/src/main/java/com/quickfilestudio/app/storage/SafFileManager.java.before-1.3.0
+./android/app/src/main/java/com/quickfilestudio/app/storage/SafFileManager.java.before-1.3.0-flags
+./android/app/src/main/java/com/quickfilestudio/app/storage/SafPermissionManager.java
+./android/app/src/main/java/com/quickfilestudio/app/storage/StreamUtils.java
+./android/app/src/main/java/com/quickfilestudio/app/update/UpdateManager.java
+./android/app/src/main/java/com/quickfilestudio/app/update/UpdateManager.java.backup
+./android/app/src/main/java/com/quickfilestudio/app/update/UpdateReceiver.java
+./android/app/src/main/java/com/quickfilestudio/app/update/UpdateResultActivity.java
+./android/app/src/main/res/values/styles.xml
+./android_backup_20260919_025503/app/build.gradle
+./android_backup_20260919_025503/app/src/main/AndroidManifest.xml
+./android_backup_20260919_025503/app/src/main/assets/www/css/app.css
+./android_backup_20260919_025503/app/src/main/assets/www/index.html
+./android_backup_20260919_025503/app/src/main/assets/www/js/app.js
+./android_backup_20260919_025503/app/src/main/java/com/quickfilestudio/app/MainActivity.java
+./android_backup_20260919_025503/app/src/main/java/com/quickfilestudio/app/MainActivity.java.backup
+./android_backup_20260919_025503/app/src/main/java/com/quickfilestudio/app/MainActivity.java.bak
+./android_backup_20260919_025503/app/src/main/res/values/styles.xml
+./android_backup_20260920_021831/app/build.gradle
+./android_backup_20260920_021831/app/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json
+./android_backup_20260920_021831/app/build/intermediates/apk_ide_redirect_file/debug/createDebugApkListingFileRedirect/redirect.txt
+./android_backup_20260920_021831/app/build/intermediates/app_metadata/debug/writeDebugAppMetadata/app-metadata.properties
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/css/app.css
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/css/app.css.backup
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/css/app.css.bak
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/css/app.css.before-big-ui
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/css/editor/editor.css
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/index.html
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/app.js
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/app.js.backup
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/app.js.bak
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/app.js.before-big-ui
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/app.js.before-file-picker
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/core/editor-state.js
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/editor-core.js
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/editor.js
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/editor/file-actions.js
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/editor/mini-toolbar.js
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/editor/session.js
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/editor/shortcuts.js
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/i18n.js
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/js/updater.js
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/locales/ar.json
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/locales/en.json
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/locales/ru.json
+./android_backup_20260920_021831/app/build/intermediates/assets/debug/mergeDebugAssets/www/locales/tr.json
+./android_backup_20260920_021831/app/build/intermediates/compatible_screen_manifest/debug/createDebugCompatibleScreenManifests/output-metadata.json
+./android_backup_20260920_021831/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/css/app.css.backup.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/css/app.css.bak.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/css/app.css.before-big-ui.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/css/app.css.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/css/editor/editor.css.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/index.html.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/app.js.backup.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/app.js.bak.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/app.js.before-big-ui.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/app.js.before-file-picker.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/app.js.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/core/editor-state.js.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/editor-core.js.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/editor.js.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/editor/file-actions.js.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/editor/mini-toolbar.js.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/editor/session.js.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/editor/shortcuts.js.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/i18n.js.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/js/updater.js.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/locales/ar.json.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/locales/en.json.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/locales/ru.json.jar
+./android_backup_20260920_021831/app/build/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/www/locales/tr.json.jar
+./android_backup_20260920_021831/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_0/graph.bin
+./android_backup_20260920_021831/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_1/graph.bin
+./android_backup_20260920_021831/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_2/graph.bin
+./android_backup_20260920_021831/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_3/graph.bin
+./android_backup_20260920_021831/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_d883a51d625651ba075af4d93cc0595b1859bc5fe2c95c687fe5180554680079_bucket_0/graph.bin
+./android_backup_20260920_021831/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_d883a51d625651ba075af4d93cc0595b1859bc5fe2c95c687fe5180554680079_bucket_1/graph.bin
+./android_backup_20260920_021831/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_d883a51d625651ba075af4d93cc0595b1859bc5fe2c95c687fe5180554680079_bucket_2/graph.bin
+./android_backup_20260920_021831/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_d883a51d625651ba075af4d93cc0595b1859bc5fe2c95c687fe5180554680079_bucket_3/graph.bin
+./android_backup_20260920_021831/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+./android_backup_20260920_021831/app/build/intermediates/dex/debug/mergeProjectDexDebug/15/classes.dex
+./android_backup_20260920_021831/app/build/intermediates/dex_archive_input_jar_hashes/debug/dexBuilderDebug/out
+./android_backup_20260920_021831/app/build/intermediates/dex_number_of_buckets_file/debug/dexBuilderDebug/out
+./android_backup_20260920_021831/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state
+./android_backup_20260920_021831/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties
+./android_backup_20260920_021831/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml
+./android_backup_20260920_021831/app/build/intermediates/incremental/debug/mergeDebugResources/merger.xml
+./android_backup_20260920_021831/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+./android_backup_20260920_021831/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir/values/values.xml
+./android_backup_20260920_021831/app/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+./android_backup_20260920_021831/app/build/intermediates/incremental/mergeDebugAssets/merger.xml
+./android_backup_20260920_021831/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+./android_backup_20260920_021831/app/build/intermediates/incremental/mergeDebugShaders/merger.xml
+./android_backup_20260920_021831/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt
+./android_backup_20260920_021831/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources
+./android_backup_20260920_021831/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0
+./android_backup_20260920_021831/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/MainActivity$AndroidBridge.class
+./android_backup_20260920_021831/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/MainActivity.class
+./android_backup_20260920_021831/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/linked-resources-binary-format-debug.ap_
+./android_backup_20260920_021831/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/output-metadata.json
+./android_backup_20260920_021831/app/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt
+./android_backup_20260920_021831/app/build/intermediates/manifest_merge_blame_file/debug/processDebugMainManifest/manifest-merger-blame-debug-report.txt
+./android_backup_20260920_021831/app/build/intermediates/merged_java_res/debug/mergeDebugJavaResource/base.jar
+./android_backup_20260920_021831/app/build/intermediates/merged_manifest/debug/processDebugMainManifest/AndroidManifest.xml
+./android_backup_20260920_021831/app/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml
+./android_backup_20260920_021831/app/build/intermediates/merged_manifests/debug/processDebugManifest/output-metadata.json
+./android_backup_20260920_021831/app/build/intermediates/merged_res/debug/mergeDebugResources/values_values.arsc.flat
+./android_backup_20260920_021831/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/mergeDebugResources.json
+./android_backup_20260920_021831/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values.json
+./android_backup_20260920_021831/app/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json
+./android_backup_20260920_021831/app/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt
+./android_backup_20260920_021831/app/build/intermediates/packaged_manifests/debug/processDebugManifestForPackage/AndroidManifest.xml
+./android_backup_20260920_021831/app/build/intermediates/packaged_manifests/debug/processDebugManifestForPackage/output-metadata.json
+./android_backup_20260920_021831/app/build/intermediates/packaged_res/debug/packageDebugResources/values/values.xml
+./android_backup_20260920_021831/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/bd07c0b708157428d18853ce1bacaa7175aa5795dfbf19ba38441bf0e8a10ff0_3.jar
+./android_backup_20260920_021831/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/quickfilestudio/app/MainActivity$AndroidBridge.dex
+./android_backup_20260920_021831/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/quickfilestudio/app/MainActivity.dex
+./android_backup_20260920_021831/app/build/intermediates/runtime_symbol_list/debug/processDebugResources/R.txt
+./android_backup_20260920_021831/app/build/intermediates/signing_config_versions/debug/writeDebugSigningConfigVersions/signing-config-versions.json
+./android_backup_20260920_021831/app/build/intermediates/source_set_path_map/debug/mapDebugSourceSetPaths/file-map.txt
+./android_backup_20260920_021831/app/build/intermediates/stable_resource_ids_file/debug/processDebugResources/stableIds.txt
+./android_backup_20260920_021831/app/build/outputs/apk/debug/app-debug.apk
+./android_backup_20260920_021831/app/build/outputs/apk/debug/output-metadata.json
+./android_backup_20260920_021831/app/build/outputs/logs/manifest-merger-debug-report.txt
+./android_backup_20260920_021831/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin
+./android_backup_20260920_021831/app/src/main/AndroidManifest.xml
+./android_backup_20260920_021831/app/src/main/assets/www/css/app.css
+./android_backup_20260920_021831/app/src/main/assets/www/css/app.css.backup
+./android_backup_20260920_021831/app/src/main/assets/www/css/app.css.bak
+./android_backup_20260920_021831/app/src/main/assets/www/css/app.css.before-big-ui
+./android_backup_20260920_021831/app/src/main/assets/www/css/editor/editor.css
+./android_backup_20260920_021831/app/src/main/assets/www/index.html
+./android_backup_20260920_021831/app/src/main/assets/www/js/app.js
+./android_backup_20260920_021831/app/src/main/assets/www/js/app.js.backup
+./android_backup_20260920_021831/app/src/main/assets/www/js/app.js.bak
+./android_backup_20260920_021831/app/src/main/assets/www/js/app.js.before-big-ui
+./android_backup_20260920_021831/app/src/main/assets/www/js/app.js.before-file-picker
+./android_backup_20260920_021831/app/src/main/assets/www/js/core/editor-state.js
+./android_backup_20260920_021831/app/src/main/assets/www/js/editor-core.js
+./android_backup_20260920_021831/app/src/main/assets/www/js/editor.js
+./android_backup_20260920_021831/app/src/main/assets/www/js/editor/file-actions.js
+./android_backup_20260920_021831/app/src/main/assets/www/js/editor/mini-toolbar.js
+./android_backup_20260920_021831/app/src/main/assets/www/js/editor/session.js
+./android_backup_20260920_021831/app/src/main/assets/www/js/editor/shortcuts.js
+./android_backup_20260920_021831/app/src/main/assets/www/js/i18n.js
+./android_backup_20260920_021831/app/src/main/assets/www/js/updater.js
+./android_backup_20260920_021831/app/src/main/assets/www/locales/ar.json
+./android_backup_20260920_021831/app/src/main/assets/www/locales/en.json
+./android_backup_20260920_021831/app/src/main/assets/www/locales/ru.json
+./android_backup_20260920_021831/app/src/main/assets/www/locales/tr.json
+./android_backup_20260920_021831/app/src/main/java/com/quickfilestudio/app/MainActivity.java
+./android_backup_20260920_021831/app/src/main/java/com/quickfilestudio/app/MainActivity.java.backup
+./android_backup_20260920_021831/app/src/main/java/com/quickfilestudio/app/MainActivity.java.bak
+./android_backup_20260920_021831/app/src/main/java/com/quickfilestudio/app/MainActivity.java.bak2
+./android_backup_20260920_021831/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-file-picker
+./android_backup_20260920_021831/app/src/main/res/values/styles.xml
+./audit.sh
+./backups/before-qedit-upgrade/app.css
+./backups/before-qedit-upgrade/app.js
+./backups/before-qedit-upgrade/i18n.js
+./backups/before-qedit-upgrade/index.html
+./backups/before-qedit-upgrade/updater.js
+./build-error.txt
+./build-error2.txt
+./build-termux.sh
+./build.gradle
+./build/reports/problems/problems-report.html
+./gradle.properties
+./gradle/wrapper/gradle-wrapper.jar
+./gradle/wrapper/gradle-wrapper.properties
+./gradlew
+./project-files.txt
+./qfs-errors.log
+./release.sh
+./releases/QuickFileStudio-1.1.0.apk
+./releases/update.json
+./settings.gradle
+./signing/quickfilestudio-release.jks
+./signing/update/qfs-update-public.pem
+./signing/update/qfs-update-signing.jks
+./tools/UpdateSigner.class
+./tools/UpdateSigner.java
+./tools/__pycache__/sign-update.cpython-314.pyc
+./tools/sign-update.py
+./update/version.json
+./web-backup-20260919-045434/css/app.css
+./web-backup-20260919-045434/css/app.css.backup
+./web-backup-20260919-045434/css/app.css.bak
+./web-backup-20260919-045434/css/app.css.before-big-ui
+./web-backup-20260919-045434/index.html
+./web-backup-20260919-045434/index.html.backup
+./web-backup-20260919-045434/index.html.bak
+./web-backup-20260919-045434/index.html.before-big-ui
+./web-backup-20260919-045434/js/app.js
+./web-backup-20260919-045434/js/app.js.backup
+./web-backup-20260919-045434/js/app.js.bak
+./web-backup-20260919-045434/js/app.js.before-big-ui
+./web-backup-20260919-045434/js/app.js.before-file-picker
+./web-backup-20260919-045434/js/editor.js
+./web-backup-20260919-045434/js/i18n.js
+./web-backup-20260919-045434/js/updater.js
+./web-backup-20260919-045434/locales/ar.json
+./web-backup-20260919-045434/locales/en.json
+./web-backup-20260919-045434/locales/ru.json
+./web-backup-20260919-045434/locales/tr.json
+./web.backup-20260919-045021/css/app.css
+./web.backup-20260919-045021/css/app.css.backup
+./web.backup-20260919-045021/css/app.css.before-big-ui
+./web.backup-20260919-045021/index.html
+./web.backup-20260919-045021/index.html.backup
+./web.backup-20260919-045021/index.html.bak
+./web.backup-20260919-045021/index.html.before-big-ui
+./web.backup-20260919-045021/js/app.js
+./web.backup-20260919-045021/js/app.js.backup
+./web.backup-20260919-045021/js/app.js.bak
+./web.backup-20260919-045021/js/app.js.before-big-ui
+./web.backup-20260919-045021/js/app.js.before-file-picker
+./web.backup-20260919-045021/js/i18n.js
+./web.backup-20260919-045021/js/updater.js
+./web.backup-20260919-045021/locales/ar.json
+./web.backup-20260919-045021/locales/en.json
+./web.backup-20260919-045021/locales/ru.json
+./web.backup-20260919-045021/locales/tr.json
+./web/css/app.css
+./web/css/app.css.backup
+./web/css/app.css.backup-sidebar-fix
+./web/css/app.css.bak
+./web/css/app.css.before-big-ui
+./web/css/app.css.before-theme-1.2.0
+./web/css/editor/editor.css
+./web/css/editor/editor.css.backup-v1
+./web/index.html
+./web/index.html.backup
+./web/index.html.backup-v1
+./web/index.html.bak
+./web/index.html.before-1.3.0-user-files
+./web/index.html.before-big-ui
+./web/index.html.before-theme-1.2.0
+./web/index.html.before-user-files-cleanup
+./web/js/app.js
+./web/js/app.js.backup
+./web/js/app.js.backup-sidebar-fix
+./web/js/app.js.bak
+./web/js/app.js.before-1.3.0-user-files
+./web/js/app.js.before-big-ui
+./web/js/app.js.before-file-picker
+./web/js/app.js.before-theme-1.2.0
+./web/js/app.js.before-user-files-cleanup
+./web/js/app.js.before-user-files-restore
+./web/js/core/editor-state.js
+./web/js/editor-core.js
+./web/js/editor-core.js.backup-v1
+./web/js/editor.js
+./web/js/editor/file-actions.js
+./web/js/editor/mini-toolbar.js
+./web/js/editor/session.js
+./web/js/editor/shortcuts.js
+./web/js/i18n.js
+./web/js/updater.js
+./web/locales/ar.json
+./web/locales/en.json
+./web/locales/ru.json
+./web/locales/tr.json
+./web_backup_20260919_025503/css/app.css
+./web_backup_20260919_025503/css/app.css.backup
+./web_backup_20260919_025503/index.html
+./web_backup_20260919_025503/index.html.backup
+./web_backup_20260919_025503/index.html.bak
+./web_backup_20260919_025503/js/app.js
+./web_backup_20260919_025503/js/app.js.backup
+./web_backup_20260919_025503/js/app.js.bak
+./web_backup_20260920_021831/css/app.css
+./web_backup_20260920_021831/css/app.css.backup
+./web_backup_20260920_021831/css/app.css.bak
+./web_backup_20260920_021831/css/app.css.before-big-ui
+./web_backup_20260920_021831/css/editor/editor.css
+./web_backup_20260920_021831/index.html
+./web_backup_20260920_021831/index.html.backup
+./web_backup_20260920_021831/index.html.bak
+./web_backup_20260920_021831/index.html.before-big-ui
+./web_backup_20260920_021831/js/app.js
+./web_backup_20260920_021831/js/app.js.backup
+./web_backup_20260920_021831/js/app.js.bak
+./web_backup_20260920_021831/js/app.js.before-big-ui
+./web_backup_20260920_021831/js/app.js.before-file-picker
+./web_backup_20260920_021831/js/core/editor-state.js
+./web_backup_20260920_021831/js/editor-core.js
+./web_backup_20260920_021831/js/editor.js
+./web_backup_20260920_021831/js/editor/file-actions.js
+./web_backup_20260920_021831/js/editor/mini-toolbar.js
+./web_backup_20260920_021831/js/editor/session.js
+./web_backup_20260920_021831/js/editor/shortcuts.js
+./web_backup_20260920_021831/js/i18n.js
+./web_backup_20260920_021831/js/updater.js
+./web_backup_20260920_021831/locales/ar.json
+./web_backup_20260920_021831/locales/en.json
+./web_backup_20260920_021831/locales/ru.json
+./web_backup_20260920_021831/locales/tr.json
+
+========== JAVASCRIPT SYNTAX ==========
+ERROR   web/js/app.js
+ERROR   web/js/core/editor-state.js
+ERROR   web/js/editor-core.js
+ERROR   web/js/editor.js
+ERROR   web/js/editor/file-actions.js
+ERROR   web/js/editor/mini-toolbar.js
+ERROR   web/js/editor/session.js
+ERROR   web/js/editor/shortcuts.js
+ERROR   web/js/i18n.js
+ERROR   web/js/updater.js
+
+JS FILES : 10
+JS ERRORS: 10
+
+========== HTML ==========
+line 366 column 3 - Warning: <input> proprietary attribute "webkitdirectory"
+
+========== DUPLICATE IDs ==========
+
+========== DUPLICATE FUNCTION DEFINITIONS ==========
+POSSIBLE DUPLICATE:       3 escapeHtml
+POSSIBLE DUPLICATE:       2 toggleWrap
+POSSIBLE DUPLICATE:       2 statistics
+POSSIBLE DUPLICATE:       2 init
+POSSIBLE DUPLICATE:       2 gotoLine
+POSSIBLE DUPLICATE:       2 editor
+POSSIBLE DUPLICATE:       2 bind
+POSSIBLE DUPLICATE:       2 apply
+
+========== SCRIPT REFERENCES ==========
+368:<script src="js/app.js"></script>
+370:<script src="js/i18n.js"></script>
+371:<script src="js/updater.js"></script>
+372:<script src="js/editor-core.js"></script>
+373:<script src="js/core/editor-state.js"></script>
+374:<script src="js/editor/file-actions.js"></script>
+375:<script src="js/editor/mini-toolbar.js"></script>
+376:<script src="js/editor/shortcuts.js"></script>
+377:<script src="js/editor/session.js"></script>
+
+========== MISSING LOCAL SCRIPT FILES ==========
+
+========== LOCAL RESOURCE REFERENCES ==========
+9:<link rel="stylesheet" href="css/app.css">
+10:<link rel="stylesheet" href="css/editor/editor.css">
+368:<script src="js/app.js"></script>
+370:<script src="js/i18n.js"></script>
+371:<script src="js/updater.js"></script>
+372:<script src="js/editor-core.js"></script>
+373:<script src="js/core/editor-state.js"></script>
+374:<script src="js/editor/file-actions.js"></script>
+375:<script src="js/editor/mini-toolbar.js"></script>
+376:<script src="js/editor/shortcuts.js"></script>
+377:<script src="js/editor/session.js"></script>
+
+========== EMPTY / SUSPICIOUS HANDLERS ==========
+web/index.html.backup:41:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+web/index.html.backup:77:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+web/index.html.backup:78:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+web/index.html.backup:87:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+web/js/i18n.js:57:    document.querySelectorAll('[data-i18n-placeholder]')
+web/js/i18n.js:60:        element.placeholder =
+web/js/i18n.js:61:          t(element.dataset.i18nPlaceholder);
+web/index.html.before-user-files-cleanup:71:            placeholder="بحث في ملفاتك ومجلداتك..."
+web/index.html.before-user-files-cleanup:119:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+web/index.html.before-user-files-cleanup:216:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+web/index.html.before-user-files-cleanup:217:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+web/index.html.before-user-files-cleanup:226:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+web/index.html:71:input::placeholder,
+web/index.html:72:textarea::placeholder{
+web/index.html:185:            placeholder="بحث في ملفاتك ومجلداتك..."
+web/index.html:233:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+web/index.html:330:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+web/index.html:331:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+web/index.html:340:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+web/index.html.before-1.3.0-user-files:71:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+web/index.html.before-1.3.0-user-files:168:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+web/index.html.before-1.3.0-user-files:169:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+web/index.html.before-1.3.0-user-files:178:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+web/css/app.css:1102:input::placeholder,
+web/css/app.css:1103:textarea::placeholder {
+web/index.html.before-theme-1.2.0:69:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+web/index.html.before-theme-1.2.0:166:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+web/index.html.before-theme-1.2.0:167:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+web/index.html.before-theme-1.2.0:176:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+web/index.html.bak:68:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+web/index.html.bak:133:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+web/index.html.bak:134:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+web/index.html.bak:143:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+web/index.html.before-big-ui:41:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+web/index.html.before-big-ui:77:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+web/index.html.before-big-ui:78:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+web/index.html.before-big-ui:87:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+web/index.html.backup-v1:69:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+web/index.html.backup-v1:163:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+web/index.html.backup-v1:164:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+web/index.html.backup-v1:173:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+web/locales/en.json:38:  "terminal.placeholder": "Enter a command...",
+web/locales/en.json:42:  "search.placeholder": "Search files and projects...",
+web/locales/ru.json:38:  "terminal.placeholder": "Введите команду...",
+web/locales/ru.json:42:  "search.placeholder": "Поиск файлов и проектов...",
+web/locales/tr.json:38:  "terminal.placeholder": "Komut girin...",
+web/locales/tr.json:42:  "search.placeholder": "Dosya ve proje ara...",
+web/locales/ar.json:38:  "terminal.placeholder": "اكتب أمرًا...",
+web/locales/ar.json:42:  "search.placeholder": "ابحث في الملفات والمشاريع...",
+
+========== ALERT-ONLY / PLACEHOLDER FUNCTIONS ==========
+web/js/editor-core.js:218:      alert('لم يتم العثور على النص');
+web/js/editor-core.js:240:    alert(`تم استبدال ${count} نتيجة`);
+web/js/editor-core.js:252:      alert('رقم السطر غير موجود');
+web/js/editor-core.js:273:    alert(
+web/js/editor-core.js:288:      alert('المعاينة متاحة حاليًا لملفات HTML وSVG');
+web/js/editor-core.js:853:        alert('Regex غير صالح: ' + err.message);
+web/js/editor-core.js:890:      alert('لم يتم العثور على النص');
+web/js/editor-core.js:928:        alert('Regex غير صالح: ' + err.message);
+web/js/editor-core.js:942:      alert('لم يتم العثور على أي نتيجة');
+web/js/editor-core.js:953:    alert(`تم استبدال ${matches.length} نتيجة`);
+web/js/updater.js:320:          alert(
+web/js/editor.js:302:    alert(
+web/js/editor.js:332:    alert(`عدد المطابقات: ${count}`);
+web/js/editor.js:356:      alert('حجم الخط يجب أن يكون بين 8 و40');
+
+========== BUTTONS ==========
+129:    <button class="icon-btn" id="menuBtn">☰</button>
+132:      <button class="icon-btn" id="searchBtn" title="بحث">⌕</button>
+133:      <button class="icon-btn" id="menuToolsBtn" title="الأدوات">⋮</button>
+134:      <button class="icon-btn" id="themeBtn" title="تبديل الوضع" aria-label="تبديل الوضع">☀️</button>
+135:      <button class="icon-btn" id="settingsBtn" title="الإعدادات">⚙</button>
+140:    <button class="nav active" data-page="files">📁 <span>الملفات</span></button>
+141:    <button class="nav" data-page="user-files">📂 <span>ملفاتك</span></button>
+142:    <button class="nav" data-page="projects">🧩 <span>المشاريع</span></button>
+143:    <button class="nav" data-page="editor">📝 <span>المحرر</span></button>
+144:    <button class="nav" data-page="tools">🛠️ <span>الأدوات</span></button>
+145:    <button class="nav" data-page="console">⌘ <span>الطرفية</span></button>
+146:    <button class="nav" data-page="trash">🗑️ <span>سلة المحذوفات</span></button>
+147:    <button class="nav" data-page="activity">◷ <span>السجل</span></button>
+154:        <button class="primary" id="userFilesChooseBtn">📂 اختيار مجلد ملفاتك</button>
+155:        <button id="userFilesRefreshBtn" title="تحديث">↻ تحديث</button>
+174:        <button class="primary" id="userFilesStartBtn">
+200:        <button class="primary" id="chooseFolderBtn">📁 اختيار مجلد</button>
+203:          <button id="newBtn">＋ جديد</button>
+205:            <button data-new="file">📄 ملف جديد</button>
+206:            <button data-new="folder">📁 مجلد جديد</button>
+207:            <button data-new="project">🧩 مشروع جديد</button>
+211:        <button id="refreshBtn" title="تحديث">↻</button>
+214:          <button id="selectMenuBtn">☑ تحديد</button>
+216:            <button id="selectAllMenu">تحديد الكل</button>
+217:            <button id="clearSelectionMenu">إلغاء التحديد</button>
+222:          <button id="sortMenuBtn">↕ ترتيب</button>
+224:            <button data-sort="name">الاسم</button>
+225:            <button data-sort="size">الحجم</button>
+226:            <button data-sort="modified">آخر تعديل</button>
+227:            <button data-sort="type">النوع</button>
+248:      <div class="section-head"><h2>المشاريع</h2><button class="primary" id="newProjectBtn">＋ مشروع جديد</button></div>
+254:  <button type="button" onclick="qfsEditorCore.find()">بحث</button>
+255:  <button type="button" onclick="qfsEditorCore.replace()">استبدال</button>
+256:  <button type="button" onclick="qfsEditorCore.gotoLine()">انتقال للسطر</button>
+257:  <button type="button" onclick="qfsEditorCore.statistics()">إحصائيات</button>
+258:  <button type="button" onclick="qfsEditorCore.indent()">إزاحة +</button>
+259:  <button type="button" onclick="qfsEditorCore.unindent()">إزاحة -</button>
+260:  <button type="button" onclick="qfsEditorCore.toggleWrap()">Word Wrap</button>
+261:  <button type="button" onclick="qfsEditorCore.toggleReadonly()">قراءة فقط</button>
+262:  <button type="button" onclick="qfsEditorCore.font(1)">A+</button>
+263:  <button type="button" onclick="qfsEditorCore.font(-1)">A-</button>
+267:<button onclick="qfsMini.tab()">Tab</button>
+268:<button onclick="qfsMini.braces()">{ }</button>
+269:<button onclick="qfsMini.parentheses()">()</button>
+270:<button onclick="qfsMini.semicolon()">;</button>
+271:<button onclick="qfsMini.angle()">&lt; &gt;</button>
+272:<button onclick="qfsMini.undo()">↶</button>
+273:<button onclick="qfsMini.redo()">↷</button>
+274:<button onclick="qfsMini.copy()">Copy</button>
+275:<button onclick="qfsMini.paste()">Paste</button>
+276:<button onclick="qfsMini.cut()">Cut</button>
+277:<button onclick="qfsMini.left()">←</button>
+278:<button onclick="qfsMini.right()">→</button>
+279:<button onclick="qfsMini.up()">↑</button>
+280:<button onclick="qfsMini.down()">↓</button>
+285:          <button id="editorFileMenuBtn">📄 ملف</button>
+287:            <button id="openEditorBtn">فتح ملف</button>
+288:            <button id="saveEditorBtn">حفظ</button>
+289:            <button id="saveAsBtn">حفظ باسم</button>
+290:            <button id="closeEditorBtn">إغلاق الملف</button>
+295:          <button id="editorEditMenuBtn">✏️ تحرير</button>
+297:            <button id="editorUndo">تراجع</button>
+298:            <button id="editorRedo">إعادة</button>
+299:            <button id="editorSelectAll">تحديد الكل</button>
+300:            <button id="editorFind">بحث</button>
+301:            <button id="editorReplace">بحث واستبدال</button>
+302:            <button id="editorGoto">الانتقال إلى سطر</button>
+307:          <button id="editorToolsMenuBtn">🛠 أدوات</button>
+309:            <button id="previewBtn">معاينة</button>
+310:            <button id="formatBtn">تنسيق</button>
+311:            <button id="editorStatsBtn">إحصائيات</button>
+327:        <div class="tool"><h3>JSON</h3><textarea id="jsonTool"></textarea><div><button id="jsonPretty">تنسيق</button><button id="jsonMin">تصغير</button></div></div>
+328:        <div class="tool"><h3>Base64</h3><textarea id="b64Tool"></textarea><div><button id="b64Enc">ترميز</button><button id="b64Dec">فك</button></div></div>
+329:        <div class="tool"><h3>URL</h3><textarea id="urlTool"></textarea><div><button id="urlEnc">ترميز</button><button id="urlDec">فك</button></div></div>
+330:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+331:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+332:        <div class="tool"><h3>UUID</h3><button id="uuidRun">توليد UUID</button><pre id="uuidOut"></pre></div>
+338:      <div class="console-head"><button id="clearConsole">مسح</button><span>Shell</span></div>
+340:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+344:      <div class="section-head"><h2>سلة المحذوفات</h2><button id="emptyTrash">إفراغ</button></div>
+349:      <div class="section-head"><h2>سجل العمليات</h2><button id="clearActivity">مسح</button></div>
+354:  <div id="modal" class="modal hidden"><div class="modal-card"><div class="modal-head"><h3 id="modalTitle"></h3><button id="modalClose">×</button></div><div id="modalBody"></div></div></div>
+357:    <button id="globalRefresh">↻ تحديث الملفات</button>
+358:    <button id="globalSearch">⌕ بحث</button>
+359:    <button id="globalSelectAll">☑ تحديد الكل</button>
+360:    <button id="globalNewFile">📄 ملف جديد</button>
+361:    <button id="globalNewFolder">📁 مجلد جديد</button>
+362:    <button id="globalSettings">⚙ الإعدادات</button>
+363:    <button id="globalAbout">ℹ حول Quick File Studio</button>
+
+========== EVENT HANDLERS ==========
+web/js/app.js:182:  if(editorBackBtn) editorBackBtn.onclick = returnFromEditor;
+web/js/app.js:185:  if(editorBack) editorBack.onclick = returnFromEditor;
+web/js/app.js:188:  $('#menuBtn').onclick=()=>{
+web/js/app.js:193:  $$('.nav').forEach(b=>b.onclick=()=>showPage(b.dataset.page));
+web/js/app.js:194:  $('#chooseFolderBtn').onclick=chooseFolder;
+web/js/app.js:195:  $('#refreshBtn').onclick=loadDir;
+web/js/app.js:198:  $('#userFilesChooseBtn').onclick=chooseUserFilesFolder;
+web/js/app.js:199:  $('#userFilesStartBtn').onclick=chooseUserFilesFolder;
+web/js/app.js:200:  $('#userFilesRefreshBtn').onclick=refreshUserFiles;
+web/js/app.js:201:  $('#userFilesSearch').oninput=renderUserFiles;
+web/js/app.js:202:  $('#selectAllMenu').onclick=()=>{state.entries.forEach(e=>state.selected.add(e.uri));renderFiles()};
+web/js/app.js:203:  $('#clearSelectionMenu').onclick=()=>{state.selected.clear();renderFiles()};
+web/js/app.js:204:  $('#newBtn').onclick=newItemMenu;
+web/js/app.js:205:  $('#selectAllMenu').onclick=()=>{state.entries.forEach(e=>state.selected.add(e.uri));renderFiles()};
+web/js/app.js:206:  $('#clearSelectionMenu').onclick=()=>{state.selected.clear();renderFiles()};
+web/js/app.js:207:  $('#sortMenuBtn').onclick=()=>$('#sortMenu').classList.toggle('hidden');
+web/js/app.js:209:    b.onclick=()=>{
+web/js/app.js:216:  $('#searchBtn').onclick=()=>$('#searchRow').classList.toggle('hidden');
+web/js/app.js:217:  $('#fileSearch').oninput=renderFiles;
+web/js/app.js:218:  $('#sortSelect').onchange=e=>{state.sort=e.target.value;renderFiles()};
+web/js/app.js:219:  $('#themeBtn').onclick=toggleTheme;
+web/js/app.js:222:  $('#settingsBtn').onclick=settingsModal;
+web/js/app.js:223:  $('#saveEditorBtn').onclick=saveEditor;
+web/js/app.js:224:  $('#saveAsBtn').onclick=saveAs;
+web/js/app.js:225:  $('#openEditorBtn').onclick=openEditorPicker;
+web/js/app.js:226:  $('#previewBtn').onclick=previewHtml;
+web/js/app.js:227:  $('#formatBtn').onclick=formatEditor;
+web/js/app.js:228:  $('#editor').oninput=()=>{state.editorDirty=true;updateEditorStats(); if(state.settings.autosave){clearTimeout(window.auto);window.auto=setTimeout(saveEditor,900)}};
+web/js/app.js:229:  $('#newProjectBtn').onclick=newProject;
+web/js/app.js:230:  $('#clearConsole').onclick=()=>$('#consoleOut').textContent='';
+web/js/app.js:231:  $('#runCmd').onclick=runCmd;
+web/js/app.js:233:  $('#emptyTrash').onclick=emptyTrash;
+web/js/app.js:234:  $('#clearActivity').onclick=()=>{state.activity=[];localStorage.removeItem('qfs.activity');renderActivity()};
+web/js/app.js:235:  ['jsonPretty','jsonMin','b64Enc','b64Dec','urlEnc','urlDec','regexRun','hashRun','uuidRun'].forEach(id=>$('#'+id).onclick=window[id]);
+web/js/app.js:236:  $('#colorPick').oninput=e=>$('#colorOut').value=e.target.value;
+web/js/app.js:458:    el.addEventListener('click', () => openUserFile(entry));
+web/js/app.js:460:    el.addEventListener('keydown', e => {
+web/js/app.js:495:    rootButton.onclick = async () => {
+web/js/app.js:588:  $('#crumbs').innerHTML=`<button class="crumb" onclick="loadDir(state.root)">🏠 الجذر</button>${state.cwd&&state.cwd!==state.root?'<span>›</span><span class="crumb">المجلد الحالي</span>':''}`;
+web/js/app.js:602:    el.onclick=ev=>{if(ev.ctrlKey||ev.metaKey){state.selected.has(uri)?state.selected.delete(uri):state.selected.add(uri);renderFiles();return}openEntry(e)};
+web/js/app.js:719:  $('#newFile').onclick=async()=>{closeModal();const name=prompt('اسم الملف');if(!name)return;try{await call('createFile',{parent:state.cwd,name,mime:guessMime(name)});log('إنشاء ملف',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js:720:  $('#newFolder').onclick=async()=>{closeModal();const name=prompt('اسم المجلد');if(!name)return;try{await call('createFolder',{parent:state.cwd,name});log('إنشاء مجلد',name);loadDir()}catch(e){toast(e.message)}};
+web/js/app.js:734:  $('#ctxOpen').onclick=()=>{closeModal();openEntry(e)};
+web/js/app.js:735:  $('#ctxRename').onclick=async()=>{closeModal();const n=prompt('الاسم الجديد',e.name);if(!n||n===e.name)return;try{await call('rename',{uri:e.uri,name:n});log('إعادة تسمية',`${e.name} → ${n}`);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:736:  $('#ctxCopy').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('copy',{sourceUri:e.uri,targetParentUri:dest});log('نسخ',e.name);toast('تم النسخ')}catch(x){toast(x.message)}};
+web/js/app.js:737:  $('#ctxMove').onclick=async()=>{closeModal();const dest=prompt('URI للمجلد الهدف',state.cwd);if(!dest)return;try{await call('move',{sourceUri:e.uri,sourceParentUri:state.cwd,targetParentUri:dest});log('نقل',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:738:  $('#ctxDup').onclick=async()=>{closeModal();try{await call('duplicate',{sourceUri:e.uri,targetParentUri:state.cwd});log('تكرار',e.name);loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:739:  $('#ctxZip').onclick=async()=>{closeModal();try{const r=await call('zip',{uri:e.uri});log('ضغط ZIP',e.name);toast(r.name||'تم إنشاء ZIP');loadDir()}catch(x){toast(x.message)}};
+web/js/app.js:740:  $('#ctxHash').onclick=async()=>{try{const r=await call('sha256',{uri:e.uri});modal('SHA-256',`<pre>${esc(r.hash)}</pre>`)}catch(x){toast(x.message)}};
+web/js/app.js:741:  $('#ctxDelete').onclick=async()=>{
+web/js/app.js:814:function renderProjects(){const el=$('#projectList');el.innerHTML=state.projects.length?state.projects.map((p,i)=>`<div class="card"><b>🧩 ${esc(p.name)}</b><div class="file-meta">${new Date(p.createdAt).toLocaleString()}</div><div class="modal-actions"><button onclick="loadDir('${esc(p.uri)}');showPage('files')">فتح</button><button onclick="openProjectPreview('${i}')">تفاصيل</button></div></div>`).join(''):'<div class="card">لا توجد مشاريع محفوظة.</div>'}
+web/js/app.js:815:window.openProjectPreview=i=>{const p=state.projects[i];modal(p.name,`<p>المسار: <code>${esc(p.uri)}</code></p><div class="modal-actions"><button onclick="loadDir('${esc(p.uri)}');showPage('files');closeModal()">فتح المجلد</button></div>`)};
+web/js/app.js:837:  $('#setSave').onclick=()=>{state.settings.lang=$('#setLang').value;state.settings.autosave=$('#setAuto').checked;localStorage.setItem('qfs.settings',JSON.stringify(state.settings));closeModal();toast('تم حفظ الإعدادات')};
+web/js/app.js:938:        <button onclick="restoreTrash(${i})">استعادة</button>
+web/js/app.js:939:        <button class="danger" onclick="permanentTrash(${i})">حذف نهائي</button>
+web/js/app.js:1097:$('#modalClose').onclick=closeModal;$('#modal').onclick=e=>{if(e.target.id==='modal')closeModal()};
+web/js/app.js:1105:window.addEventListener('load', async () => {
+web/js/app.js:1171:    if (b) b.onclick = e => {
+web/js/app.js:1178:    btn.onclick = () => {
+web/js/app.js:1189:    selectAll.onclick = () => {
+web/js/app.js:1198:    clearSelection.onclick = () => {
+web/js/app.js:1206:  if (undo) undo.onclick = () => {
+web/js/app.js:1212:  if (redo) redo.onclick = () => {
+web/js/app.js:1219:    selectEditor.onclick = () => {
+web/js/app.js:1231:    find.onclick = () => {
+web/js/app.js:1253:    replace.onclick = () => {
+web/js/app.js:1272:    gotoLine.onclick = () => {
+web/js/app.js:1298:    stats.onclick = () => {
+web/js/app.js:1322:    closeEditor.onclick = () => {
+web/js/app.js:1340:  document.addEventListener('click', e => {
+web/js/app.js:1346:window.addEventListener('load', () => {
+web/js/app.js:1351:window.addEventListener('load', () => {
+web/js/app.js:1354:  if (refresh) refresh.onclick = () => {
+web/js/app.js:1360:  if (search) search.onclick = () => {
+web/js/app.js:1367:  if (selectAll) selectAll.onclick = () => {
+web/js/app.js:1374:  if (newFile) newFile.onclick = () => {
+web/js/app.js:1380:  if (about) about.onclick = () => {
+web/js/editor/file-actions.js:96:    editor.addEventListener('input', () => {
+web/js/editor/file-actions.js:118:    document.addEventListener('DOMContentLoaded', bindLiveDirtyState, { once: true });
+web/js/editor/shortcuts.js:2:  document.addEventListener('keydown',async e=>{
+web/js/editor/session.js:2:  window.addEventListener('beforeunload',e=>{
+web/js/editor/session.js:11:  document.addEventListener('visibilitychange',()=>{
+web/js/editor-core.js:609:      e.addEventListener('scroll', syncEditorScroll);
+web/js/editor-core.js:611:      e.addEventListener('input', () => {
+web/js/editor-core.js:617:      e.addEventListener('scroll', updateHighlight);
+web/js/editor-core.js:619:      e.addEventListener('click', updateCurrentLine);
+web/js/editor-core.js:620:      e.addEventListener('keyup', updateCurrentLine);
+web/js/editor-core.js:621:      e.addEventListener('select', updateCurrentLine);
+web/js/editor-core.js:985:      e.addEventListener(ev,updateStats);
+web/js/editor-core.js:988:    e.addEventListener('keydown',ev=>{
+web/js/editor-core.js:1085:  document.addEventListener('DOMContentLoaded',bind);
+web/js/editor-core.js:1161:      e.addEventListener(eventName, updateCaretStatus);
+web/js/editor-core.js:1164:    e.addEventListener('select', updateCaretStatus);
+web/js/editor-core.js:1177:    document.addEventListener('DOMContentLoaded', bindCaretStatus, {once:true});
+web/js/updater.js:280:      later.onclick = () => {
+web/js/updater.js:287:      now.onclick = async () => {
+web/js/core/editor-state.js:124:        el.onclick=(event)=>{
+web/js/core/editor-state.js:139:      plus.onclick=()=>{
+web/js/editor.js:181:      btn.onclick = e => {
+web/js/editor.js:193:    $('#editorNewTab').onclick = () => newTab();
+web/js/editor.js:376:    e.addEventListener('input', () => {
+web/js/editor.js:381:    e.addEventListener('keydown', ev => {
+web/js/editor.js:473:  window.addEventListener('DOMContentLoaded', init);
+web/index.html:254:  <button type="button" onclick="qfsEditorCore.find()">بحث</button>
+web/index.html:255:  <button type="button" onclick="qfsEditorCore.replace()">استبدال</button>
+web/index.html:256:  <button type="button" onclick="qfsEditorCore.gotoLine()">انتقال للسطر</button>
+web/index.html:257:  <button type="button" onclick="qfsEditorCore.statistics()">إحصائيات</button>
+web/index.html:258:  <button type="button" onclick="qfsEditorCore.indent()">إزاحة +</button>
+web/index.html:259:  <button type="button" onclick="qfsEditorCore.unindent()">إزاحة -</button>
+web/index.html:260:  <button type="button" onclick="qfsEditorCore.toggleWrap()">Word Wrap</button>
+web/index.html:261:  <button type="button" onclick="qfsEditorCore.toggleReadonly()">قراءة فقط</button>
+web/index.html:262:  <button type="button" onclick="qfsEditorCore.font(1)">A+</button>
+web/index.html:263:  <button type="button" onclick="qfsEditorCore.font(-1)">A-</button>
+web/index.html:267:<button onclick="qfsMini.tab()">Tab</button>
+web/index.html:268:<button onclick="qfsMini.braces()">{ }</button>
+web/index.html:269:<button onclick="qfsMini.parentheses()">()</button>
+web/index.html:270:<button onclick="qfsMini.semicolon()">;</button>
+web/index.html:271:<button onclick="qfsMini.angle()">&lt; &gt;</button>
+web/index.html:272:<button onclick="qfsMini.undo()">↶</button>
+web/index.html:273:<button onclick="qfsMini.redo()">↷</button>
+web/index.html:274:<button onclick="qfsMini.copy()">Copy</button>
+web/index.html:275:<button onclick="qfsMini.paste()">Paste</button>
+web/index.html:276:<button onclick="qfsMini.cut()">Cut</button>
+web/index.html:277:<button onclick="qfsMini.left()">←</button>
+web/index.html:278:<button onclick="qfsMini.right()">→</button>
+web/index.html:279:<button onclick="qfsMini.up()">↑</button>
+web/index.html:280:<button onclick="qfsMini.down()">↓</button>
+
+========== EMPTY FUNCTIONS ==========
+web/js/app.js:20:function call(name,args={}) {
+web/js/app.js:24:    window.__qfsCallbacks ||= {};
+web/js/app.js:38:  } catch (_) {}
+web/js/app.js:722:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+web/js/editor/mini-toolbar.js:18:    braces:()=>insert('{}'),
+web/js/i18n.js:13:  let dict = {};
+web/js/editor-core.js:233:      new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g')
+web/js/editor-core.js:933:        search.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+web/js/editor-core.js:963:    }catch(_){}
+web/js/editor-core.js:967:    }catch(_){}
+web/js/editor-core.js:972:    }catch(_){}
+web/js/updater.js:12:  async function nativeCall(command, args = {}) {
+web/js/updater.js:30:        window.__qfsCallbacks ||= {};
+web/js/editor.js:321:      search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+========== CONSOLE / DEBUG ==========
+web/js/app.js:131:          console.warn('تعذر استعادة مجلد العمل:', e);
+web/js/app.js:138:        console.warn('لا توجد صلاحية لمجلد العمل المحفوظ');
+web/js/app.js:153:          console.warn(
+web/js/app.js:167:        console.warn(
+web/js/app.js:175:      console.warn(e)
+web/js/app.js:265:    console.error(e);
+web/js/app.js:315:    console.error(e);
+web/js/app.js:337:    console.error(e);
+web/js/app.js:722:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+web/js/app.js:864:      console.warn('تعذر التحقق من مجلد السلة المحفوظ:', e);
+web/js/app.js:892:    console.warn('تعذر البحث عن مجلد السلة:', e);
+web/js/app.js:997:    console.error(e);
+web/js/app.js:1035:    console.error(e);
+web/js/app.js:1067:      console.error('Trash delete failed:', item, e);
+web/js/app.js:1129:    console.warn(
+web/js/i18n.js:39:      console.error(error);
+web/js/updater.js:99:      console.warn(
+
+========== COMMON BROKEN PATTERNS ==========
+web/js/app.js:15:const native = () => typeof window.AndroidBridge !== 'undefined';
+web/js/app.js:648:    return false;
+web/js/editor-core.js:313:        typeof state !== 'undefined' ? (state.editorName || '') : ''
+web/js/editor-core.js:378:        'const let var function return if else for while do switch case break continue new class extends import export from async await try catch finally throw typeof instanceof in of this true false null undefined yield delete',
+web/js/editor-core.js:380:        'const let var function return if else for while switch case break continue new class extends interface type enum public private protected readonly implements import export from async await try catch finally throw typeof instanceof in of this true false null undefined',
+web/js/editor-core.js:416:        'if else repeat while function for in next break TRUE FALSE NULL Inf NaN NA',
+web/js/editor-core.js:447:      if(/^(true|false|null|undefined|None|True|False|nil|NULL)$/.test(part))
+web/js/editor-core.js:693:    if(editorState.readonly) return false;
+web/js/editor-core.js:745:    if(editorState.readonly) return false;
+web/js/editor-core.js:758:    if(!close) return false;
+web/js/editor-core.js:806:    if(editorState.readonly) return false;
+web/js/editor-core.js:811:      return false;
+web/js/editor-core.js:830:    return false;
+web/js/editor-core.js:960:      if(typeof state !== 'undefined'){
+web/js/core/editor-state.js:59:        if(!result)return false;
+
+========== UNMATCHED BRACES (ROUGH CHECK) ==========
+BRACE MISMATCH: web/js/editor-core.js  {=160 }=157
+
+========== UNMATCHED PARENTHESES (ROUGH CHECK) ==========
+PAREN MISMATCH: web/js/editor-core.js  (=565 )=563
+
+========== FILES WITH VERY LARGE SIZE ==========
+43907 web/js/app.js.before-user-files-cleanup
+43704 web/js/app.js
+40586 web/js/app.js.before-user-files-restore
+30510 web/js/editor-core.js
+28811 web/js/app.js.before-1.3.0-user-files
+27553 web/js/app.js.before-theme-1.2.0
+27495 web/js/app.js.backup-sidebar-fix
+27273 web/css/app.css
+26969 web/js/app.js.bak
+19734 web/js/app.js.before-file-picker
+19114 web/js/app.js.before-big-ui
+18502 web/js/app.js.backup
+16334 web/css/app.css.before-theme-1.2.0
+15731 web/css/app.css.backup-sidebar-fix
+14715 web/css/app.css.bak
+14288 web/index.html
+12359 web/index.html.before-user-files-cleanup
+10704 web/index.html.before-1.3.0-user-files
+10530 web/index.html.before-theme-1.2.0
+10424 web/index.html.backup-v1
+10081 web/js/editor.js
+8487 web/index.html.bak
+8029 web/js/editor-core.js.backup-v1
+6743 web/js/updater.js
+5537 web/index.html.before-big-ui
+5537 web/index.html.backup
+4597 web/css/app.css.before-big-ui
+4597 web/css/app.css.backup
+4092 web/css/editor/editor.css
+3457 web/js/core/editor-state.js
+
+==================================================
+ AUDIT FINISHED
+ REPORT: /data/data/com.termux/files/home/QuickFileStudio/QUICKFILESTUDIO_AUDIT.txt
+==================================================

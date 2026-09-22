@@ -1,0 +1,90 @@
+
+#qfsTabs {
+  display:flex;
+  align-items:center;
+  gap:4px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  min-height:42px;
+  padding:5px;
+  border-bottom:1px solid rgba(128,128,128,.25);
+}
+
+.qfs-tab,
+.qfs-tab-add {
+  flex:0 0 auto;
+  border:0;
+  padding:8px 12px;
+  border-radius:8px;
+  background:rgba(128,128,128,.12);
+  color:inherit;
+  cursor:pointer;
+}
+
+.qfs-tab.active {
+  background:rgba(25,118,210,.25);
+}
+
+.qfs-tab.dirty {
+  font-weight:600;
+}
+
+.qfs-tab b {
+  margin-inline-start:8px;
+  opacity:.7;
+}
+
+.qfs-tab-add {
+  font-size:20px;
+  min-width:40px;
+}
+
+.qfs-editor-layout {
+  display:grid;
+  grid-template-columns:auto 1fr;
+  width:100%;
+  overflow:hidden;
+}
+
+.qfs-line-numbers {
+  user-select:none;
+  text-align:right;
+  padding:12px 8px;
+  opacity:.55;
+  font-family:monospace;
+  line-height:1.6;
+  min-width:42px;
+  overflow:hidden;
+}
+
+.qfs-editor-wrap {
+  min-width:0;
+  position:relative;
+}
+
+#editor {
+  box-sizing:border-box;
+  width:100%;
+  min-height:65vh;
+  border:0;
+  outline:0;
+  resize:none;
+  padding:12px;
+  font-family:"JetBrains Mono","Fira Code","Noto Sans Mono",monospace;
+  line-height:1.6;
+  tab-size:4;
+}
+
+.qfs-mini-toolbar {
+  display:flex;
+  gap:5px;
+  overflow-x:auto;
+  padding:6px;
+}
+
+.qfs-mini-toolbar button {
+  flex:0 0 auto;
+  min-width:38px;
+  padding:7px 10px;
+}
+

@@ -1,0 +1,14 @@
+{
+  "versionCode": 110,
+  "versionName": "1.1.0",
+  "mandatory": false,
+  "title": "يتوفر تحديث جديد",
+  "message": "يتوفر إصدار جديد من Quick File Studio.",
+  "releaseNotes": [
+    "تحسينات عامة",
+    "تحسين مدير الملفات",
+    "إصلاح الأخطاء"
+  ],
+  "apkUrl": "",
+  "sha256": "80d19186790b7e7cfcfac4204275261a50c3de9d8500c017ea44feb22d37361a"
+}

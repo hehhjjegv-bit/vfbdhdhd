@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090b10">
+<title>Quick File Studio</title>
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/editor/editor.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <button class="icon-btn" id="menuBtn">☰</button>
+    <div class="brand"><b>Quick File Studio</b><span id="statusText">جاهز</span></div>
+    <div class="top-actions">
+      <button class="icon-btn" id="searchBtn" title="بحث">⌕</button>
+      <button class="icon-btn" id="menuToolsBtn" title="الأدوات">⋮</button>
+      <button class="icon-btn" id="settingsBtn" title="الإعدادات">⚙</button>
+    </div>
+  </header>
+
+  <nav id="sidebar" class="sidebar">
+    <button class="nav active" data-page="files">📁 <span>الملفات</span></button>
+    <button class="nav" data-page="projects">🧩 <span>المشاريع</span></button>
+    <button class="nav" data-page="editor">📝 <span>المحرر</span></button>
+    <button class="nav" data-page="tools">🛠️ <span>الأدوات</span></button>
+    <button class="nav" data-page="console">⌘ <span>الطرفية</span></button>
+    <button class="nav" data-page="trash">🗑️ <span>سلة المحذوفات</span></button>
+    <button class="nav" data-page="activity">◷ <span>السجل</span></button>
+  </nav>
+
+  <main class="content">
+    <section id="page-files" class="page active">
+      <div class="toolbar">
+        <button class="primary" id="chooseFolderBtn">📁 اختيار مجلد</button>
+
+        <div class="menu-wrap">
+          <button id="newBtn">＋ جديد</button>
+          <div id="newMenu" class="popup-menu hidden">
+            <button data-new="file">📄 ملف جديد</button>
+            <button data-new="folder">📁 مجلد جديد</button>
+            <button data-new="project">🧩 مشروع جديد</button>
+          </div>
+        </div>
+
+        <button id="refreshBtn" title="تحديث">↻</button>
+
+        <div class="menu-wrap">
+          <button id="selectMenuBtn">☑ تحديد</button>
+          <div id="selectMenu" class="popup-menu hidden">
+            <button id="selectAllMenu">تحديد الكل</button>
+            <button id="clearSelectionMenu">إلغاء التحديد</button>
+          </div>
+        </div>
+
+        <div class="menu-wrap">
+          <button id="sortMenuBtn">↕ ترتيب</button>
+          <div id="sortMenu" class="popup-menu hidden">
+            <button data-sort="name">الاسم</button>
+            <button data-sort="size">الحجم</button>
+            <button data-sort="modified">آخر تعديل</button>
+            <button data-sort="type">النوع</button>
+          </div>
+        </div>
+      </div>
+      <div class="crumbs" id="crumbs"></div>
+      <div class="search-row hidden" id="searchRow">
+        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+      </div>
+      <div class="subbar">
+        <span id="fileCount">0 عنصر</span>
+        <select id="sortSelect">
+          <option value="name">الاسم</option>
+          <option value="date">آخر تعديل</option>
+          <option value="size">الحجم</option>
+          <option value="type">النوع</option>
+        </select>
+      </div>
+      <div id="fileGrid" class="file-grid"></div>
+    </section>
+
+    <section id="page-projects" class="page">
+      <div class="section-head"><h2>المشاريع</h2><button class="primary" id="newProjectBtn">＋ مشروع جديد</button></div>
+      <div id="projectList" class="cards"></div>
+    </section>
+
+    <section id="page-editor" class="page">
+      <div class="editor-toolbar qfs-editor-tools">
+  <button type="button" onclick="qfsEditorCore.find()">بحث</button>
+  <button type="button" onclick="qfsEditorCore.replace()">استبدال</button>
+  <button type="button" onclick="qfsEditorCore.gotoLine()">انتقال للسطر</button>
+  <button type="button" onclick="qfsEditorCore.statistics()">إحصائيات</button>
+  <button type="button" onclick="qfsEditorCore.indent()">إزاحة +</button>
+  <button type="button" onclick="qfsEditorCore.unindent()">إزاحة -</button>
+  <button type="button" onclick="qfsEditorCore.toggleWrap()">Word Wrap</button>
+  <button type="button" onclick="qfsEditorCore.toggleReadonly()">قراءة فقط</button>
+  <button type="button" onclick="qfsEditorCore.font(1)">A+</button>
+  <button type="button" onclick="qfsEditorCore.font(-1)">A-</button>
+</div>
+\n<div id="qfsTabs"></div>
+<div class="qfs-mini-toolbar" id="qfsMiniToolbar">
+<button onclick="qfsMini.tab()">Tab</button>
+<button onclick="qfsMini.braces()">{ }</button>
+<button onclick="qfsMini.parentheses()">()</button>
+<button onclick="qfsMini.semicolon()">;</button>
+<button onclick="qfsMini.angle()">&lt; &gt;</button>
+<button onclick="qfsMini.undo()">↶</button>
+<button onclick="qfsMini.redo()">↷</button>
+<button onclick="qfsMini.copy()">Copy</button>
+<button onclick="qfsMini.paste()">Paste</button>
+<button onclick="qfsMini.cut()">Cut</button>
+<button onclick="qfsMini.left()">←</button>
+<button onclick="qfsMini.right()">→</button>
+<button onclick="qfsMini.up()">↑</button>
+<button onclick="qfsMini.down()">↓</button>
+</div>
+<div class="editor-toolbar">
+
+        <div class="menu-wrap">
+          <button id="editorFileMenuBtn">📄 ملف</button>
+          <div id="editorFileMenu" class="popup-menu hidden">
+            <button id="openEditorBtn">فتح ملف</button>
+            <button id="saveEditorBtn">حفظ</button>
+            <button id="saveAsBtn">حفظ باسم</button>
+            <button id="closeEditorBtn">إغلاق الملف</button>
+          </div>
+        </div>
+
+        <div class="menu-wrap">
+          <button id="editorEditMenuBtn">✏️ تحرير</button>
+          <div id="editorEditMenu" class="popup-menu hidden">
+            <button id="editorUndo">تراجع</button>
+            <button id="editorRedo">إعادة</button>
+            <button id="editorSelectAll">تحديد الكل</button>
+            <button id="editorFind">بحث</button>
+            <button id="editorReplace">بحث واستبدال</button>
+            <button id="editorGoto">الانتقال إلى سطر</button>
+          </div>
+        </div>
+
+        <div class="menu-wrap">
+          <button id="editorToolsMenuBtn">🛠 أدوات</button>
+          <div id="editorToolsMenu" class="popup-menu hidden">
+            <button id="previewBtn">معاينة</button>
+            <button id="formatBtn">تنسيق</button>
+            <button id="editorStatsBtn">إحصائيات</button>
+          </div>
+        </div>
+
+        <div class="editor-spacer"></div>
+        <span id="editorMode">نص</span>
+      </div>
+      <div class="editor-meta"><span id="editorPath">لا يوجد ملف</span><span id="editorStats">0:0</span></div>
+      <textarea id="editor" spellcheck="false"></textarea>
+    </section>
+
+    <section id="page-tools" class="page">
+      <div class="tool-grid">
+        <div class="tool"><h3>JSON</h3><textarea id="jsonTool"></textarea><div><button id="jsonPretty">تنسيق</button><button id="jsonMin">تصغير</button></div></div>
+        <div class="tool"><h3>Base64</h3><textarea id="b64Tool"></textarea><div><button id="b64Enc">ترميز</button><button id="b64Dec">فك</button></div></div>
+        <div class="tool"><h3>URL</h3><textarea id="urlTool"></textarea><div><button id="urlEnc">ترميز</button><button id="urlDec">فك</button></div></div>
+        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+        <div class="tool"><h3>UUID</h3><button id="uuidRun">توليد UUID</button><pre id="uuidOut"></pre></div>
+        <div class="tool"><h3>ألوان</h3><input id="colorPick" type="color" value="#8b5cf6"><input id="colorOut" readonly></div>
+      </div>
+    </section>
+
+    <section id="page-console" class="page">
+      <div class="console-head"><button id="clearConsole">مسح</button><span>Shell</span></div>
+      <div id="consoleOut" class="console"></div>
+      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+    </section>
+
+    <section id="page-trash" class="page">
+      <div class="section-head"><h2>سلة المحذوفات</h2><button id="emptyTrash">إفراغ</button></div>
+      <div id="trashList" class="cards"></div>
+    </section>
+
+    <section id="page-activity" class="page">
+      <div class="section-head"><h2>سجل العمليات</h2><button id="clearActivity">مسح</button></div>
+      <div id="activityList" class="cards"></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden"><div class="modal-card"><div class="modal-head"><h3 id="modalTitle"></h3><button id="modalClose">×</button></div><div id="modalBody"></div></div></div>
+  
+  <div id="globalToolsMenu" class="popup-menu hidden">
+    <button id="globalRefresh">↻ تحديث الملفات</button>
+    <button id="globalSearch">⌕ بحث</button>
+    <button id="globalSelectAll">☑ تحديد الكل</button>
+    <button id="globalNewFile">📄 ملف جديد</button>
+    <button id="globalNewFolder">📁 مجلد جديد</button>
+    <button id="globalSettings">⚙ الإعدادات</button>
+    <button id="globalAbout">ℹ حول Quick File Studio</button>
+  </div>
+<input id="fallbackFile" type="file" hidden multiple>
+  <input id="fallbackFolder" type="file" hidden webkitdirectory multiple>
+</div>
+<script src="js/app.js"></script>
+
+<script src="js/i18n.js"></script>
+<script src="js/updater.js"></script>
+<script src="js/editor-core.js"></script>
+<script src="js/core/editor-state.js"></script>
+<script src="js/editor/file-actions.js"></script>
+<script src="js/editor/mini-toolbar.js"></script>
+<script src="js/editor/shortcuts.js"></script>
+<script src="js/editor/session.js"></script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+
+#qfsTabs {
+  display:flex;
+  align-items:center;
+  gap:4px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  min-height:42px;
+  padding:5px;
+  border-bottom:1px solid rgba(128,128,128,.25);
+}
+
+.qfs-tab,
+.qfs-tab-add {
+  flex:0 0 auto;
+  border:0;
+  padding:8px 12px;
+  border-radius:8px;
+  background:rgba(128,128,128,.12);
+  color:inherit;
+  cursor:pointer;
+}
+
+.qfs-tab.active {
+  background:rgba(25,118,210,.25);
+}
+
+.qfs-tab.dirty {
+  font-weight:600;
+}
+
+.qfs-tab b {
+  margin-inline-start:8px;
+  opacity:.7;
+}
+
+.qfs-tab-add {
+  font-size:20px;
+  min-width:40px;
+}
+
+.qfs-editor-layout {
+  display:grid;
+  grid-template-columns:auto 1fr;
+  width:100%;
+  overflow:hidden;
+}
+
+.qfs-line-numbers {
+  user-select:none;
+  text-align:right;
+  padding:12px 8px;
+  opacity:.55;
+  font-family:monospace;
+  line-height:1.6;
+  min-width:42px;
+  overflow:hidden;
+}
+
+.qfs-editor-wrap {
+  min-width:0;
+  position:relative;
+}
+
+#editor {
+  box-sizing:border-box;
+  width:100%;
+  min-height:65vh;
+  border:0;
+  outline:0;
+  resize:none;
+  padding:12px;
+  font-family:"JetBrains Mono","Fira Code","Noto Sans Mono",monospace;
+  line-height:1.6;
+  tab-size:4;
+}
+
+.qfs-mini-toolbar {
+  display:flex;
+  gap:5px;
+  overflow-x:auto;
+  padding:6px;
+}
+
+.qfs-mini-toolbar button {
+  flex:0 0 auto;
+  min-width:38px;
+  padding:7px 10px;
+}
+
+
+/* QFS PRO EDITOR V1 */
+.qfs-editor-layout {
+  min-height: 65vh;
+  background: transparent;
+}
+
+.qfs-editor-layout .qfs-editor-wrap {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.qfs-line-numbers {
+  box-sizing: border-box;
+  min-width: 52px;
+  height: 65vh;
+  overflow: hidden;
+  padding: 12px 10px 12px 6px;
+  text-align: right;
+  user-select: none;
+  pointer-events: none;
+  font-family: "JetBrains Mono","Fira Code","Noto Sans Mono",monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: nowrap;
+  opacity: .58;
+  border-inline-end: 1px solid rgba(128,128,128,.22);
+}
+
+.qfs-line-numbers > div {
+  height: 1.6em;
+  line-height: 1.6;
+  border-radius: 4px;
+  padding-inline: 5px;
+}
+
+.qfs-line-numbers > div.current-line {
+  opacity: 1;
+  font-weight: 700;
+  background: rgba(128,128,128,.16);
+}
+
+.qfs-editor-layout #editor {
+  height: 65vh;
+  min-height: 65vh;
+  overflow-y: auto;
+  overflow-x: auto;
+  white-space: pre;
+  tab-size: 4;
+  line-height: 1.6;
+  font-variant-ligatures: contextual;
+}
+
+.qfs-editor-layout #editor:focus {
+  box-shadow: inset 0 0 0 1px rgba(128,128,128,.12);
+}
+
+@media (max-width: 600px) {
+  .qfs-line-numbers {
+    min-width: 42px;
+    padding-inline: 5px;
+    font-size: 13px;
+  }
+
+  .qfs-editor-layout #editor {
+    font-size: 14px;
+  }
+}
+
+
+/* QFS PRO SYNTAX LAYER */
+.qfs-code-editor {
+  position: relative;
+  min-width: 0;
+  height: 65vh;
+  overflow: hidden;
+}
+
+.qfs-code-editor #qfsHighlight,
+.qfs-code-editor #editor {
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  border: 0;
+  font-family: "JetBrains Mono","Fira Code","Noto Sans Mono",monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  tab-size: 4;
+  white-space: pre;
+  overflow: auto;
+}
+
+.qfs-code-editor #qfsHighlight {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  color: inherit;
+  background: transparent;
+  overflow: hidden;
+  word-wrap: normal;
+}
+
+.qfs-code-editor #editor {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  color: transparent;
+  caret-color: currentColor;
+  -webkit-text-fill-color: transparent;
+  resize: none;
+}
+
+.qfs-code-editor #editor::selection {
+  background: rgba(120,140,255,.30);
+}
+
+.qfs-code-editor .qfs-token-keyword {
+  color: #c792ea;
+}
+
+.qfs-code-editor .qfs-token-string {
+  color: #c3e88d;
+}
+
+.qfs-code-editor .qfs-token-number {
+  color: #f78c6c;
+}
+
+.qfs-code-editor .qfs-token-comment {
+  color: #7f8c8d;
+}
+
+.qfs-code-editor .qfs-token-function {
+  color: #82aaff;
+}
+
+.qfs-code-editor .qfs-token-tag {
+  color: #f07178;
+}
+
+.qfs-code-editor .qfs-token-attribute {
+  color: #ffcb6b;
+}
+
+.qfs-code-editor .qfs-token-property {
+  color: #89ddff;
+}
+
+.qfs-code-editor .qfs-token-operator {
+  color: #89ddff;
+}
+
+.qfs-code-editor .qfs-token-boolean {
+  color: #ff5370;
+}
+
+
+/* QFS editor navigation */
+.editor-backbar{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 10px;
+  border-bottom:1px solid rgba(128,128,128,.22);
+  background:var(--qfs-surface);
+}
+
+.editor-backbar button{
+  min-height:40px;
+  padding:8px 14px;
+  border:1px solid var(--qfs-border);
+  border-radius:10px;
+  background:var(--qfs-surface-2);
+  color:var(--qfs-text);
+  cursor:pointer;
+  transition:transform .12s ease,background .12s ease;
+}
+
+.editor-backbar button:active{
+  transform:scale(.97);
+}
+
+#editor{
+  font-family:
+    "JetBrains Mono",
+    "Fira Code",
+    "Noto Sans Mono",
+    monospace !important;
+  font-size:15px !important;
+  line-height:1.65 !important;
+  letter-spacing:.1px;
+  tab-size:4;
+}
+
+.qfs-code-editor{
+  border:1px solid var(--qfs-border);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+
+/* =========================================================
+   QFS FULL CODE EDITOR FIX
+   يجعل المحرر يملأ المساحة المتاحة ويعرض الملف كاملاً
+   ========================================================= */
+
+.qfs-code-editor{
+  position:relative !important;
+  display:flex !important;
+  flex:1 1 auto !important;
+  width:100% !important;
+  min-width:0 !important;
+  min-height:0 !important;
+  height:100% !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+
+.qfs-code-editor #editor{
+  display:block !important;
+  position:relative !important;
+  width:100% !important;
+  min-width:0 !important;
+  max-width:none !important;
+  height:100% !important;
+  min-height:400px !important;
+  max-height:none !important;
+  flex:1 1 auto !important;
+
+  box-sizing:border-box !important;
+  margin:0 !important;
+  padding:16px !important;
+
+  resize:none !important;
+  overflow:auto !important;
+
+  white-space:pre !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+
+  font-family:
+    "JetBrains Mono",
+    "Fira Code",
+    "Noto Sans Mono",
+    monospace !important;
+
+  font-size:15px !important;
+  line-height:1.65 !important;
+  letter-spacing:0 !important;
+  tab-size:4 !important;
+
+  text-align:left !important;
+  direction:ltr !important;
+
+  border:0 !important;
+  outline:none !important;
+
+  background:transparent !important;
+  color:var(--qfs-text) !important;
+}
+
+.qfs-code-editor #editor:focus{
+  outline:none !important;
+}
+
+.qfs-editor-layout{
+  display:flex !important;
+  flex-direction:column !important;
+  width:100% !important;
+  min-width:0 !important;
+  height:100% !important;
+  min-height:0 !important;
+  overflow:hidden !important;
+}
+
+.qfs-editor-layout .qfs-code-editor{
+  flex:1 1 auto !important;
+  min-height:0 !important;
+}
+
+.qfs-editor-layout #editor{
+  width:100% !important;
+  height:100% !important;
+  min-height:400px !important;
+  flex:1 1 auto !important;
+}
+
+/* إلغاء أي مساحة صغيرة/عرض ثابت قديم */
+.qfs-code-editor textarea#editor{
+  width:100% !important;
+  height:100% !important;
+  min-height:400px !important;
+  max-width:none !important;
+}
+
+/* إذا كان هناك طبقة تلوين للكود، لا تجعلها تضيق المحرر */
+.qfs-code-editor #qfsHighlight{
+  width:100% !important;
+  max-width:none !important;
+  min-width:0 !important;
+  height:100% !important;
+  min-height:400px !important;
+  box-sizing:border-box !important;
+}
+
+/* =========================================================
+   END FULL CODE EDITOR FIX
+   ========================================================= */

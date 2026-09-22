@@ -1,0 +1,594 @@
+============================================================
+ QUICK FILE STUDIO - REAL AUDIT
+ Sun Sep 20 10:52:44 HDT 2026
+============================================================
+
+========== JAVASCRIPT REAL SYNTAX ==========
+OK: web/js/app.js
+OK: web/js/editor/file-actions.js
+OK: web/js/editor/shortcuts.js
+OK: web/js/editor/session.js
+OK: web/js/editor/mini-toolbar.js
+OK: web/js/i18n.js
+OK: web/js/editor-core.js
+OK: web/js/updater.js
+OK: web/js/core/editor-state.js
+OK: web/js/editor.js
+
+REAL JS ERRORS: 0
+
+========== MISSING LOCAL SCRIPT FILES ==========
+OK: web/js/app.js
+OK: web/js/i18n.js
+OK: web/js/updater.js
+OK: web/js/editor-core.js
+OK: web/js/core/editor-state.js
+OK: web/js/editor/file-actions.js
+OK: web/js/editor/mini-toolbar.js
+OK: web/js/editor/shortcuts.js
+OK: web/js/editor/session.js
+
+========== DUPLICATE HTML IDs ==========
+NONE
+
+========== REAL DUPLICATE TOP-LEVEL JS FUNCTIONS ==========
+
+========== UNDEFINED LOCAL SCRIPT REFERENCES ==========
+
+========== REAL PLACEHOLDER / FAKE URL CHECK ==========
+web/js/i18n.js:57:    document.querySelectorAll('[data-i18n-placeholder]')
+web/js/i18n.js:60:        element.placeholder =
+web/js/i18n.js:61:          t(element.dataset.i18nPlaceholder);
+web/js/updater.js:5:  const UPDATE_URL = 'https://YOUR-DOMAIN.example/update/version.json';
+web/index.html:71:input::placeholder,
+web/index.html:72:textarea::placeholder{
+web/index.html:185:            placeholder="بحث في ملفاتك ومجلداتك..."
+web/index.html:233:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+web/index.html:330:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+web/index.html:331:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+web/index.html:340:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+web/css/app.css:1102:input::placeholder,
+web/css/app.css:1103:textarea::placeholder {
+web/locales/en.json:38:  "terminal.placeholder": "Enter a command...",
+web/locales/en.json:42:  "search.placeholder": "Search files and projects...",
+web/locales/ru.json:38:  "terminal.placeholder": "Введите команду...",
+web/locales/ru.json:42:  "search.placeholder": "Поиск файлов и проектов...",
+web/locales/tr.json:38:  "terminal.placeholder": "Komut girin...",
+web/locales/tr.json:42:  "search.placeholder": "Dosya ve proje ara...",
+web/locales/ar.json:38:  "terminal.placeholder": "اكتب أمرًا...",
+web/locales/ar.json:42:  "search.placeholder": "ابحث في الملفات والمشاريع...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/i18n.js:57:    document.querySelectorAll('[data-i18n-placeholder]')
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/i18n.js:60:        element.placeholder =
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/i18n.js:61:          t(element.dataset.i18nPlaceholder);
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/updater.js:5:  const UPDATE_URL = 'https://YOUR-DOMAIN.example/update/version.json';
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html:71:input::placeholder,
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html:72:textarea::placeholder{
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html:185:            placeholder="بحث في ملفاتك ومجلداتك..."
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html:233:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html:330:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html:331:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html:340:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css:1102:input::placeholder,
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css:1103:textarea::placeholder {
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/en.json:38:  "terminal.placeholder": "Enter a command...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/en.json:42:  "search.placeholder": "Search files and projects...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/ru.json:38:  "terminal.placeholder": "Введите команду...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/ru.json:42:  "search.placeholder": "Поиск файлов и проектов...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/tr.json:38:  "terminal.placeholder": "Komut girin...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/tr.json:42:  "search.placeholder": "Dosya ve proje ara...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/ar.json:38:  "terminal.placeholder": "اكتب أمرًا...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/ar.json:42:  "search.placeholder": "ابحث في الملفات والمشاريع...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/i18n.js:57:    document.querySelectorAll('[data-i18n-placeholder]')
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/i18n.js:60:        element.placeholder =
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/i18n.js:61:          t(element.dataset.i18nPlaceholder);
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/index.html:69:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/index.html:163:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/index.html:164:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/index.html:173:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/en.json:38:  "terminal.placeholder": "Enter a command...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/en.json:42:  "search.placeholder": "Search files and projects...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/ru.json:38:  "terminal.placeholder": "Введите команду...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/ru.json:42:  "search.placeholder": "Поиск файлов и проектов...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/tr.json:38:  "terminal.placeholder": "Komut girin...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/tr.json:42:  "search.placeholder": "Dosya ve proje ara...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/ar.json:38:  "terminal.placeholder": "اكتب أمرًا...",
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/ar.json:42:  "search.placeholder": "ابحث في الملفات والمشاريع...",
+android/app/src/main/assets/www/js/i18n.js:57:    document.querySelectorAll('[data-i18n-placeholder]')
+android/app/src/main/assets/www/js/i18n.js:60:        element.placeholder =
+android/app/src/main/assets/www/js/i18n.js:61:          t(element.dataset.i18nPlaceholder);
+android/app/src/main/assets/www/js/updater.js:5:  const UPDATE_URL = 'https://YOUR-DOMAIN.example/update/version.json';
+android/app/src/main/assets/www/index.html:71:input::placeholder,
+android/app/src/main/assets/www/index.html:72:textarea::placeholder{
+android/app/src/main/assets/www/index.html:185:            placeholder="بحث في ملفاتك ومجلداتك..."
+android/app/src/main/assets/www/index.html:233:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+android/app/src/main/assets/www/index.html:330:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+android/app/src/main/assets/www/index.html:331:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+android/app/src/main/assets/www/index.html:340:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+android/app/src/main/assets/www/css/app.css:1102:input::placeholder,
+android/app/src/main/assets/www/css/app.css:1103:textarea::placeholder {
+android/app/src/main/assets/www/locales/en.json:38:  "terminal.placeholder": "Enter a command...",
+android/app/src/main/assets/www/locales/en.json:42:  "search.placeholder": "Search files and projects...",
+android/app/src/main/assets/www/locales/ru.json:38:  "terminal.placeholder": "Введите команду...",
+android/app/src/main/assets/www/locales/ru.json:42:  "search.placeholder": "Поиск файлов и проектов...",
+android/app/src/main/assets/www/locales/tr.json:38:  "terminal.placeholder": "Komut girin...",
+android/app/src/main/assets/www/locales/tr.json:42:  "search.placeholder": "Dosya ve proje ara...",
+android/app/src/main/assets/www/locales/ar.json:38:  "terminal.placeholder": "اكتب أمرًا...",
+android/app/src/main/assets/www/locales/ar.json:42:  "search.placeholder": "ابحث في الملفات والمشاريع...",
+android/app/src/main/assets/www.before-1.3.0-user-files/js/i18n.js:57:    document.querySelectorAll('[data-i18n-placeholder]')
+android/app/src/main/assets/www.before-1.3.0-user-files/js/i18n.js:60:        element.placeholder =
+android/app/src/main/assets/www.before-1.3.0-user-files/js/i18n.js:61:          t(element.dataset.i18nPlaceholder);
+android/app/src/main/assets/www.before-1.3.0-user-files/index.html:69:        <input id="fileSearch" placeholder="بحث في الملفات والمجلدات...">
+android/app/src/main/assets/www.before-1.3.0-user-files/index.html:163:        <div class="tool"><h3>Regex</h3><input id="regexPattern" placeholder="النمط"><input id="regexText" placeholder="النص"><pre id="regexOut"></pre><button id="regexRun">اختبار</button></div>
+android/app/src/main/assets/www.before-1.3.0-user-files/index.html:164:        <div class="tool"><h3>SHA-256</h3><input id="hashText" placeholder="نص"><button id="hashRun">احسب</button><pre id="hashOut"></pre></div>
+android/app/src/main/assets/www.before-1.3.0-user-files/index.html:173:      <div class="console-input"><span>$</span><input id="cmdInput" autocomplete="off" placeholder="اكتب أمرًا..."><button id="runCmd">تشغيل</button></div>
+android/app/src/main/assets/www.before-1.3.0-user-files/locales/en.json:38:  "terminal.placeholder": "Enter a command...",
+android/app/src/main/assets/www.before-1.3.0-user-files/locales/en.json:42:  "search.placeholder": "Search files and projects...",
+android/app/src/main/assets/www.before-1.3.0-user-files/locales/ru.json:38:  "terminal.placeholder": "Введите команду...",
+android/app/src/main/assets/www.before-1.3.0-user-files/locales/ru.json:42:  "search.placeholder": "Поиск файлов и проектов...",
+android/app/src/main/assets/www.before-1.3.0-user-files/locales/tr.json:38:  "terminal.placeholder": "Komut girin...",
+android/app/src/main/assets/www.before-1.3.0-user-files/locales/tr.json:42:  "search.placeholder": "Dosya ve proje ara...",
+android/app/src/main/assets/www.before-1.3.0-user-files/locales/ar.json:38:  "terminal.placeholder": "اكتب أمرًا...",
+android/app/src/main/assets/www.before-1.3.0-user-files/locales/ar.json:42:  "search.placeholder": "ابحث في الملفات والمشاريع...",
+
+========== DEBUG / CONSOLE ==========
+web/js/app.js:131:          console.warn('تعذر استعادة مجلد العمل:', e);
+web/js/app.js:138:        console.warn('لا توجد صلاحية لمجلد العمل المحفوظ');
+web/js/app.js:153:          console.warn(
+web/js/app.js:167:        console.warn(
+web/js/app.js:175:      console.warn(e)
+web/js/app.js:265:    console.error(e);
+web/js/app.js:315:    console.error(e);
+web/js/app.js:337:    console.error(e);
+web/js/app.js:722:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+web/js/app.js:864:      console.warn('تعذر التحقق من مجلد السلة المحفوظ:', e);
+web/js/app.js:892:    console.warn('تعذر البحث عن مجلد السلة:', e);
+web/js/app.js:997:    console.error(e);
+web/js/app.js:1035:    console.error(e);
+web/js/app.js:1067:      console.error('Trash delete failed:', item, e);
+web/js/app.js:1129:    console.warn(
+web/js/i18n.js:39:      console.error(error);
+web/js/updater.js:99:      console.warn(
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:131:          console.warn('تعذر استعادة مجلد العمل:', e);
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:138:        console.warn('لا توجد صلاحية لمجلد العمل المحفوظ');
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:153:          console.warn(
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:167:        console.warn(
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:175:      console.warn(e)
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:265:    console.error(e);
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:315:    console.error(e);
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:337:    console.error(e);
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:724:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:866:      console.warn('تعذر التحقق من مجلد السلة المحفوظ:', e);
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:894:    console.warn('تعذر البحث عن مجلد السلة:', e);
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:999:    console.error(e);
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:1037:    console.error(e);
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:1069:      console.error('Trash delete failed:', item, e);
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js:1131:    console.warn(
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/i18n.js:39:      console.error(error);
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/updater.js:99:      console.warn(
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/app.js:61:    }catch(e){console.warn(e)}
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/app.js:224:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/app.js:315:    console.warn(
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/i18n.js:39:      console.error(error);
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/updater.js:43:      console.warn(
+android/app/src/main/assets/www/js/app.js:131:          console.warn('تعذر استعادة مجلد العمل:', e);
+android/app/src/main/assets/www/js/app.js:138:        console.warn('لا توجد صلاحية لمجلد العمل المحفوظ');
+android/app/src/main/assets/www/js/app.js:153:          console.warn(
+android/app/src/main/assets/www/js/app.js:167:        console.warn(
+android/app/src/main/assets/www/js/app.js:175:      console.warn(e)
+android/app/src/main/assets/www/js/app.js:265:    console.error(e);
+android/app/src/main/assets/www/js/app.js:315:    console.error(e);
+android/app/src/main/assets/www/js/app.js:337:    console.error(e);
+android/app/src/main/assets/www/js/app.js:724:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+android/app/src/main/assets/www/js/app.js:866:      console.warn('تعذر التحقق من مجلد السلة المحفوظ:', e);
+android/app/src/main/assets/www/js/app.js:894:    console.warn('تعذر البحث عن مجلد السلة:', e);
+android/app/src/main/assets/www/js/app.js:999:    console.error(e);
+android/app/src/main/assets/www/js/app.js:1037:    console.error(e);
+android/app/src/main/assets/www/js/app.js:1069:      console.error('Trash delete failed:', item, e);
+android/app/src/main/assets/www/js/app.js:1131:    console.warn(
+android/app/src/main/assets/www/js/i18n.js:39:      console.error(error);
+android/app/src/main/assets/www/js/updater.js:99:      console.warn(
+android/app/src/main/assets/www.before-1.3.0-user-files/js/app.js:61:    }catch(e){console.warn(e)}
+android/app/src/main/assets/www.before-1.3.0-user-files/js/app.js:224:function defaultContent(n){const x=ext(n);return x==='html'?'<!doctype html>\\n<html lang="ar"><head><meta charset="utf-8"><title>New Project</title></head><body><h1>Hello</h1></body></html>':x==='css'?'body {\\n  margin: 0;\\n}\\n':x==='js'?'console.log("Hello");\\n':x==='json'?'{}\\n':x==='py'?'print("Hello")\\n':''}
+android/app/src/main/assets/www.before-1.3.0-user-files/js/app.js:315:    console.warn(
+android/app/src/main/assets/www.before-1.3.0-user-files/js/i18n.js:39:      console.error(error);
+android/app/src/main/assets/www.before-1.3.0-user-files/js/updater.js:43:      console.warn(
+
+========== EMPTY FUNCTIONS ==========
+
+========== CURRENT SOURCE FILES ==========
+android/app/build.gradle
+android/app/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json
+android/app/build/intermediates/annotation_processor_list/release/javaPreCompileRelease/annotationProcessors.json
+android/app/build/intermediates/apk_ide_redirect_file/release/createReleaseApkListingFileRedirect/redirect.txt
+android/app/build/intermediates/app_metadata/release/writeReleaseAppMetadata/app-metadata.properties
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/css/app.css
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/css/app.css.backup
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/css/app.css.bak
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/css/app.css.before-big-ui
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/css/editor/editor.css
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/index.html
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/app.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/app.js.backup
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/app.js.bak
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/app.js.before-big-ui
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/app.js.before-file-picker
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/core/editor-state.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/editor-core.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/editor.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/editor/file-actions.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/editor/mini-toolbar.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/editor/session.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/editor/shortcuts.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/i18n.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/js/updater.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/ar.json
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/en.json
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/ru.json
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www.before-1.3.0-user-files/locales/tr.json
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css.backup
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css.backup-sidebar-fix
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css.bak
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css.before-big-ui
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/app.css.before-theme-1.2.0
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/editor/editor.css
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/css/editor/editor.css.backup-v1
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.backup
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.backup-v1
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.bak
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.before-1.3.0-user-files
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.before-big-ui
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.before-theme-1.2.0
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/index.html.before-user-files-cleanup
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.backup
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.backup-sidebar-fix
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.bak
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.before-1.3.0-user-files
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.before-big-ui
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.before-file-picker
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.before-theme-1.2.0
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.before-user-files-cleanup
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/app.js.before-user-files-restore
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/core/editor-state.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor-core.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor-core.js.backup-v1
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor/file-actions.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor/mini-toolbar.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor/session.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/editor/shortcuts.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/i18n.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/js/updater.js
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/ar.json
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/en.json
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/ru.json
+android/app/build/intermediates/assets/release/mergeReleaseAssets/www/locales/tr.json
+android/app/build/intermediates/compatible_screen_manifest/debug/createDebugCompatibleScreenManifests/output-metadata.json
+android/app/build/intermediates/compatible_screen_manifest/release/createReleaseCompatibleScreenManifests/output-metadata.json
+android/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar
+android/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/processReleaseResources/R.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/css/app.css.backup.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/css/app.css.bak.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/css/app.css.before-big-ui.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/css/app.css.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/css/editor/editor.css.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/index.html.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/app.js.backup.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/app.js.bak.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/app.js.before-big-ui.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/app.js.before-file-picker.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/app.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/core/editor-state.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/editor-core.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/editor.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/editor/file-actions.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/editor/mini-toolbar.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/editor/session.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/editor/shortcuts.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/i18n.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/js/updater.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/locales/ar.json.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/locales/en.json.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/locales/ru.json.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www.before-1.3.0-user-files/locales/tr.json.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/app.css.backup-sidebar-fix.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/app.css.backup.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/app.css.bak.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/app.css.before-big-ui.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/app.css.before-theme-1.2.0.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/app.css.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/editor/editor.css.backup-v1.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/css/editor/editor.css.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.backup-v1.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.backup.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.bak.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.before-1.3.0-user-files.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.before-big-ui.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.before-theme-1.2.0.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.before-user-files-cleanup.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/index.html.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.backup-sidebar-fix.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.backup.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.bak.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.before-1.3.0-user-files.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.before-big-ui.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.before-file-picker.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.before-theme-1.2.0.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.before-user-files-cleanup.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.before-user-files-restore.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/app.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/core/editor-state.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor-core.js.backup-v1.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor-core.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor/file-actions.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor/mini-toolbar.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor/session.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/editor/shortcuts.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/i18n.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/js/updater.js.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/locales/ar.json.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/locales/en.json.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/locales/ru.json.jar
+android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/www/locales/tr.json.jar
+android/app/build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-8.7.3
+android/app/build/intermediates/default_proguard_files/global/proguard-android.txt-8.7.3
+android/app/build/intermediates/default_proguard_files/global/proguard-defaults.txt-8.7.3
+android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/dirs_bucket_0/graph.bin
+android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/dirs_bucket_1/graph.bin
+android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/dirs_bucket_2/graph.bin
+android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/jar_e343e35ce477bbf997745124aca3c5f4a741afbd025e93447849b3bb4c5c5b91_bucket_0/graph.bin
+android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/jar_e343e35ce477bbf997745124aca3c5f4a741afbd025e93447849b3bb4c5c5b91_bucket_1/graph.bin
+android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/jar_e343e35ce477bbf997745124aca3c5f4a741afbd025e93447849b3bb4c5c5b91_bucket_2/graph.bin
+android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+android/app/build/intermediates/dex_archive_input_jar_hashes/release/dexBuilderRelease/out
+android/app/build/intermediates/dex_number_of_buckets_file/release/dexBuilderRelease/out
+android/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties
+android/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml
+android/app/build/intermediates/incremental/debug/mergeDebugResources/merger.xml
+android/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+android/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir/values/values.xml
+android/app/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+android/app/build/intermediates/incremental/lintVitalAnalyzeRelease/module.xml
+android/app/build/intermediates/incremental/lintVitalAnalyzeRelease/release-artifact-dependencies.xml
+android/app/build/intermediates/incremental/lintVitalAnalyzeRelease/release-artifact-libraries.xml
+android/app/build/intermediates/incremental/lintVitalAnalyzeRelease/release.xml
+android/app/build/intermediates/incremental/mergeReleaseAssets/merger.xml
+android/app/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml
+android/app/build/intermediates/incremental/mergeReleaseShaders/merger.xml
+android/app/build/intermediates/incremental/packageRelease/tmp/release/dex-renamer-state.txt
+android/app/build/intermediates/incremental/packageRelease/tmp/release/zip-cache/androidResources
+android/app/build/intermediates/incremental/packageRelease/tmp/release/zip-cache/javaResources0
+android/app/build/intermediates/incremental/release-mergeJavaRes/merge-state
+android/app/build/intermediates/incremental/release/mergeReleaseResources/compile-file-map.properties
+android/app/build/intermediates/incremental/release/mergeReleaseResources/merged.dir/values/values.xml
+android/app/build/intermediates/incremental/release/mergeReleaseResources/merger.xml
+android/app/build/intermediates/incremental/release/packageReleaseResources/compile-file-map.properties
+android/app/build/intermediates/incremental/release/packageReleaseResources/merged.dir/values/values.xml
+android/app/build/intermediates/incremental/release/packageReleaseResources/merger.xml
+android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/MainActivity$1.class
+android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/MainActivity$LegacyAndroidBridge.class
+android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/MainActivity.class
+android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/bridge/AndroidBridge$1.class
+android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/bridge/AndroidBridge$Callback.class
+android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/bridge/AndroidBridge.class
+android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/storage/SafFileManager.class
+android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/storage/SafPermissionManager.class
+android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/storage/StreamUtils.class
+android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/update/UpdateManager.class
+android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/update/UpdateReceiver.class
+android/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/quickfilestudio/app/update/UpdateResultActivity.class
+android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/MainActivity$1.class
+android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/MainActivity$LegacyAndroidBridge.class
+android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/MainActivity.class
+android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/bridge/AndroidBridge$1.class
+android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/bridge/AndroidBridge$Callback.class
+android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/bridge/AndroidBridge.class
+android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/storage/SafFileManager.class
+android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/storage/SafPermissionManager.class
+android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/storage/StreamUtils.class
+android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/update/UpdateManager.class
+android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/update/UpdateReceiver.class
+android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/quickfilestudio/app/update/UpdateResultActivity.class
+android/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/linked-resources-binary-format-debug.ap_
+android/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/output-metadata.json
+android/app/build/intermediates/linked_resources_binary_format/release/processReleaseResources/linked-resources-binary-format-release.ap_
+android/app/build/intermediates/linked_resources_binary_format/release/processReleaseResources/output-metadata.json
+android/app/build/intermediates/lint-cache/lintVitalAnalyzeRelease/lint-cache-version.txt
+android/app/build/intermediates/lint-cache/lintVitalReportRelease/lint-cache-version.txt
+android/app/build/intermediates/lint_vital_intermediate_text_report/release/lintVitalReportRelease/lint-results-release.txt
+android/app/build/intermediates/lint_vital_partial_results/release/lintVitalAnalyzeRelease/out/lint-resources.xml
+android/app/build/intermediates/lint_vital_report_lint_model/release/generateReleaseLintVitalReportModel/module.xml
+android/app/build/intermediates/lint_vital_report_lint_model/release/generateReleaseLintVitalReportModel/release-artifact-dependencies.xml
+android/app/build/intermediates/lint_vital_report_lint_model/release/generateReleaseLintVitalReportModel/release-artifact-libraries.xml
+android/app/build/intermediates/lint_vital_report_lint_model/release/generateReleaseLintVitalReportModel/release.xml
+android/app/build/intermediates/lint_vital_return_value/release/lintVitalReportRelease/return-value-release.txt
+android/app/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt
+android/app/build/intermediates/local_only_symbol_list/release/parseReleaseLocalResources/R-def.txt
+android/app/build/intermediates/manifest_merge_blame_file/debug/processDebugMainManifest/manifest-merger-blame-debug-report.txt
+android/app/build/intermediates/manifest_merge_blame_file/release/processReleaseMainManifest/manifest-merger-blame-release-report.txt
+android/app/build/intermediates/merged_java_res/release/mergeReleaseJavaResource/base.jar
+android/app/build/intermediates/merged_manifest/debug/processDebugMainManifest/AndroidManifest.xml
+android/app/build/intermediates/merged_manifest/release/processReleaseMainManifest/AndroidManifest.xml
+android/app/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml
+android/app/build/intermediates/merged_manifests/debug/processDebugManifest/output-metadata.json
+android/app/build/intermediates/merged_manifests/release/processReleaseManifest/AndroidManifest.xml
+android/app/build/intermediates/merged_manifests/release/processReleaseManifest/output-metadata.json
+android/app/build/intermediates/merged_res/debug/mergeDebugResources/values_values.arsc.flat
+android/app/build/intermediates/merged_res/release/mergeReleaseResources/values_values.arsc.flat
+android/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/mergeDebugResources.json
+android/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values.json
+android/app/build/intermediates/merged_res_blame_folder/release/mergeReleaseResources/out/multi-v2/mergeReleaseResources.json
+android/app/build/intermediates/merged_res_blame_folder/release/mergeReleaseResources/out/multi-v2/values.json
+android/app/build/intermediates/metadata_library_dependencies_report/release/collectReleaseDependencies/dependencies.pb
+android/app/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json
+android/app/build/intermediates/navigation_json/release/extractDeepLinksRelease/navigation.json
+android/app/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt
+android/app/build/intermediates/nested_resources_validation_report/release/generateReleaseResources/nestedResourcesValidationReport.txt
+android/app/build/intermediates/optimized_processed_res/release/optimizeReleaseResources/output-metadata.json
+android/app/build/intermediates/optimized_processed_res/release/optimizeReleaseResources/resources-release-optimize.ap_
+android/app/build/intermediates/packaged_manifests/debug/processDebugManifestForPackage/AndroidManifest.xml
+android/app/build/intermediates/packaged_manifests/debug/processDebugManifestForPackage/output-metadata.json
+android/app/build/intermediates/packaged_manifests/release/processReleaseManifestForPackage/AndroidManifest.xml
+android/app/build/intermediates/packaged_manifests/release/processReleaseManifestForPackage/output-metadata.json
+android/app/build/intermediates/packaged_res/debug/packageDebugResources/values/values.xml
+android/app/build/intermediates/packaged_res/release/packageReleaseResources/values/values.xml
+android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/bd07c0b708157428d18853ce1bacaa7175aa5795dfbf19ba38441bf0e8a10ff0_2.jar
+android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/MainActivity$1.dex
+android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/MainActivity$LegacyAndroidBridge.dex
+android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/MainActivity.dex
+android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/bridge/AndroidBridge$1.dex
+android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/bridge/AndroidBridge$Callback.dex
+android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/bridge/AndroidBridge.dex
+android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/storage/SafFileManager.dex
+android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/storage/SafPermissionManager.dex
+android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/storage/StreamUtils.dex
+android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/update/UpdateManager.dex
+android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/update/UpdateReceiver.dex
+android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/quickfilestudio/app/update/UpdateResultActivity.dex
+android/app/build/intermediates/runtime_symbol_list/debug/processDebugResources/R.txt
+android/app/build/intermediates/runtime_symbol_list/release/processReleaseResources/R.txt
+android/app/build/intermediates/sdk_dependency_data/release/sdkReleaseDependencyData/sdkDependencyData.pb
+android/app/build/intermediates/signing_config_versions/release/writeReleaseSigningConfigVersions/signing-config-versions.json
+android/app/build/intermediates/source_set_path_map/debug/mapDebugSourceSetPaths/file-map.txt
+android/app/build/intermediates/source_set_path_map/release/mapReleaseSourceSetPaths/file-map.txt
+android/app/build/intermediates/stable_resource_ids_file/debug/processDebugResources/stableIds.txt
+android/app/build/intermediates/stable_resource_ids_file/release/processReleaseResources/stableIds.txt
+android/app/build/intermediates/version_control_info_file/release/extractReleaseVersionControlInfo/version-control-info.textproto
+android/app/build/outputs/apk/release/app-release.apk
+android/app/build/outputs/apk/release/output-metadata.json
+android/app/build/outputs/logs/manifest-merger-debug-report.txt
+android/app/build/outputs/logs/manifest-merger-release-report.txt
+android/app/build/outputs/sdk-dependencies/release/sdkDependencies.txt
+android/app/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/AndroidBridge$1.class.uniqueId3
+android/app/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/AndroidBridge$Callback.class.uniqueId2
+android/app/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/AndroidBridge.class.uniqueId1
+android/app/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/UpdateManager.class.uniqueId0
+android/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin
+android/app/build/tmp/compileReleaseJavaWithJavac/compileTransaction/stash-dir/AndroidBridge$1.class.uniqueId0
+android/app/build/tmp/compileReleaseJavaWithJavac/compileTransaction/stash-dir/AndroidBridge$Callback.class.uniqueId2
+android/app/build/tmp/compileReleaseJavaWithJavac/compileTransaction/stash-dir/AndroidBridge.class.uniqueId1
+android/app/build/tmp/compileReleaseJavaWithJavac/compileTransaction/stash-dir/UpdateManager.class.uniqueId3
+android/app/build/tmp/compileReleaseJavaWithJavac/previous-compilation-data.bin
+android/app/src/main/AndroidManifest.xml
+android/app/src/main/assets/www.before-1.3.0-user-files/css/app.css
+android/app/src/main/assets/www.before-1.3.0-user-files/css/app.css.backup
+android/app/src/main/assets/www.before-1.3.0-user-files/css/app.css.bak
+android/app/src/main/assets/www.before-1.3.0-user-files/css/app.css.before-big-ui
+android/app/src/main/assets/www.before-1.3.0-user-files/css/editor/editor.css
+android/app/src/main/assets/www.before-1.3.0-user-files/index.html
+android/app/src/main/assets/www.before-1.3.0-user-files/js/app.js
+android/app/src/main/assets/www.before-1.3.0-user-files/js/app.js.backup
+android/app/src/main/assets/www.before-1.3.0-user-files/js/app.js.bak
+android/app/src/main/assets/www.before-1.3.0-user-files/js/app.js.before-big-ui
+android/app/src/main/assets/www.before-1.3.0-user-files/js/app.js.before-file-picker
+android/app/src/main/assets/www.before-1.3.0-user-files/js/core/editor-state.js
+android/app/src/main/assets/www.before-1.3.0-user-files/js/editor-core.js
+android/app/src/main/assets/www.before-1.3.0-user-files/js/editor.js
+android/app/src/main/assets/www.before-1.3.0-user-files/js/editor/file-actions.js
+android/app/src/main/assets/www.before-1.3.0-user-files/js/editor/mini-toolbar.js
+android/app/src/main/assets/www.before-1.3.0-user-files/js/editor/session.js
+android/app/src/main/assets/www.before-1.3.0-user-files/js/editor/shortcuts.js
+android/app/src/main/assets/www.before-1.3.0-user-files/js/i18n.js
+android/app/src/main/assets/www.before-1.3.0-user-files/js/updater.js
+android/app/src/main/assets/www.before-1.3.0-user-files/locales/ar.json
+android/app/src/main/assets/www.before-1.3.0-user-files/locales/en.json
+android/app/src/main/assets/www.before-1.3.0-user-files/locales/ru.json
+android/app/src/main/assets/www.before-1.3.0-user-files/locales/tr.json
+android/app/src/main/assets/www/css/app.css
+android/app/src/main/assets/www/css/app.css.backup
+android/app/src/main/assets/www/css/app.css.backup-sidebar-fix
+android/app/src/main/assets/www/css/app.css.bak
+android/app/src/main/assets/www/css/app.css.before-big-ui
+android/app/src/main/assets/www/css/app.css.before-theme-1.2.0
+android/app/src/main/assets/www/css/editor/editor.css
+android/app/src/main/assets/www/css/editor/editor.css.backup-v1
+android/app/src/main/assets/www/index.html
+android/app/src/main/assets/www/index.html.backup
+android/app/src/main/assets/www/index.html.backup-v1
+android/app/src/main/assets/www/index.html.bak
+android/app/src/main/assets/www/index.html.before-1.3.0-user-files
+android/app/src/main/assets/www/index.html.before-big-ui
+android/app/src/main/assets/www/index.html.before-theme-1.2.0
+android/app/src/main/assets/www/index.html.before-user-files-cleanup
+android/app/src/main/assets/www/js/app.js
+android/app/src/main/assets/www/js/app.js.backup
+android/app/src/main/assets/www/js/app.js.backup-sidebar-fix
+android/app/src/main/assets/www/js/app.js.bak
+android/app/src/main/assets/www/js/app.js.before-1.3.0-user-files
+android/app/src/main/assets/www/js/app.js.before-big-ui
+android/app/src/main/assets/www/js/app.js.before-file-picker
+android/app/src/main/assets/www/js/app.js.before-theme-1.2.0
+android/app/src/main/assets/www/js/app.js.before-user-files-cleanup
+android/app/src/main/assets/www/js/app.js.before-user-files-restore
+android/app/src/main/assets/www/js/core/editor-state.js
+android/app/src/main/assets/www/js/editor-core.js
+android/app/src/main/assets/www/js/editor-core.js.backup-v1
+android/app/src/main/assets/www/js/editor.js
+android/app/src/main/assets/www/js/editor/file-actions.js
+android/app/src/main/assets/www/js/editor/mini-toolbar.js
+android/app/src/main/assets/www/js/editor/session.js
+android/app/src/main/assets/www/js/editor/shortcuts.js
+android/app/src/main/assets/www/js/i18n.js
+android/app/src/main/assets/www/js/updater.js
+android/app/src/main/assets/www/locales/ar.json
+android/app/src/main/assets/www/locales/en.json
+android/app/src/main/assets/www/locales/ru.json
+android/app/src/main/assets/www/locales/tr.json
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.backup
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.bak
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.bak2
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-1.3.0-no-startup-permission
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-1.3.0-valid-tree-permission
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-bridge
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-bridge-step2
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-fast-bridge
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-file-picker
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-new-bridge
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-parent-fix
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-user-files
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.before-user-files-2
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.stage0
+android/app/src/main/java/com/quickfilestudio/app/MainActivity.java.stage1-backup
+android/app/src/main/java/com/quickfilestudio/app/bridge/AndroidBridge.java
+android/app/src/main/java/com/quickfilestudio/app/bridge/AndroidBridge.java.before-fast-bridge
+android/app/src/main/java/com/quickfilestudio/app/bridge/AndroidBridge.java.before-full-bridge
+android/app/src/main/java/com/quickfilestudio/app/bridge/AndroidBridge.java.before-mainactivity
+android/app/src/main/java/com/quickfilestudio/app/bridge/AndroidBridge.java.before-picker
+android/app/src/main/java/com/quickfilestudio/app/storage/SafFileManager.java
+android/app/src/main/java/com/quickfilestudio/app/storage/SafFileManager.java.before-1.3.0
+android/app/src/main/java/com/quickfilestudio/app/storage/SafFileManager.java.before-1.3.0-flags
+android/app/src/main/java/com/quickfilestudio/app/storage/SafPermissionManager.java
+android/app/src/main/java/com/quickfilestudio/app/storage/StreamUtils.java
+android/app/src/main/java/com/quickfilestudio/app/update/UpdateManager.java
+android/app/src/main/java/com/quickfilestudio/app/update/UpdateManager.java.backup
+android/app/src/main/java/com/quickfilestudio/app/update/UpdateReceiver.java
+android/app/src/main/java/com/quickfilestudio/app/update/UpdateResultActivity.java
+android/app/src/main/res/values/styles.xml
+web/js/app.js
+web/js/app.js.backup
+web/js/app.js.backup-sidebar-fix
+web/js/app.js.bak
+web/js/app.js.before-1.3.0-user-files
+web/js/app.js.before-big-ui
+web/js/app.js.before-file-picker
+web/js/app.js.before-theme-1.2.0
+web/js/app.js.before-user-files-cleanup
+web/js/app.js.before-user-files-restore
+web/js/core/editor-state.js
+web/js/editor-core.js
+web/js/editor-core.js.backup-v1
+web/js/editor.js
+web/js/editor/file-actions.js
+web/js/editor/mini-toolbar.js
+web/js/editor/session.js
+web/js/editor/shortcuts.js
+web/js/i18n.js
+web/js/updater.js
+
+============================================================
+ END REAL AUDIT
+============================================================

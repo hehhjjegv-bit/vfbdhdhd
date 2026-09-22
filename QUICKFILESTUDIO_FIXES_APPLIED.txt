@@ -1,0 +1,5 @@
+Quick File Studio - fixes applied
+1. Fixed AndroidBridge.call invocation in app.js: Java exposes call(String), so JS now sends one JSON string.
+2. Fixed Android i18n loading: local locale JSON is read through native readAsset instead of fetch(file://...).
+3. Updated updater version defaults to 1.2.1 and disabled placeholder update endpoint until a real URL is configured.
+4. Existing Android SAF folder/file/project pickers are preserved; they now work through the corrected bridge call.

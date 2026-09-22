@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.application'
+}
+
+def qfsKeystore = System.getenv("QFS_KEYSTORE")
+def qfsAlias = System.getenv("QFS_KEY_ALIAS")
+def qfsPassword = System.getenv("QFS_KEY_PASSWORD")
+
+android {
+    namespace 'com.quickfilestudio.app'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.quickfilestudio.app"
+        minSdk 23
+        targetSdk 35
+        versionCode 121
+        versionName "1.2.1"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("${rootProject.projectDir}/signing/quickfilestudio-release.jks")
+            storePassword System.getenv("QFS_KEY_PASSWORD")
+            keyAlias System.getenv("QFS_KEY_ALIAS") ?: "quickfilestudio"
+            keyPassword System.getenv("QFS_KEY_PASSWORD")
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}

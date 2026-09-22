@@ -1,0 +1,379 @@
+(() => {
+  'use strict';
+
+  const $ = id => document.getElementById(id);
+
+  const editorState = {
+    fontSize: Number(localStorage.getItem('qfs.editor.fontSize') || 15),
+    wrap: localStorage.getItem('qfs.editor.wrap') !== 'false',
+    readonly: false
+  };
+
+  function editor(){
+    return $('editor');
+  }
+
+  function status(){
+    return $('editorStats');
+  }
+
+  function updateStats(){
+    const e = editor();
+    if(!e) return;
+
+    const text = e.value || '';
+    const pos = e.selectionStart || 0;
+    const before = text.slice(0,pos);
+    const line = before.split('\n').length;
+    const last = before.lastIndexOf('\n');
+    const column = pos - last;
+
+    const lines = text ? text.split('\n').length : 1;
+    const chars = text.length;
+    const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+
+    if(status()){
+      status().textContent =
+        `السطر ${line} | العمود ${column} | ${lines} سطر | ${words} كلمة | ${chars} حرف`;
+    }
+
+    const mode = $('editorMode');
+    if(mode){
+      mode.textContent = detectLanguage(state.editorName || '');
+    }
+  }
+
+  function detectLanguage(name){
+    const ext = (name.split('.').pop() || '').toLowerCase();
+
+    const map = {
+      js:'JavaScript',
+      mjs:'JavaScript',
+      cjs:'JavaScript',
+      ts:'TypeScript',
+      jsx:'JSX',
+      tsx:'TSX',
+      html:'HTML',
+      htm:'HTML',
+      css:'CSS',
+      scss:'SCSS',
+      less:'LESS',
+      xml:'XML',
+      json:'JSON',
+      yaml:'YAML',
+      yml:'YAML',
+      toml:'TOML',
+      py:'Python',
+      pyw:'Python',
+      java:'Java',
+      kt:'Kotlin',
+      kts:'Kotlin',
+      c:'C',
+      h:'C/C++ Header',
+      cpp:'C++',
+      cc:'C++',
+      cxx:'C++',
+      hpp:'C++ Header',
+      cs:'C#',
+      go:'Go',
+      rs:'Rust',
+      php:'PHP',
+      rb:'Ruby',
+      pl:'Perl',
+      lua:'Lua',
+      r:'R',
+      swift:'Swift',
+      m:'Objective-C',
+      mm:'Objective-C++',
+      dart:'Dart',
+      sql:'SQL',
+      sh:'Shell',
+      bash:'Bash',
+      zsh:'Zsh',
+      ps1:'PowerShell',
+      bat:'Batch',
+      cmd:'Batch',
+      md:'Markdown',
+      tex:'LaTeX',
+      vue:'Vue',
+      svelte:'Svelte'
+    };
+
+    return map[ext] || 'Plain Text';
+  }
+
+  function indent(){
+    const e=editor();
+    if(!e)return;
+
+    const start=e.selectionStart;
+    const end=e.selectionEnd;
+    const selected=e.value.slice(start,end);
+
+    if(!selected){
+      e.setRangeText('    ',start,end,'end');
+      return;
+    }
+
+    const changed=selected
+      .split('\n')
+      .map(line=>'    '+line)
+      .join('\n');
+
+    e.setRangeText(changed,start,end,'select');
+    updateStats();
+  }
+
+  function unindent(){
+    const e=editor();
+    if(!e)return;
+
+    const start=e.selectionStart;
+    const end=e.selectionEnd;
+    const selected=e.value.slice(start,end);
+
+    if(!selected){
+      const lineStart=e.value.lastIndexOf('\n',start-1)+1;
+      const part=e.value.slice(lineStart,start);
+      const remove=part.startsWith('    ')?4:part.startsWith('\t')?1:0;
+
+      if(remove){
+        e.setRangeText('',lineStart,lineStart+remove,'end');
+      }
+      return;
+    }
+
+    const changed=selected
+      .split('\n')
+      .map(line=>line.replace(/^ {1,4}|\t/,''))
+      .join('\n');
+
+    e.setRangeText(changed,start,end,'select');
+    updateStats();
+  }
+
+  function toggleWrap(){
+    editorState.wrap=!editorState.wrap;
+    localStorage.setItem('qfs.editor.wrap',editorState.wrap);
+    apply();
+  }
+
+  function toggleReadonly(){
+    editorState.readonly=!editorState.readonly;
+    apply();
+  }
+
+  function font(delta){
+    editorState.fontSize=Math.max(
+      10,
+      Math.min(32,editorState.fontSize+delta)
+    );
+
+    localStorage.setItem(
+      'qfs.editor.fontSize',
+      editorState.fontSize
+    );
+
+    apply();
+  }
+
+  function apply(){
+    const e=editor();
+    if(!e)return;
+
+    e.style.fontSize=editorState.fontSize+'px';
+    e.style.whiteSpace=editorState.wrap?'pre-wrap':'pre';
+    e.style.overflowX=editorState.wrap?'hidden':'auto';
+    e.readOnly=editorState.readonly;
+
+    const mode=$('editorMode');
+    if(mode){
+      const flags=[];
+      if(editorState.readonly) flags.push('قراءة فقط');
+      if(editorState.wrap) flags.push('Word Wrap');
+
+      mode.textContent =
+        detectLanguage(state.editorName||'') +
+        (flags.length?' · '+flags.join(' · '):'');
+    }
+  }
+
+  function find(){
+    const e=editor();
+    if(!e)return;
+
+    const q=prompt('بحث عن:');
+    if(!q)return;
+
+    const text=e.value;
+    const start=e.selectionEnd;
+    let index=text.indexOf(q,start);
+
+    if(index<0) index=text.indexOf(q,0);
+
+    if(index>=0){
+      e.focus();
+      e.setSelectionRange(index,index+q.length);
+    }else{
+      alert('لم يتم العثور على النص');
+    }
+  }
+
+  function replace(){
+    const e=editor();
+    if(!e)return;
+
+    const search=prompt('النص المطلوب استبداله:');
+    if(search===null || search==='')return;
+
+    const replacement=prompt('استبدال بـ:');
+    if(replacement===null)return;
+
+    const count=(e.value.match(
+      new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g')
+    )||[]).length;
+
+    e.value=e.value.split(search).join(replacement);
+    state.editorDirty=true;
+    updateStats();
+
+    alert(`تم استبدال ${count} نتيجة`);
+  }
+
+  function gotoLine(){
+    const e=editor();
+    if(!e)return;
+
+    const line=Number(prompt('رقم السطر:'));
+    if(!Number.isInteger(line) || line<1)return;
+
+    const lines=e.value.split('\n');
+    if(line>lines.length){
+      alert('رقم السطر غير موجود');
+      return;
+    }
+
+    let pos=0;
+    for(let i=0;i<line-1;i++){
+      pos+=lines[i].length+1;
+    }
+
+    e.focus();
+    e.setSelectionRange(pos,pos);
+  }
+
+  function statistics(){
+    const e=editor();
+    if(!e)return;
+
+    const text=e.value||'';
+    const words=text.trim()?text.trim().split(/\s+/).length:0;
+    const lines=text?text.split('\n').length:1;
+
+    alert(
+      `إحصائيات الملف\n\n`+
+      `الأسطر: ${lines}\n`+
+      `الكلمات: ${words}\n`+
+      `الأحرف: ${text.length}\n`+
+      `البايتات UTF-8 تقريبًا: ${new TextEncoder().encode(text).length}`
+    );
+  }
+
+  function preview(){
+    const e=editor();
+    if(!e)return;
+
+    const name=state.editorName||'';
+    if(!/\.(html?|svg)$/i.test(name)){
+      alert('المعاينة متاحة حاليًا لملفات HTML وSVG');
+      return;
+    }
+
+    const blob=new Blob(
+      [e.value],
+      {type:name.toLowerCase().endsWith('svg')
+        ?'image/svg+xml'
+        :'text/html'}
+    );
+
+    const url=URL.createObjectURL(blob);
+    window.open(url,'_blank');
+  }
+
+  function bind(){
+    const e=editor();
+    if(!e)return;
+
+    [
+      'input',
+      'keyup',
+      'click',
+      'select'
+    ].forEach(ev=>{
+      e.addEventListener(ev,updateStats);
+    });
+
+    e.addEventListener('keydown',ev=>{
+      const ctrl=ev.ctrlKey||ev.metaKey;
+
+      if(ctrl && ev.key.toLowerCase()==='f'){
+        ev.preventDefault();
+        find();
+        return;
+      }
+
+      if(ctrl && ev.key.toLowerCase()==='h'){
+        ev.preventDefault();
+        replace();
+        return;
+      }
+
+      if(ctrl && ev.key.toLowerCase()==='g'){
+        ev.preventDefault();
+        gotoLine();
+        return;
+      }
+
+      if(ctrl && ev.key.toLowerCase()==='s'){
+        ev.preventDefault();
+        if(typeof saveEditor==='function') saveEditor();
+        return;
+      }
+
+      if(ctrl && ev.key.toLowerCase()==='a'){
+        return;
+      }
+
+      if(ev.key==='Tab'){
+        ev.preventDefault();
+
+        if(ev.shiftKey){
+          unindent();
+        }else{
+          indent();
+        }
+
+        updateStats();
+      }
+    });
+
+    apply();
+    updateStats();
+  }
+
+  window.qfsEditorCore={
+    find,
+    replace,
+    gotoLine,
+    statistics,
+    preview,
+    toggleWrap,
+    toggleReadonly,
+    font,
+    indent,
+    unindent,
+    updateStats
+  };
+
+  document.addEventListener('DOMContentLoaded',bind);
+})();
