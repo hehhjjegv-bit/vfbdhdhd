@@ -135,7 +135,7 @@ def main():
             "signature": signature
         }
 
-        output_path = ROOT / "version.json"
+        output_path = ROOT / "update" / "version.json"
 
         output_path.write_text(
             json.dumps(
