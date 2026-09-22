@@ -29,34 +29,63 @@ import android.util.Base64;
 public final class UpdateManager {
 
     public static final String PACKAGE_NAME = "com.quickfilestudio.app";
-    public static final int CURRENT_VERSION_CODE = 122;
-    public static final String CURRENT_VERSION_NAME = "1.2.2";
+    private int getCurrentVersionCode() {
+        try {
+            android.content.pm.PackageInfo info =
+                    context.getPackageManager().getPackageInfo(
+                            context.getPackageName(),
+                            0
+                    );
+
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
+                return (int) info.getLongVersionCode();
+            }
+
+            return info.versionCode;
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    private String getCurrentVersionName() {
+        try {
+            android.content.pm.PackageInfo info =
+                    context.getPackageManager().getPackageInfo(
+                            context.getPackageName(),
+                            0
+                    );
+
+            return info.versionName == null ? "" : info.versionName;
+        } catch (Exception e) {
+            return "";
+        }
+    }
 
     private static final String UPDATE_PUBLIC_CERT =
-            "-----BEGIN CERTIFICATE-----\\n"
-            + "MIIEIjCCAoqgAwIBAgIJAPFdqEWfUUL7MA0GCSqGSIb3DQEBCwUAMD8xGjAYBgNV\\n"
-            + "BAoTEVF1aWNrIEZpbGUgU3R1ZGlvMSEwHwYDVQQDExhRdWljayBGaWxlIFN0dWRp\\n"
-            + "byBVcGRhdGUwHhcNMjYwOTIyMDIyMjU3WhcNMzYwOTE5MDIyMjU3WjA/MRowGAYD\\n"
-            + "VQQKExFRdWljayBGaWxlIFN0dWRpbzEhMB8GA1UEAxMYUXVpY2sgRmlsZSBTdHVk\\n"
-            + "aW8gVXBkYXRlMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAmBH/Hrqy\\n"
-            + "Bjmh/mpI1+YJy5Rn6GAnuZcD/6pgYSrBG2VVThSferf8EouQ26N8BAf5oAkFHCBK\\n"
-            + "lbY+SxQ9JKs1qwf5G+WqPAL6mk3CmeEjbFYP/qR3Vn8fZ1sz2PBFYK1aHSmrk3he\\n"
-            + "6d/+Z/cOgdnpAKX7A8mPhA/KiKYSry1iQIqisKzSmKaC/r3P7sD1zWF9cdhOul3w\\n"
-            + "OeFpBJCbjof1tsbV/nBzPffwPWATVxFP3Mco48exmPT2U0NNbNx3Mn6GwQcfiBIX\\n"
-            + "Jqpp+UM3HPFEMO3wX6CM+/PBkTyTWuQuDDzP0OY2uGv1IZDCSFLs8WTLZurDFJhR\\n"
-            + "I48TMqgad273LabG1jpwD+LvKb+r+SWBfR7ntyjdsIIDiF+VWgu86iyjkl842+Cg\\n"
-            + "853pZ6Oe5SsS790FwzayP3RJq6P5bFn9M7cBYaK48j8XnDntN/8Jbwa+EfIpQuEi\\n"
-            + "J7JBxsLSTRzQlSTQ9eeBrrQhr6ioKO0+6+NrIbCsRYpBrqzvyHO93wA9AgMBAAGj\\n"
-            + "ITAfMB0GA1UdDgQWBBQcnS9qwvxKmqzTc7Mf4CqA1zleXjANBgkqhkiG9w0BAQsF\\n"
-            + "AAOCAYEAdNNbfBCoIIOKBe6epvZ2EEr6IDdQBwjrIe4Q4RnTp1UbY9NFp4z+x0O7\\n"
-            + "aYgpfrUpr9WWSqu61C9foKzMchF95DNnjSFi0N2egKvB+2+wx6yamjhfROCLHBZu\\n"
-            + "us7lKe8Xn83KEZgBoljSw0s5gXBKFT+jCT+i7wLgSM6DAxIQTA/IcNN8NvdIIIHK\\n"
-            + "TFc9t9nbQGj1ucAdaMdS5SvbaQQVqyCH+fevqmMUx1ae/inoIsj3oOzO5Uey6Q7m\\n"
-            + "qCJpD4UgPZvyv7iKxkZcQHKkpGJRIaM1INL0g1uFAhBg+cU1HOUQoHhL3LfZ43fj\\n"
-            + "8pUj9aopcosMAX8g4XSokVD/pWo9IniU2ysDXqzDuvwXm8e7QXjXadbwaGKrIyb9\\n"
-            + "LYbpnmjzubtMvemafzpYJbrtH0SuRGOCKFEHTlZjX5hYY19mVhMJnZJ+0dQTzBK9\\n"
-            + "W0d6+RGgyrvpxtXw2LtXTUjseWTq+UhErxCrDhjpOATTh13lyODnOmuT834KZzx0\\n"
-            + "YV/I0x5x\\n"
+            "-----BEGIN CERTIFICATE-----\n"
+            + "MIIEIjCCAoqgAwIBAgIJAPFdqEWfUUL7MA0GCSqGSIb3DQEBCwUAMD8xGjAYBgNV\n"
+            + "BAoTEVF1aWNrIEZpbGUgU3R1ZGlvMSEwHwYDVQQDExhRdWljayBGaWxlIFN0dWRp\n"
+            + "byBVcGRhdGUwHhcNMjYwOTIyMDIyMjU3WhcNMzYwOTE5MDIyMjU3WjA/MRowGAYD\n"
+            + "VQQKExFRdWljayBGaWxlIFN0dWRpbzEhMB8GA1UEAxMYUXVpY2sgRmlsZSBTdHVk\n"
+            + "aW8gVXBkYXRlMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAmBH/Hrqy\n"
+            + "Bjmh/mpI1+YJy5Rn6GAnuZcD/6pgYSrBG2VVThSferf8EouQ26N8BAf5oAkFHCBK\n"
+            + "lbY+SxQ9JKs1qwf5G+WqPAL6mk3CmeEjbFYP/qR3Vn8fZ1sz2PBFYK1aHSmrk3he\n"
+            + "6d/+Z/cOgdnpAKX7A8mPhA/KiKYSry1iQIqisKzSmKaC/r3P7sD1zWF9cdhOul3w\n"
+            + "OeFpBJCbjof1tsbV/nBzPffwPWATVxFP3Mco48exmPT2U0NNbNx3Mn6GwQcfiBIX\n"
+            + "Jqpp+UM3HPFEMO3wX6CM+/PBkTyTWuQuDDzP0OY2uGv1IZDCSFLs8WTLZurDFJhR\n"
+            + "I48TMqgad273LabG1jpwD+LvKb+r+SWBfR7ntyjdsIIDiF+VWgu86iyjkl842+Cg\n"
+            + "853pZ6Oe5SsS790FwzayP3RJq6P5bFn9M7cBYaK48j8XnDntN/8Jbwa+EfIpQuEi\n"
+            + "J7JBxsLSTRzQlSTQ9eeBrrQhr6ioKO0+6+NrIbCsRYpBrqzvyHO93wA9AgMBAAGj\n"
+            + "ITAfMB0GA1UdDgQWBBQcnS9qwvxKmqzTc7Mf4CqA1zleXjANBgkqhkiG9w0BAQsF\n"
+            + "AAOCAYEAdNNbfBCoIIOKBe6epvZ2EEr6IDdQBwjrIe4Q4RnTp1UbY9NFp4z+x0O7\n"
+            + "aYgpfrUpr9WWSqu61C9foKzMchF95DNnjSFi0N2egKvB+2+wx6yamjhfROCLHBZu\n"
+            + "us7lKe8Xn83KEZgBoljSw0s5gXBKFT+jCT+i7wLgSM6DAxIQTA/IcNN8NvdIIIHK\n"
+            + "TFc9t9nbQGj1ucAdaMdS5SvbaQQVqyCH+fevqmMUx1ae/inoIsj3oOzO5Uey6Q7m\n"
+            + "qCJpD4UgPZvyv7iKxkZcQHKkpGJRIaM1INL0g1uFAhBg+cU1HOUQoHhL3LfZ43fj\n"
+            + "8pUj9aopcosMAX8g4XSokVD/pWo9IniU2ysDXqzDuvwXm8e7QXjXadbwaGKrIyb9\n"
+            + "LYbpnmjzubtMvemafzpYJbrtH0SuRGOCKFEHTlZjX5hYY19mVhMJnZJ+0dQTzBK9\n"
+            + "W0d6+RGgyrvpxtXw2LtXTUjseWTq+UhErxCrDhjpOATTh13lyODnOmuT834KZzx0\n"
+            + "YV/I0x5x\n"
             + "-----END CERTIFICATE-----";
 
     private final Context context;
@@ -68,8 +97,8 @@ public final class UpdateManager {
     public JSONObject appInfo() throws Exception {
         PackageManager pm = context.getPackageManager();
 
-        int versionCode = CURRENT_VERSION_CODE;
-        String versionName = CURRENT_VERSION_NAME;
+        int versionCode = getCurrentVersionCode();
+        String versionName = getCurrentVersionName();
 
         try {
             android.content.pm.PackageInfo info =
@@ -147,7 +176,7 @@ public final class UpdateManager {
 
             JSONObject remote = new JSONObject(jsonText.toString());
 
-            int currentCode = CURRENT_VERSION_CODE;
+            int currentCode = getCurrentVersionCode();
             int remoteCode = remote.optInt("versionCode", 0);
 
             String packageName = remote.optString(
@@ -165,7 +194,7 @@ public final class UpdateManager {
                 return new JSONObject()
                         .put("available", false)
                         .put("currentVersionCode", currentCode)
-                        .put("currentVersionName", CURRENT_VERSION_NAME)
+                        .put("currentVersionName", getCurrentVersionName())
                         .put("latest", remote);
             }
 
@@ -205,7 +234,7 @@ public final class UpdateManager {
             return new JSONObject()
                     .put("available", true)
                     .put("currentVersionCode", currentCode)
-                    .put("currentVersionName", CURRENT_VERSION_NAME)
+                    .put("currentVersionName", getCurrentVersionName())
                     .put("latest", remote);
 
         } finally {
@@ -410,11 +439,11 @@ public final class UpdateManager {
             String apkUrl,
             String sha256
     ) {
-        return "QFS-UPDATE-V1\\n"
-                + packageName + "\\n"
-                + versionCode + "\\n"
-                + versionName + "\\n"
-                + apkUrl + "\\n"
+        return "QFS-UPDATE-V1\n"
+                + packageName + "\n"
+                + versionCode + "\n"
+                + versionName + "\n"
+                + apkUrl + "\n"
                 + sha256.toLowerCase(java.util.Locale.US);
     }
 

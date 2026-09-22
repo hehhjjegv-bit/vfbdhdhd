@@ -1,0 +1,7 @@
+
+# Quick File Studio local/build secrets
+.gradle/
+build/
+android/app/build/
+signing/
+tools/__pycache__/
