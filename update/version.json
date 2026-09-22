@@ -1,8 +1,7 @@
 {
-  "packageName": "com.quickfilestudio.app",
-  "versionCode": 124,
-  "versionName": "1.2.4",
-  "apkUrl": "https://github.com/hehhjjegv-bit/vfbdhdhd/releases/download/v1.2.4/QuickFileStudio-1.2.4.apk",
-  "sha256": "189a37356a1f3386f364c631dee14886dff3003639994d52b58888cb844969bc",
-  "signature": "au7R/j/QoU3h8G3Klavff0I0R/V9xjJJcgdzKjLffwMSElsj4HD8tqwzLTycUAMBWi0TrgaSD1HjdI/VpyFR2MgkBffiz8lEhNNsBdX+Ki1D3d2CTnOezEJwon/tAkQj1uXHVWPb5lP//+Y31UwSK+E6W8oyzN/GmmL2duy9mxPb/w4qJA6Ti/Rah+GeQG/y+BU2Ztb3b/oYZd4C/66NB1jtBQ0B6olDOAgwnIh/eeq/kBwLDyrxJADj4L2NeexF572sUbvV/+o0jPP9XHJCh0oVQp5XB2lX3LK9eg4z4WGvtaL5uRI9rlhk0CpTCj1SW84uKy6SR5PU/LBWxRjyVCXw5pdVKo+j2sVOGt7Hon7veCLGhnGtHWQ83nio5AkDaBdS7FvZWFnpzCc/aAQD5gZ6oiHW3K0TxC476dy0Qcn0ezLdJQV0xLNcN3LG9G3KxKKIuUsgtKBTOgtVwKDM+IOOZSO+WQ7pZ/g33D71Z8Z2IcNNv7zRhr35VP1Zd5DZ"
+  "versionCode": 126,
+  "versionName": "1.2.6",
+  "apkUrl": "https://github.com/hehhjjegv-bit/vfbdhdhd/releases/download/v1.2.6/QuickFileStudio-1.2.6.apk",
+  "sha256": "c9f7fa423834a25ef94efa9b780935f50da7a00f1595794e54220453ac690773",
+  "releaseNotes": "اختبار نظام التحديث التلقائي"
 }

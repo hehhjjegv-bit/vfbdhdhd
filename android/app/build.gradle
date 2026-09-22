@@ -14,16 +14,22 @@ android {
         applicationId "com.quickfilestudio.app"
         minSdk 23
         targetSdk 35
-        versionCode 122
-        versionName "1.2.2"
+        versionCode 126
+        versionName "1.2.6"
+    }
+
+    def qfsSigningProps = new Properties()
+    def qfsSigningFile = file(System.getProperty("user.home") + "/.qfs-signing.properties")
+    if (qfsSigningFile.exists()) {
+        qfsSigningProps.load(new FileInputStream(qfsSigningFile))
     }
 
     signingConfigs {
         release {
-            storeFile file("${rootProject.projectDir}/signing/quickfilestudio-release.jks")
-            storePassword System.getenv("QFS_KEY_PASSWORD")
-            keyAlias System.getenv("QFS_KEY_ALIAS") ?: "quickfilestudio"
-            keyPassword System.getenv("QFS_KEY_PASSWORD")
+            storeFile file(qfsSigningProps.getProperty("storeFile"))
+            storePassword qfsSigningProps.getProperty("storePassword")
+            keyAlias qfsSigningProps.getProperty("keyAlias", "quickfilestudio")
+            keyPassword qfsSigningProps.getProperty("keyPassword")
         }
     }
 
