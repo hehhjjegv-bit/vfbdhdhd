@@ -11,9 +11,9 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-KEYSTORE = ROOT / "signing/update/qfs-update-signing.jks"
+KEYSTORE = Path.home() / "qfs-private-signing/qfs-update-signing.jks"
 ALIAS = "qfs-update-signing"
-JAVA_CP = ROOT / "tools"
+JAVA_CP = Path.home() / "qfs-java-test"
 
 
 def sha256_file(path):
@@ -70,7 +70,7 @@ def main():
         sys.exit(1)
 
     if not apk_url.startswith(("https://", "http://")):
-        print("خطأ: APK URL يجب أن يبدأ بـ http:// أو https://")
+        print("خطأ: APK URL غير صحيح.")
         sys.exit(1)
 
     signed_data = (
@@ -82,26 +82,16 @@ def main():
         + sha256.lower()
     )
 
-    with tempfile.NamedTemporaryFile(
-        mode="w",
-        encoding="utf-8",
-        delete=False
-    ) as f:
-        f.write(signed_data)
-        data_file = f.name
+    with tempfile.TemporaryDirectory(prefix="qfs-sign-") as tmp:
+        tmp = Path(tmp)
 
-    try:
-        print()
-        print("سيُطلب الآن رمز مرور Keystore.")
-        print("لن يظهر أثناء الكتابة.")
+        data_file = tmp / "signed-data.txt"
+        signature_file = tmp / "signature.txt"
+
+        data_file.write_text(signed_data, encoding="utf-8")
 
         password = getpass.getpass("Keystore password: ")
 
-        env = os.environ.copy()
-        env["QFS_SIGNER_PASSWORD"] = password
-
-        # UpdateSigner يقرأ كلمة المرور من Console.
-        # لذلك نمررها إلى العملية عبر stdin فقط إذا لزم.
         result = subprocess.run(
             [
                 "java",
@@ -110,12 +100,12 @@ def main():
                 "UpdateSigner",
                 str(KEYSTORE),
                 ALIAS,
-                data_file,
+                str(data_file),
+                str(signature_file),
             ],
             input=password + "\n",
             text=True,
             capture_output=True,
-            env=env,
         )
 
         if result.returncode != 0:
@@ -124,10 +114,16 @@ def main():
                 print(result.stderr)
             sys.exit(1)
 
-        signature = result.stdout.strip()
+        if not signature_file.is_file():
+            print("خطأ: لم يتم إنشاء ملف التوقيع.")
+            sys.exit(1)
+
+        signature = signature_file.read_text(
+            encoding="ascii"
+        ).strip()
 
         if not signature:
-            print("فشل: لم يتم إنتاج التوقيع.")
+            print("خطأ: التوقيع فارغ.")
             sys.exit(1)
 
         output = {
@@ -141,30 +137,20 @@ def main():
 
         output_path = ROOT / "version.json"
 
-        with open(
-            output_path,
-            "w",
-            encoding="utf-8"
-        ) as f:
-            json.dump(
+        output_path.write_text(
+            json.dumps(
                 output,
-                f,
                 ensure_ascii=False,
                 indent=2
-            )
-            f.write("\n")
+            ) + "\n",
+            encoding="utf-8"
+        )
 
-        print()
-        print("تم إنشاء ملف التحديث بنجاح:")
-        print(output_path)
-        print()
-        print("لا ترسل المفتاح الخاص أو كلمة المرور لأي شخص.")
-
-    finally:
-        try:
-            os.remove(data_file)
-        except FileNotFoundError:
-            pass
+    print()
+    print("تم إنشاء ملف التحديث:")
+    print(output_path)
+    print()
+    print("المفتاح الخاص بقي خارج المشروع.")
 
 
 if __name__ == "__main__":

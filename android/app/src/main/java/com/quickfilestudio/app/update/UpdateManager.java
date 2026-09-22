@@ -29,14 +29,34 @@ import android.util.Base64;
 public final class UpdateManager {
 
     public static final String PACKAGE_NAME = "com.quickfilestudio.app";
-    public static final int CURRENT_VERSION_CODE = 121;
-    public static final String CURRENT_VERSION_NAME = "1.2.1";
+    public static final int CURRENT_VERSION_CODE = 122;
+    public static final String CURRENT_VERSION_NAME = "1.2.2";
 
     private static final String UPDATE_PUBLIC_CERT =
             "-----BEGIN CERTIFICATE-----\\n"
-            + "MIIEITCCAomgAwIBAgIICxABOcRgI4EwDQYJKoZIhvcNAQEMBQAwPzEaMBgGA1UEChMRUXVpY2sgRmlsZSBTdHVkaW8xITAfBgNVBAMTGFF1aWNrIEZpbGUgU3R1ZGlvIFVwZGF0ZTAeFw0yNjA5MjAxNzIzNTlaFw0zNjA5MTcxNzIzNTlaMD8xGjAYBgNVBAoTEVF1aWNrIEZpbGUgU3R1ZGlvMSEwHwYDVQQDExhRdWljayBGaWxlIFN0dWRpbyBVcGRhdGUwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQC0bWP8x0w921oNuIBaRR3ZV0Nmw5hLvSyiT02ceKTtNe3pmvBRnzJ/JpdaQncO7/giONAFpNWHI0WrT9+qU/EnhJarXRLanpzQHks8eR6JYR+MtfKB3sMaxF4Hv3EZy1xXFsK/KTWGgKkW8gzRqCvmQKpK2/+0EOHdN5M3lKwRAaVTENgmMrFK3L9i9ON9VHFF6F0Rq/ZP\\n"
-            + "jmEPow79pRyj1XdXOo3ZOsYtwhknQ6XrTGMrdjkUlEe8j/tknOF0sJmcd6DFcLHYWd8NBfOaUwEq9x9+5BeF708+i87P43Jc014/qFbxQODIINpkDIBl/NGQMoDNbZWVUa9wpCj10ReVDpQb1ex3PNhwXDsS0s7shsrbOCotc9vNFtcWMjlWrFWeQjseF8UTZR5AaC5xNdXt2dzuSw9an+A6J66hZwruGLY6g10mqHSdpvcjj2IuiEetBKQAnGe/FvawNj20x+7KuKOYTOi2fIq/wvpdspiyfRWx54V8J2xYt15qHaJ/mvkCAwEAAaMhMB8wHQYDVR0OBBYEFII3VfIEkwZhau++1oQSuLEj1yHfMA0GCSqGSIb3DQEBDAUA\\n"
-            + "A4IBgQAGWOjJWtJ50K7UmjwHyIiA+V+A7N8BkW+OcceQqOMOvFtMzghZTpvreTecZFQyRgsrVs7raZ/9LTT5vhvI4DFkcW2OCGGTQDqMCDAU4qKG8qH6TNreYX9RC4uDoV+gijzBqzmDMp1+vy5OOi87Mg0cK8agWOponUID8EohqXOkSKIJ8A+rGkh6KZpZ9Yvj14j8P5mxJ6h9yBefBZ6zFay6n9qCLtTcEQjy2vcNKNUMJ20lfp27eLdVZ8Ttc6rMzWm/Z9HwNi484Timts+T2nG14KY8UK1fheqPhMbIN1R2S+ccwCXZu9PyV/LTlvdKFa4wb6MlL+c8DWSP2dVGUDqjMnrtjxK8xEEPOzqN4m+UEmEwWg3iMZXVsb9+QSn1enT/gCR+cDiGtUILQ9lQJEZb8tHodBQUNA7z4VohKGmTSy1vCiIoj1JLcnDJlRMjZO0rFcny0bGmGtLYqwu4zdeBeFvooWAJgUwrB5HSxLJ1LqpaEaykQYzxFPmw31KYWVA=\\n"
+            + "MIIEIjCCAoqgAwIBAgIJAPFdqEWfUUL7MA0GCSqGSIb3DQEBCwUAMD8xGjAYBgNV\\n"
+            + "BAoTEVF1aWNrIEZpbGUgU3R1ZGlvMSEwHwYDVQQDExhRdWljayBGaWxlIFN0dWRp\\n"
+            + "byBVcGRhdGUwHhcNMjYwOTIyMDIyMjU3WhcNMzYwOTE5MDIyMjU3WjA/MRowGAYD\\n"
+            + "VQQKExFRdWljayBGaWxlIFN0dWRpbzEhMB8GA1UEAxMYUXVpY2sgRmlsZSBTdHVk\\n"
+            + "aW8gVXBkYXRlMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAmBH/Hrqy\\n"
+            + "Bjmh/mpI1+YJy5Rn6GAnuZcD/6pgYSrBG2VVThSferf8EouQ26N8BAf5oAkFHCBK\\n"
+            + "lbY+SxQ9JKs1qwf5G+WqPAL6mk3CmeEjbFYP/qR3Vn8fZ1sz2PBFYK1aHSmrk3he\\n"
+            + "6d/+Z/cOgdnpAKX7A8mPhA/KiKYSry1iQIqisKzSmKaC/r3P7sD1zWF9cdhOul3w\\n"
+            + "OeFpBJCbjof1tsbV/nBzPffwPWATVxFP3Mco48exmPT2U0NNbNx3Mn6GwQcfiBIX\\n"
+            + "Jqpp+UM3HPFEMO3wX6CM+/PBkTyTWuQuDDzP0OY2uGv1IZDCSFLs8WTLZurDFJhR\\n"
+            + "I48TMqgad273LabG1jpwD+LvKb+r+SWBfR7ntyjdsIIDiF+VWgu86iyjkl842+Cg\\n"
+            + "853pZ6Oe5SsS790FwzayP3RJq6P5bFn9M7cBYaK48j8XnDntN/8Jbwa+EfIpQuEi\\n"
+            + "J7JBxsLSTRzQlSTQ9eeBrrQhr6ioKO0+6+NrIbCsRYpBrqzvyHO93wA9AgMBAAGj\\n"
+            + "ITAfMB0GA1UdDgQWBBQcnS9qwvxKmqzTc7Mf4CqA1zleXjANBgkqhkiG9w0BAQsF\\n"
+            + "AAOCAYEAdNNbfBCoIIOKBe6epvZ2EEr6IDdQBwjrIe4Q4RnTp1UbY9NFp4z+x0O7\\n"
+            + "aYgpfrUpr9WWSqu61C9foKzMchF95DNnjSFi0N2egKvB+2+wx6yamjhfROCLHBZu\\n"
+            + "us7lKe8Xn83KEZgBoljSw0s5gXBKFT+jCT+i7wLgSM6DAxIQTA/IcNN8NvdIIIHK\\n"
+            + "TFc9t9nbQGj1ucAdaMdS5SvbaQQVqyCH+fevqmMUx1ae/inoIsj3oOzO5Uey6Q7m\\n"
+            + "qCJpD4UgPZvyv7iKxkZcQHKkpGJRIaM1INL0g1uFAhBg+cU1HOUQoHhL3LfZ43fj\\n"
+            + "8pUj9aopcosMAX8g4XSokVD/pWo9IniU2ysDXqzDuvwXm8e7QXjXadbwaGKrIyb9\\n"
+            + "LYbpnmjzubtMvemafzpYJbrtH0SuRGOCKFEHTlZjX5hYY19mVhMJnZJ+0dQTzBK9\\n"
+            + "W0d6+RGgyrvpxtXw2LtXTUjseWTq+UhErxCrDhjpOATTh13lyODnOmuT834KZzx0\\n"
+            + "YV/I0x5x\\n"
             + "-----END CERTIFICATE-----";
 
     private final Context context;

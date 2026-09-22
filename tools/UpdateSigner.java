@@ -15,55 +15,40 @@ public class UpdateSigner {
             System.exit(2);
         }
 
-        Console console = System.console();
-
-        if (console == null) {
-            System.err.println("ERROR: interactive console required");
-            System.exit(3);
-        }
-
-        char[] password =
-                console.readPassword("Keystore password: ");
-
-        if (password == null || password.length == 0) {
+        String passwordText = readPassword();
+        if (passwordText == null || passwordText.isEmpty()) {
             throw new Exception("Password was not supplied");
         }
 
+        char[] password = passwordText.toCharArray();
+
         try {
-            KeyStore ks =
-                    KeyStore.getInstance("PKCS12");
+            KeyStore ks = KeyStore.getInstance("PKCS12");
 
-            try (InputStream in =
-                    new FileInputStream(args[0])) {
-
+            try (InputStream in = new FileInputStream(args[0])) {
                 ks.load(in, password);
             }
 
-            Key key =
-                    ks.getKey(args[1], password);
+            Key key = ks.getKey(args[1], password);
 
             if (!(key instanceof PrivateKey)) {
-                throw new Exception(
-                    "Alias does not contain a private key"
-                );
+                throw new Exception("Alias does not contain a private key");
             }
 
-            byte[] data =
-                    Files.readAllBytes(
-                        Paths.get(args[2])
-                    );
+            byte[] data = Files.readAllBytes(
+                Paths.get(args[2])
+            );
 
             Signature signer =
-                    Signature.getInstance("SHA256withRSA");
+                Signature.getInstance("SHA256withRSA");
 
             signer.initSign((PrivateKey) key);
             signer.update(data);
 
             String signature =
-                    Base64.getEncoder()
-                    .encodeToString(
-                        signer.sign()
-                    );
+                Base64.getEncoder().encodeToString(
+                    signer.sign()
+                );
 
             Files.writeString(
                 Paths.get(args[3]),
@@ -72,10 +57,22 @@ public class UpdateSigner {
             );
 
         } finally {
-            java.util.Arrays.fill(
-                password,
-                '\0'
-            );
+            java.util.Arrays.fill(password, '\0');
         }
+    }
+
+    private static String readPassword() throws IOException {
+        BufferedReader reader =
+            new BufferedReader(
+                new InputStreamReader(System.in)
+            );
+
+        String line = reader.readLine();
+
+        if (line == null) {
+            return null;
+        }
+
+        return line.trim();
     }
 }

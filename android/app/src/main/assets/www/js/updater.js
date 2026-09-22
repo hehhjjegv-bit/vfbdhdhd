@@ -2,7 +2,7 @@
 
 window.QFSUpdater = (() => {
 
-  const UPDATE_URL = '';
+  const UPDATE_URL = 'https://raw.githubusercontent.com/hehhjjegv-bit/vfbdhdhd/main/update/version.json';
 
   let currentVersionCode = 120;
   let currentVersionName = '1.2.0';

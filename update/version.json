@@ -1,14 +1,8 @@
 {
-  "versionCode": 110,
-  "versionName": "1.1.0",
-  "mandatory": false,
-  "title": "يتوفر تحديث جديد",
-  "message": "يتوفر إصدار جديد من Quick File Studio.",
-  "releaseNotes": [
-    "تحسينات عامة",
-    "تحسين مدير الملفات",
-    "إصلاح الأخطاء"
-  ],
-  "apkUrl": "",
-  "sha256": "80d19186790b7e7cfcfac4204275261a50c3de9d8500c017ea44feb22d37361a"
+  "packageName": "com.quickfilestudio.app",
+  "versionCode": 122,
+  "versionName": "1.2.2",
+  "apkUrl": "https://github.com/hehhjjegv-bit/vfbdhdhd/releases/download/v1.2.2/QuickFileStudio-1.2.2.apk",
+  "sha256": "76638ee7862486ddc5a655f952de68cc6834544520e44e6405f355dafc0635f8",
+  "signature": "aZyo495AodDd6mF/9fDEIe2EU2SMSiwCcKwlPPL80QUL6RxFqJrvjPujZ9crKe6IL2ibriowhijvqd2US/afAwVPTHoBCCYSV1m2J6qwT1l5Q4LMpbTuaDrfjzzamKAjEfHHjgHl6rCQ1uylAFII7eUDPBrj91PudM6hAuJOU052u/XcQnk7WLyWh0tXu18DQB6CGzLdBZxZcop8lgtFf50d8kILKOJV80/LHAaBS7+kY6MbRQNeIlln8jylRlQlSfNMBgnB3FglUa8NbRskscYOIZ0EcTjcQZO2/8lB/RikMrbGeYbUzZGgRrATAizZtcbJh/jtes8OIvKmqofQaNPp8ithSiyra7iZobvG1JNebPGcGFwko9VBjGqCpOAKQ6e2uuOyF44tAGUWy+l8kyhXKFSttztkBm4B23XWxTUm435qoJiAekMIjSB9C+2ffaTh/q5e69E9V0rjgE80tfGQMpCHTfcC+wOO7I1oLnr2oP7endI0s8XnvsI1FPI1"
 }
